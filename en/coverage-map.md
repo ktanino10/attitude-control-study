@@ -37,7 +37,7 @@ This table shows **where and at what level** these notes explain the content of 
 
 ## Note: how the three lesson sessions are divided
 
-- The original article is an **overview article**, so detailed sensor estimation (Kalman) and control calculation (torque and PID) are handled fully in **Session 2 and Session 3**.
-- Session 1 (this session) aims to cover **all terms and the overall picture** that appear in the photos. As the table shows, every item from the photos is explained somewhere.
+- The original article is an overview article, so sensor estimation (Kalman) and control calculation (torque and PID) are handled in **Session 2 and Session 3**.
+- Session 1 (this session) focuses on the overall picture and basic terms. The table above shows where each item is explained.
 
 📎 For term meanings, see [`GLOSSARY.md`](./GLOSSARY.md). For sources, see [`REFERENCES.md`](../REFERENCES.md).

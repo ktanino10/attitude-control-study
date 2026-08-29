@@ -8,9 +8,7 @@ I explain difficult technical terms in **words a middle school student can under
 > **Original source**: Transistor Gijutsu (Transistor Technology) June 2020, Chapter 10, “XYZ at Will! Birth of a 3-Axis Attitude Control Module” (Shuhei Mowatari / JAXA)
 > These notes do not use photos from the article. They are made only from **diagrams I redrew myself** and **summaries in my own words**.
 
-### 🧾 All content from the original article photos is covered
-I prepared a map showing **where each item and figure from the photos is explained**.
-➡️ **[`coverage-map.md` (map to the original article)](./coverage-map.md)**
+- 📎 See [`coverage-map.md`](./coverage-map.md) for the map to the original article, and [`REFERENCES.md`](../REFERENCES.md) for sources.
 
 ### 🟢🔵 Written at two levels
 - **🟢 Easy**: Mostly examples for middle school readers. Use this to get the big picture first.
