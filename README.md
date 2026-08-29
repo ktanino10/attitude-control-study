@@ -20,7 +20,7 @@
 - 📖 [用語集](./ja/GLOSSARY.md)
 - 📚 [出典・参考文献](./REFERENCES.md)
 
-**元ネタ**: トランジスタ技術 2020年6月号 第10章「XYZ自由自在！3軸姿勢制御モジュール誕生」(茂渡 修平／JAXA)
+**元ネタ**: トランジスタ技術 2020年6月号 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」【第1回】1次元倒立振子のメカニズム（巳谷 真司／JAXA, pp.121–127）
 記事の写真は使わず、**自分で描いた図**と**自分の言葉のまとめ**だけで作っています。
 
 </td>
@@ -37,7 +37,7 @@ For readers who want to know *how* it works, there is also a **🔵 In-depth** t
 - 📖 [Glossary](./en/GLOSSARY.md)
 - 📚 [Sources and references](./REFERENCES.md)
 
-**Source**: Transistor Gijutsu (Transistor Technology) June 2020, Ch.10, "XYZ at Will! Birth of a 3-Axis Attitude Control Module" (Shuhei Mowatari / JAXA).
+**Source**: Transistor Gijutsu (Transistor Technology) June 2020, short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module," Part 1 (Shinji Mitani / JAXA, pp.121–127).
 No photos from the article are used — only **diagrams I redrew myself** and **summaries in my own words**.
 
 </td>

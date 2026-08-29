@@ -10,11 +10,20 @@
 ## 🇯🇵 参考文献（日本語）
 
 ### 一次資料（この学習ノートの元記事）
-1. 茂渡 修平（JAXA）, 「第10章 XYZ自由自在！3軸姿勢制御モジュール誕生」,
-   特集「宇宙大実験！人工衛星の製作」, **トランジスタ技術 2020年6月号**, CQ出版社, pp.110–114.
+1. 巳谷 真司（JAXA）, 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」
+   【第1回】1次元倒立振子のメカニズム（副題：自立で起き上がって静かに倒立する立方体）,
+   **トランジスタ技術 2020年6月号**, CQ出版社, pp.121–127.
    - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202006/>
    - 書籍情報: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
    - PDF版（電子版）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
+   - 著者情報（KAKEN 研究者DB）: <https://nrid.nii.ac.jp/ja/nrid/1000000747446/>
+   - ※ 全3回の連載（第2回：1次元モジュールのモデリングと制御／第3回：3次元モジュールの倒立メカニズムと制御）。
+
+### 元記事が引用している一次文献（The Cubli）
+- M. Gajamohan, M. Merz, I. Thommen, R. D'Andrea, "The Cubli: A Cube that can Jump Up and Balance,"
+  *2012 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*, 2012年10月7–12日, Vilamoura, ポルトガル.
+- M. Gajamohan, M. Muehlebach, T. Widmer, R. D'Andrea, "The Cubli: A Reaction Wheel Based 3D Inverted Pendulum,"
+  *European Control Conference (ECC)*, pp.268–274, 2013.
 
 ### 関連するJAXAの宇宙機・ロボット
 2. JAXA「Int-Ball（JEM自律移動型船内カメラ）」
@@ -44,7 +53,7 @@
 
 ### 出典・著作権について
 - 本ノートの図（`assets/` 内のSVG・Mermaid）は**すべて筆者が独自に作成**したものです。
-- 元記事の写真・図版（図1〜図3など）の**著作権は JAXA／CQ出版社等の各権利者**に帰属し、本ノートには**転載していません**。
+- 元記事の写真・図版の**著作権は、個別に記載のある場合を除き JAXA**（一部は CQ出版社等の各権利者）に帰属し、本ノートには**転載していません**。
 - 部品名・型番・商標は各社に帰属します。
 
 ---
@@ -59,12 +68,20 @@ This is a study note (secondary material) for learning purposes. All figures wer
 **no photographs or figures from the original article are reproduced.** Always consult the primary sources below.
 
 ### Primary source (the article this note is based on)
-1. Shuhei Motowatari (JAXA), "Chapter 10: XYZ at Will! Birth of a 3-Axis Attitude Control Module,"
-   in the special feature "A Grand Space Experiment! Building a Satellite," **Transistor Gijutsu (Transistor Technology), June 2020**, CQ Publishing, pp.110–114. *(Japanese)*
+1. Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module,"
+   **Part 1: Mechanism of a 1-D Inverted Pendulum** (subtitle: "A cube that stands itself up and balances quietly"),
+   **Transistor Gijutsu (Transistor Technology), June 2020**, CQ Publishing, pp.121–127. *(Japanese)*
    - Issue page: <https://toragi.cqpub.co.jp/magazine/202006/>
    - Book info: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
    - PDF (e-edition): <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
-   - *Author name romanization is approximate.*
+   - Author profile (KAKEN researcher DB): <https://nrid.nii.ac.jp/nrid/1000000747446/>
+   - *A 3-part serial (Part 2: modeling & control of the 1-D module; Part 3: inverted mechanism & control of the 3-D module).*
+
+### Primary references cited by the article (The Cubli)
+- M. Gajamohan, M. Merz, I. Thommen, R. D'Andrea, "The Cubli: A Cube that can Jump Up and Balance,"
+  *2012 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*, Oct 7–12, 2012, Vilamoura, Portugal.
+- M. Gajamohan, M. Muehlebach, T. Widmer, R. D'Andrea, "The Cubli: A Reaction Wheel Based 3D Inverted Pendulum,"
+  *European Control Conference (ECC)*, pp.268–274, 2013.
 
 ### Related JAXA spacecraft / robots
 2. JAXA "Int-Ball (JEM Internal Ball Camera)"
@@ -91,5 +108,5 @@ This is a study note (secondary material) for learning purposes. All figures wer
 
 ### Attribution & copyright
 - All figures in this repository (SVG/Mermaid under `assets/`) were **created independently by the author**.
-- Copyright of the original article's photographs and figures belongs to **JAXA / CQ Publishing and other rights holders**; they are **not reproduced** here.
+- Copyright of the original article's photographs and figures belongs to **JAXA** (except where individually noted; some rights held by CQ Publishing and others); they are **not reproduced** here.
 - Product names, part numbers, and trademarks belong to their respective owners.

@@ -2,7 +2,7 @@
 
 **🌐 言語 / Language:** [日本語](../ja/coverage-map.md) ・ English (current) ｜ [🏠 Top](../README.md)
 
-This table shows **where and at what level** these notes explain the content of the photos you provided: **Transistor Gijutsu (Transistor Technology) June 2020, Chapter 10, “XYZ at Will! Birth of a 3-Axis Attitude Control Module” (Shuhei Mowatari / JAXA, pp.110–114)**. The photos themselves are not included, and all diagrams are **redrawn by me** (→ [Sources and references](../REFERENCES.md)).
+This table shows **where and at what level** these notes explain the content of the photos you provided: **Transistor Gijutsu (Transistor Technology) June 2020, short serial “Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module,” Part 1 (Shinji Mitani / JAXA, pp.121–127)**. The photos themselves are not included, and all diagrams are **redrawn by me** (→ [Sources and references](../REFERENCES.md)).
 
 > Level guide: 🟢 = for middle school readers (easy) / 🔵 = for readers who want more detail (in depth, with formulas)
 

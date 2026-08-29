@@ -3,7 +3,7 @@
 This area collects material you can look back at when you are “actually building it.”
 It is separated from the lessons (understanding) so you can look up **circuit structure, parts, and connections** in reverse.
 
-> Source: Transistor Gijutsu (Transistor Technology) June 2020, Chapter 10 (JAXA). All diagrams are redrawn by me.
+> Source: Transistor Gijutsu (Transistor Technology) June 2020, short serial Part 1 (Shinji Mitani / JAXA, pp.121–127). All diagrams are redrawn by me.
 
 ## Table of contents
 

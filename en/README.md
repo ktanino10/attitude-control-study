@@ -5,7 +5,7 @@
 These are study notes for learning **3-axis attitude control** as a hobby, with the goal of eventually building it myself.
 I explain difficult technical terms in **words a middle school student can understand**.
 
-> **Original source**: Transistor Gijutsu (Transistor Technology) June 2020, Chapter 10, “XYZ at Will! Birth of a 3-Axis Attitude Control Module” (Shuhei Mowatari / JAXA)
+> **Original source**: Transistor Gijutsu (Transistor Technology) June 2020, short serial “Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module,” Part 1 (Shinji Mitani / JAXA, pp.121–127)
 > These notes do not use photos from the article. They are made only from **diagrams I redrew myself** and **summaries in my own words**.
 
 - 📎 See [`coverage-map.md`](./coverage-map.md) for the map to the original article, and [`REFERENCES.md`](../REFERENCES.md) for sources.
