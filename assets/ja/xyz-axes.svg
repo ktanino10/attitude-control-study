@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" font-family="sans-serif">
-  <rect width="640" height="470" fill="#ffffff"/>
-  <text x="320" y="34" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">姿勢を決める3つの回転（ロール・ピッチ・ヨー）</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="sans-serif">
+  <rect width="800" height="470" fill="#ffffff"/>
+  <text x="400" y="34" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">姿勢を決める3つの回転（ロール・ピッチ・ヨー）</text>
 
   <!-- satellite body (cube in simple isometric) -->
   <g stroke="#333" stroke-width="2" fill="#dfe9f5">
@@ -33,5 +33,5 @@
   <polygon points="380,110 371,103 369,116" fill="#1971c2"/>
   <text x="395" y="105" font-size="14" fill="#1971c2">ヨー（Yaw）＝上下軸まわり（首ふり）</text>
 
-  <text x="320" y="450" font-size="13" text-anchor="middle" fill="#666">「姿勢」＝この3つの回転で「今どっちを向いているか」を表す</text>
+  <text x="400" y="450" font-size="13" text-anchor="middle" fill="#666">「姿勢」＝この3つの回転で「今どっちを向いているか」を表す</text>
 </svg>

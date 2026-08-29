@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="sans-serif">
-  <rect width="860" height="300" fill="#ffffff"/>
-  <text x="430" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#222">From "lying flat" to standing up and balancing on a point</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 300" font-family="sans-serif">
+  <rect width="930" height="300" fill="#ffffff"/>
+  <text x="465" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#222">From "lying flat" to standing up and balancing on a point</text>
 
   <!-- (a) flat -->
   <g transform="translate(70,150)">

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" font-family="sans-serif">
-  <rect width="700" height="540" fill="#ffffff"/>
-  <text x="350" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#222">3軸姿勢制御モジュールの中身（ざっくり）</text>
-  <text x="350" y="56" font-size="13" text-anchor="middle" fill="#666">1辺10cmくらいの立方体フレームに、ぜんぶ詰め込んである</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 540" font-family="sans-serif">
+  <rect width="740" height="540" fill="#ffffff"/>
+  <text x="370" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#222">3軸姿勢制御モジュールの中身（ざっくり）</text>
+  <text x="370" y="56" font-size="13" text-anchor="middle" fill="#666">1辺10cmくらいの立方体フレームに、ぜんぶ詰め込んである</text>
 
   <!-- cube frame (isometric-ish) -->
   <g stroke="#5a3d8a" stroke-width="3" fill="none">
@@ -44,5 +44,5 @@
     <text x="470" y="442" fill="#666">一瞬で止めて力を取り出す</text>
   </g>
 
-  <text x="350" y="510" font-size="13" text-anchor="middle" fill="#5a3d8a" font-weight="bold">ホイール＋モータ＋ブレーキのセットが、X・Y・Z用に3組（互いに直交）入っている</text>
+  <text x="370" y="510" font-size="13" text-anchor="middle" fill="#5a3d8a" font-weight="bold">ホイール＋モータ＋ブレーキのセットが、X・Y・Z用に3組（互いに直交）入っている</text>
 </svg>

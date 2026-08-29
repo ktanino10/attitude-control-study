@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="sans-serif">
-  <rect width="860" height="300" fill="#ffffff"/>
-  <text x="430" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#222">「寝た状態」から起き上がって、点で立つまで</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 300" font-family="sans-serif">
+  <rect width="890" height="300" fill="#ffffff"/>
+  <text x="445" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#222">「寝た状態」から起き上がって、点で立つまで</text>
 
   <!-- (a) flat -->
   <g transform="translate(70,150)">

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" font-family="sans-serif">
-  <rect width="700" height="540" fill="#ffffff"/>
-  <text x="350" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#222">Inside the 3-axis attitude control module (overview)</text>
-  <text x="350" y="56" font-size="13" text-anchor="middle" fill="#666">Everything is packed into a cube frame about 10 cm on a side</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 540" font-family="sans-serif">
+  <rect width="770" height="540" fill="#ffffff"/>
+  <text x="385" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#222">Inside the 3-axis attitude control module (overview)</text>
+  <text x="385" y="56" font-size="13" text-anchor="middle" fill="#666">Everything is packed into a cube frame about 10 cm on a side</text>
 
   <!-- cube frame (isometric-ish) -->
   <g stroke="#5a3d8a" stroke-width="3" fill="none">
@@ -44,5 +44,5 @@
     <text x="455" y="442" fill="#666">stops the wheel instantly for force</text>
   </g>
 
-  <text x="350" y="510" font-size="13" text-anchor="middle" fill="#5a3d8a" font-weight="bold">A wheel + motor + brake set is included for each of X, Y, Z (mutually orthogonal)</text>
+  <text x="385" y="510" font-size="13" text-anchor="middle" fill="#5a3d8a" font-weight="bold">A wheel + motor + brake set is included for each of X, Y, Z (mutually orthogonal)</text>
 </svg>
