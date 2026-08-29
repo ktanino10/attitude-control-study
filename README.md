@@ -1,67 +1,61 @@
-# 3軸姿勢制御 まなびノート 🛰️
+<!-- Language switch -->
+**🌐 言語 / Language:** [日本語](./ja/README.md) ・ [English](./en/README.md)
 
-趣味で **3軸姿勢制御（3-axis attitude control）** を学び、いずれ自分でも作れるようになるための勉強ノートです。
+---
+
+# 3軸姿勢制御 まなびノート / 3-Axis Attitude Control Study Notes 🛰️
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+## 🇯🇵 日本語
+
+趣味で **3軸姿勢制御** を学び、いずれ自分でも作れるようになるための勉強ノートです。
 むずかしい専門用語を、**中学生にもわかる言葉**でぜんぶかみくだいて説明します。
+さらに、仕組みを知りたい人向けに **🔵 くわしく（数式つき）** も用意しました。
 
-> **元ネタ（出典）**: トランジスタ技術 2020年6月号 第10章「XYZ自由自在！3軸姿勢制御モジュール誕生」(茂渡 修平／JAXA)
-> このノートは記事の写真は使わず、**自分で描いた図**と**自分の言葉のまとめ**だけで作っています。
+- 📘 **[日本語版トップへ →](./ja/README.md)**
+- 🗂️ [写真（元記事）との対応表](./ja/coverage-map.md)
+- 📖 [用語集](./ja/GLOSSARY.md)
+- 📚 [出典・参考文献](./REFERENCES.md)
+
+**元ネタ**: トランジスタ技術 2020年6月号 第10章「XYZ自由自在！3軸姿勢制御モジュール誕生」(茂渡 修平／JAXA)
+記事の写真は使わず、**自分で描いた図**と**自分の言葉のまとめ**だけで作っています。
+
+</td>
+<td width="50%" valign="top">
+
+## 🇬🇧 English
+
+Study notes for learning **3-axis attitude control** as a hobby, aiming to eventually build it myself.
+Every difficult technical term is explained in **words a middle school student can understand**.
+For readers who want to know *how* it works, there is also a **🔵 In-depth** tier (with formulas).
+
+- 📘 **[Go to the English version →](./en/README.md)**
+- 🗂️ [Map to the original article photos](./en/coverage-map.md)
+- 📖 [Glossary](./en/GLOSSARY.md)
+- 📚 [Sources and references](./REFERENCES.md)
+
+**Source**: Transistor Gijutsu (Transistor Technology) June 2020, Ch.10, "XYZ at Will! Birth of a 3-Axis Attitude Control Module" (Shuhei Mowatari / JAXA).
+No photos from the article are used — only **diagrams I redrew myself** and **summaries in my own words**.
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📚 このノートの構成
+## 🗺️ 全体構成 / Overall structure
 
-大きく2つに分かれています。
-
-| フォルダ | なに？ | いつ使う |
+| | 日本語 | English |
 |---|---|---|
-| `session-1〜3/` | **座学（理解する）** — 3回に分けて概念を学ぶ | 勉強するとき |
-| `reference/` | **リファレンス（作る材料）** — 回路構成・部品表・メカ構造 | いざ作るとき |
-| `assets/` | 図（SVG） | 上の2つから参照 |
-| `GLOSSARY.md` | **用語集** — 出てくる言葉を全部やさしく解説 | わからない言葉が出たら |
+| Lessons（座学・全3回） | [`ja/session-1-overview/`](./ja/session-1-overview/README.md) | [`en/session-1-overview/`](./en/session-1-overview/README.md) |
+| Reference（作るための資料） | [`ja/reference/`](./ja/reference/README.md) | [`en/reference/`](./en/reference/README.md) |
+| Diagrams（図） | [`assets/ja/`](./assets/ja/) | [`assets/en/`](./assets/en/) |
+| Glossary（用語集） | [`ja/GLOSSARY.md`](./ja/GLOSSARY.md) | [`en/GLOSSARY.md`](./en/GLOSSARY.md) |
 
----
+> 座学は全3回。今回は **1回目（全体像と基本概念）** を作り込んでいます。
+> There are 3 study sessions in total; **Session 1 (big picture and basic concepts)** is the one built out here.
 
-## 🗺️ 座学マップ（全3回）
-
-「まず全体を知る → 自分の向きを"知る"仕組み → 向きを"変える"仕組み」の順に学びます。
-
-| 回 | テーマ | 学ぶこと | フォルダ |
-|---|---|---|---|
-| **第1回（今回）** | **全体像と基礎概念** | 姿勢とは／なぜ制御が必要か／宇宙で向きを変える方法／JAXAモジュール紹介 | [`session-1-overview/`](./session-1-overview/README.md) |
-| 第2回 | センサと姿勢推定 | IMU・加速度センサ・ジャイロ・カルマンフィルタ（向きを"知る"） | [`session-2-sensing/`](./session-2-sensing/README.md) |
-| 第3回 | アクチュエータと制御 | リアクションホイール・電磁ブレーキ・モータ・トルク計算（向きを"変える"） | [`session-3-control/`](./session-3-control/README.md) |
-
-➡️ **今回はまず [座学 第1回](./session-1-overview/README.md) から始めてください。**
-
----
-
-## 🔧 リファレンス（作るために必要な情報）
-
-「この回路構成、どうなってるの？」をまとめた場所です。
-
-| ファイル | 内容 |
-|---|---|
-| [`reference/system-block.md`](./reference/system-block.md) | **回路構成**（システム・ブロック図＝元記事 図2 を自分で描き直し＋解説） |
-| [`reference/parts-list.md`](./reference/parts-list.md) | **部品表（BOM）** — 何が何個、役割、型番 |
-| [`reference/mechanical.md`](./reference/mechanical.md) | **メカ構造** — ホイールとセンサの配置（元記事 図3） |
-| [`reference/interfaces.md`](./reference/interfaces.md) | **信号のつなぎ方** — I²C / UART / PWM / MOSFET / A-D の役割 |
-
----
-
-## 🖼️ 図の一覧（`assets/`）
-
-- `xyz-axes.svg` — 姿勢を決める3つの回転（ロール・ピッチ・ヨー）
-- `module-cube.svg` — モジュールの中身ざっくり
-- `standup-sequence.svg` — 寝た状態から点で立つまで
-- `reaction-wheel-principle.svg` — リアクションホイールの原理（作用・反作用）
-
----
-
-## ✅ 進め方のおすすめ
-
-1. `session-1-overview/README.md` を上から読む
-2. わからない言葉が出たら `GLOSSARY.md` を引く
-3. 各回の最後の `quiz.md` で理解度チェック
-4. 作りたくなったら `reference/` を見る
-
-楽しく学びましょう 🚀
+Have fun learning 🚀

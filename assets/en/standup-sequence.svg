@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="sans-serif">
+  <rect width="860" height="300" fill="#ffffff"/>
+  <text x="430" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#222">From "lying flat" to standing up and balancing on a point</text>
+
+  <!-- (a) flat -->
+  <g transform="translate(70,150)">
+    <rect x="-45" y="-18" width="90" height="36" fill="#dfe9f5" stroke="#333" stroke-width="2"/>
+    <line x1="-60" y1="18" x2="60" y2="18" stroke="#aaa" stroke-width="2"/>
+    <text x="0" y="60" font-size="13" text-anchor="middle" fill="#333">(a) At rest</text>
+    <text x="0" y="78" font-size="11" text-anchor="middle" fill="#888">lying flat</text>
+  </g>
+  <text x="165" y="150" font-size="24" fill="#d9820f">→</text>
+
+  <!-- (b) tilting -->
+  <g transform="translate(255,150) rotate(-28)">
+    <rect x="-42" y="-18" width="84" height="36" fill="#dfe9f5" stroke="#333" stroke-width="2"/>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#2b8a3e" stroke-width="2"/>
+    <path d="M 8 -8 A 11 11 0 0 1 8 8" fill="none" stroke="#2b8a3e" stroke-width="2"/>
+    <polygon points="8,8 3,4 12,2" fill="#2b8a3e"/>
+  </g>
+  <line x1="205" y1="168" x2="305" y2="168" stroke="#aaa" stroke-width="2"/>
+  <text x="255" y="230" font-size="13" text-anchor="middle" fill="#333">(b) Spin wheel +</text>
+  <text x="255" y="248" font-size="13" text-anchor="middle" fill="#333">brake to stand up</text>
+  <text x="360" y="150" font-size="24" fill="#d9820f">→</text>
+
+  <!-- (c) on edge (diamond) -->
+  <g transform="translate(450,150) rotate(45)">
+    <rect x="-38" y="-38" width="76" height="76" fill="#dfe9f5" stroke="#333" stroke-width="2"/>
+  </g>
+  <line x1="400" y1="204" x2="500" y2="204" stroke="#aaa" stroke-width="2"/>
+  <text x="450" y="235" font-size="13" text-anchor="middle" fill="#333">(c) Balanced on an edge</text>
+  <text x="555" y="150" font-size="24" fill="#d9820f">→</text>
+
+  <!-- (d) tilt again -->
+  <g transform="translate(645,150) rotate(20)">
+    <rect x="-36" y="-36" width="72" height="72" fill="#dfe9f5" stroke="#333" stroke-width="2" transform="rotate(45)"/>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#2b8a3e" stroke-width="2"/>
+    <path d="M 8 -8 A 11 11 0 0 1 8 8" fill="none" stroke="#2b8a3e" stroke-width="2"/>
+    <polygon points="8,8 3,4 12,2" fill="#2b8a3e"/>
+  </g>
+  <text x="645" y="235" font-size="13" text-anchor="middle" fill="#333">(d) Stand up</text>
+  <text x="645" y="252" font-size="13" text-anchor="middle" fill="#333">once more</text>
+  <text x="745" y="150" font-size="24" fill="#d9820f">→</text>
+
+  <!-- (e) on vertex -->
+  <g transform="translate(820,140)">
+    <rect x="-34" y="-34" width="68" height="68" fill="#ffe3e3" stroke="#c92a2a" stroke-width="2" transform="rotate(45)"/>
+    <circle cx="0" cy="48" r="3" fill="#c92a2a"/>
+  </g>
+  <text x="820" y="235" font-size="13" text-anchor="middle" fill="#c92a2a" font-weight="bold">(e) Balanced on a vertex</text>
+  <text x="820" y="252" font-size="11" text-anchor="middle" fill="#888">standing on a point!</text>
+</svg>
