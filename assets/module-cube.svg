@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" font-family="sans-serif">
+  <rect width="700" height="540" fill="#ffffff"/>
+  <text x="350" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#222">3軸姿勢制御モジュールの中身（ざっくり）</text>
+  <text x="350" y="56" font-size="13" text-anchor="middle" fill="#666">1辺10cmくらいの立方体フレームに、ぜんぶ詰め込んである</text>
+
+  <!-- cube frame (isometric-ish) -->
+  <g stroke="#5a3d8a" stroke-width="3" fill="none">
+    <polygon points="250,150 470,150 540,110 320,110"/>
+    <polygon points="250,150 250,390 470,390 470,150"/>
+    <polygon points="470,150 540,110 540,350 470,390"/>
+  </g>
+
+  <!-- reaction wheel (front face) -->
+  <circle cx="360" cy="270" r="80" fill="#cfe8d8" stroke="#2b8a3e" stroke-width="2"/>
+  <circle cx="360" cy="270" r="52" fill="#eafbf0" stroke="#2b8a3e" stroke-width="2"/>
+  <circle cx="360" cy="270" r="10" fill="#2b8a3e"/>
+  <text x="360" y="360" font-size="12" text-anchor="middle" fill="#2b8a3e">リアクション・ホイール</text>
+
+  <!-- electronics blocks -->
+  <rect x="285" y="165" width="45" height="26" fill="#c7d8ee" stroke="#1971c2"/>
+  <rect x="392" y="168" width="40" height="24" fill="#f6d5a8" stroke="#d9820f"/>
+  <rect x="300" y="330" width="34" height="24" fill="#e7c9e0" stroke="#8a3d7a"/>
+
+  <!-- callouts -->
+  <g font-size="13" fill="#333">
+    <line x1="307" y1="178" x2="150" y2="150" stroke="#888"/>
+    <text x="18" y="146">リチウムポリマ電池</text>
+    <text x="18" y="163" fill="#666">（7.4V×2）＝動力源</text>
+
+    <line x1="412" y1="180" x2="600" y2="150" stroke="#888"/>
+    <text x="560" y="146">PSoCマイコン</text>
+    <text x="560" y="163" fill="#666">＝脳・司令塔</text>
+
+    <line x1="317" y1="342" x2="150" y2="440" stroke="#888"/>
+    <text x="40" y="445">無線モジュール</text>
+    <text x="40" y="462" fill="#666">＝リモコンと通信</text>
+
+    <line x1="410" y1="300" x2="600" y2="300" stroke="#888"/>
+    <text x="560" y="290">IMUセンサ</text>
+    <text x="560" y="307" fill="#666">＝目・耳（傾きを感じる）</text>
+
+    <line x1="360" y1="322" x2="560" y2="410" stroke="#888"/>
+    <text x="470" y="425">電磁ブレーキ＝ホイールを</text>
+    <text x="470" y="442" fill="#666">一瞬で止めて力を取り出す</text>
+  </g>
+
+  <text x="350" y="510" font-size="13" text-anchor="middle" fill="#5a3d8a" font-weight="bold">ホイール＋モータ＋ブレーキのセットが、X・Y・Z用に3組（互いに直交）入っている</text>
+</svg>
