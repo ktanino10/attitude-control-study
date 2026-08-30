@@ -38,9 +38,9 @@ You cannot suddenly write a “control program that does not fall over.” You p
 ## 🔵 In depth: why these four steps?
 
 - **Step 1 (modeling)**: Turn real motion into an **equation of motion** (differential equation) from Newton’s laws. This is the “blueprint” of control. If the equation is wrong, everything after it shifts out of place.
-- **Step 2 (linearization)**: The equation of motion contains **nonlinear** terms such as $\sin\theta_b$. If it stays nonlinear, design theory used later (such as LQR) cannot be applied directly, so we use a **Taylor expansion around the upright point**, approximate to first order, and make a **linear state-space model** $\dot{\mathbf{x}} = A\mathbf{x} + Bu$.
-- **Step 3 (discretization)**: A microcontroller cannot integrate in continuous time. We convert it into a **discrete-time model** that updates at a fixed period $\Delta t$ (here, $20\,\text{ms}$): $\mathbf{x}[k+1] = A_d\mathbf{x}[k] + B_d u[k]$.
-- **Step 4 (control law)**: For the discrete model, design the **state feedback** $u[k] = -K_d\,\mathbf{x}[k]$ gain $K_d$ and implement it in C or another language.
+- **Step 2 (linearization)**: The equation of motion contains **nonlinear** terms such as $`\sin\theta_b`$. If it stays nonlinear, design theory used later (such as LQR) cannot be applied directly, so we use a **Taylor expansion around the upright point**, approximate to first order, and make a **linear state-space model** $`\dot{\mathbf{x}} = A\mathbf{x} + Bu`$.
+- **Step 3 (discretization)**: A microcontroller cannot integrate in continuous time. We convert it into a **discrete-time model** that updates at a fixed period $`\Delta t`$ (here, $`20\,\text{ms}`$): $`\mathbf{x}[k+1] = A_d\mathbf{x}[k] + B_d u[k]`$.
+- **Step 4 (control law)**: For the discrete model, design the **state feedback** $`u[k] = -K_d\,\mathbf{x}[k]`$ gain $`K_d`$ and implement it in C or another language.
 
 > 🧠 Steps 2 and 3 are the work of “translating reality into a form that the microcontroller and control theory can handle.”
 > Much of the difficulty is in this translation. The implementation in Step 4 itself is only a few multiplications and additions.

@@ -43,17 +43,19 @@ There is a good reason why the inside is packed so tightly.
 ## 🔵 In depth: why three orthogonal wheels are enough / physics of distributed placement
 
 ### Three orthogonal wheels = a three-dimensional “basis”
-- The torque you want to create is a **vector** $\boldsymbol{\tau}$ with direction and magnitude. Any vector in 3D space can always be broken into **components along three orthogonal directions**.
+- The torque you want to create is a **vector** $`\boldsymbol{\tau}`$ with direction and magnitude. Any vector in 3D space can always be broken into **components along three orthogonal directions**.
 
-$$ \boldsymbol{\tau} = \tau_x\,\hat{x} + \tau_y\,\hat{y} + \tau_z\,\hat{z} $$
+```math
+\boldsymbol{\tau} = \tau_x\,\hat{x} + \tau_y\,\hat{y} + \tau_z\,\hat{z}
+```
 
 - If there is one wheel each for X/Y/Z, each wheel can handle one component, so the system can **combine them into torque in any direction**. This is the mathematical reason why “three wheels give full freedom in XYZ.”
 - (Real satellites sometimes carry four or more wheels at diagonal angles to handle failures. Three orthogonal wheels are the minimum setup.)
 
 ### Distributed IMUs: position differences become “information”
-- A point at distance $r$ from the center of motion receives **centripetal acceleration** $a = \omega^2 r$ when rotating with angular velocity $\omega$.
-- IMUs at different positions have different $a$, so **differences in acceleration → information about rotation**.
-- Also, averaging the six measurements reduces each sensor’s random error (noise) to about $1/\sqrt{6}$. This improves both accuracy and reliability.
+- A point at distance $`r`$ from the center of motion receives **centripetal acceleration** $`a = \omega^2 r`$ when rotating with angular velocity $`\omega`$.
+- IMUs at different positions have different $`a`$, so **differences in acceleration → information about rotation**.
+- Also, averaging the six measurements reduces each sensor’s random error (noise) to about $`1/\sqrt{6}`$. This improves both accuracy and reliability.
 
 > 🧠 Summary: three orthogonal wheels are “the minimum tool set for creating 3D torque.” Distributed IMUs improve accuracy by using “position differences + averaging.”
 

@@ -122,13 +122,13 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 | Linearization | 線形化 | Looking only **near the inverted point** and approximating a curve (like sinθ) with a **straight line**. |
 | Taylor expansion | テイラー展開 | A way to write a function as a sum of "1st + 2nd + …" order terms. Dropping the small higher-order terms gives linearization. |
 | Equilibrium point (inverted point) | 平衡点（倒立点） | A posture where forces balance so it "could stay still on its own." For the inverted pendulum, the upright point. |
-| State-space model | 状態空間モデル | A formula that gathers the state into a vector and writes it as $\dot{x}=Ax+Bu$. Matrices handle everything at once. |
-| State variable | 状態変数 | The set of numbers describing "the current state" (e.g., tilt, angular velocity, wheel speed). The vector $x$. |
-| Discretization | 離散化 | Rewriting a continuous-time formula as one that steps every fixed interval (20 ms): $x[k{+}1]=A_d x[k]+B_d u[k]$. |
-| Sampling period | サンプリング周期 $\Delta t$ | The **time of one step** to read sensors, compute, and output. On this machine, 20 ms. |
-| State feedback | 状態フィードバック | Control that looks at the current state $x$ and sets the input as $u=-Kx$. "Push back in proportion to how much it tilted." |
-| Gain | ゲイン $K$ | The strength setting for "how hard to push back." Larger means snappier motion. |
-| LQR | Linear Quadratic Regulator | A method that automatically chooses the gain $K$ to minimize a cost function $J$ (penalizing error and input). |
+| State-space model | 状態空間モデル | A formula that gathers the state into a vector and writes it as $`\dot{x}=Ax+Bu`$. Matrices handle everything at once. |
+| State variable | 状態変数 | The set of numbers describing "the current state" (e.g., tilt, angular velocity, wheel speed). The vector $`x`$. |
+| Discretization | 離散化 | Rewriting a continuous-time formula as one that steps every fixed interval (20 ms): $`x[k{+}1]=A_d x[k]+B_d u[k]`$. |
+| Sampling period | サンプリング周期 $`\Delta t`$ | The **time of one step** to read sensors, compute, and output. On this machine, 20 ms. |
+| State feedback | 状態フィードバック | Control that looks at the current state $`x`$ and sets the input as $`u=-Kx`$. "Push back in proportion to how much it tilted." |
+| Gain | ゲイン $`K`$ | The strength setting for "how hard to push back." Larger means snappier motion. |
+| LQR | Linear Quadratic Regulator | A method that automatically chooses the gain $`K`$ to minimize a cost function $`J`$ (penalizing error and input). |
 
 ---
 
@@ -138,9 +138,9 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 |---|---|---|
 | Attitude estimation | 姿勢推定 | Working out "how much it is tilted right now" from sensor values. |
 | Least squares | 最小二乗法 | A calculation that finds the answer that **best fits** many measurements. Used to get the gravity direction from 6 accelerometers. |
-| Gyroscopic effect | ジャイロ効果 | In 3D, rotations **influence each other**. It appears as the $\omega\times(I\omega)$ term. |
+| Gyroscopic effect | ジャイロ効果 | In 3D, rotations **influence each other**. It appears as the $`\omega\times(I\omega)`$ term. |
 | Inertia tensor | 慣性テンソル | The 3D version of the moment of inertia. A **3×3 table** showing how hard it is to rotate in each direction. |
-| State equation | 状態方程式 | A formula of the form $\dot{x}=Ax+Bu$. In 3D the state grows to 9 numbers. |
+| State equation | 状態方程式 | A formula of the form $`\dot{x}=Ax+Bu`$. In 3D the state grows to 9 numbers. |
 | Controllability | 可制御性 | Whether the input (motors) can move the state **as you want**. On this machine, yaw cannot be moved. |
 | Observability | 可観測性 | Whether the state can be **told from the sensors**. Yaw is invisible from gravity. |
 | Kalman canonical decomposition | カルマン正準分解 | A way to sort a system into "controllable & visible / not" parts. Only the 7-dimensional part is used for control. |
@@ -159,17 +159,17 @@ These are slightly technical terms that appear in the “🔵 In depth” parts.
 | Euler angles | Euler angles | A way to describe orientation using **three angles**, such as roll, pitch, and yaw. It is intuitive but has the weakness of gimbal lock. |
 | Quaternion | quaternion | A way to describe orientation using **four numbers**. It handles order and singularities well, so real machines often use it. |
 | Gimbal lock | gimbal lock | A problem in Euler angles where axes overlap at a certain orientation and rotation can no longer be represented well. |
-| Moment of inertia | moment of inertia $I$ | **How hard something is to rotate**. It is larger when mass is farther from the rotation axis. Unit: kg·m². |
-| Centripetal acceleration | centripetal accel. | Acceleration toward the center during rotation, $a=\omega^2 r$. It is a clue that distributed IMUs can use to detect rotation. |
+| Moment of inertia | moment of inertia $`I`$ | **How hard something is to rotate**. It is larger when mass is farther from the rotation axis. Unit: kg·m². |
+| Centripetal acceleration | centripetal accel. | Acceleration toward the center during rotation, $`a=\omega^2 r`$. It is a clue that distributed IMUs can use to detect rotation. |
 | Momentum saturation | momentum saturation | A state where a wheel reaches its maximum speed and can no longer accelerate. Unloading becomes necessary. |
 | Magnetic torquer | magnetic torquer | A device that creates external torque using **Earth’s magnetic field**. Used for unloading in space. |
 | Disturbance torque | disturbance torque | Small unwanted forces that disturb attitude, such as gravity-gradient torque, solar radiation pressure, and atmospheric drag. |
 | Feedback control | feedback control | Control that repeats “measure → compare with target → correct” to maintain a state. |
 | PID control | PID control | A standard control method that uses three things: error size, accumulated error, and rate of change (→ Lesson 3). |
 | Complementary filter | complementary filter | A simple estimation method that combines accelerometer data (low frequency) and gyro data (high frequency) by dividing their roles by frequency. |
-| Back-EMF | back-EMF $E=k_e\omega$ | A “reverse voltage” generated when a motor rotates. The faster it rotates, the harder it is for current to flow. |
+| Back-EMF | back-EMF $`E=k_e\omega`$ | A “reverse voltage” generated when a motor rotates. The faster it rotates, the harder it is for current to flow. |
 | PGA | Programmable Gain Amplifier | An amplifier whose gain can be set in software. It trims the D-A output for the motor driver. |
-| Torque constant | torque constant $k_t$ | Torque per 1 A of current. About 25.5 mNm/A for the maxon EC 45 flat. $\tau=k_t I$. |
+| Torque constant | torque constant $`k_t`$ | Torque per 1 A of current. About 25.5 mNm/A for the maxon EC 45 flat. $`\tau=k_t I`$. |
 | Open-drain / pull-up | open-drain / pull-up | The wiring method used by I²C. A resistor that “pulls up” the line is needed. |
 | Flyback diode | flyback diode | A part that protects components from reverse voltage when a coil (electromagnetic brake) is suddenly turned off. |
 

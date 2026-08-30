@@ -18,7 +18,7 @@ Accelerometers and gyros have **opposite strengths and weaknesses**, so we use t
 If we **take the best parts** of these two, we get a tilt that is “smooth” and “does not drift.” That is the complementary filter.
 
 > 🧠 The accelerometer’s “slow component” + the gyro’s “fast component” = just the right tilt.
-> How much to trust each side is adjusted with one weight, $\kappa$ (kappa).
+> How much to trust each side is adjusted with one weight, $`\kappa`$ (kappa).
 
 ```mermaid
 flowchart LR
@@ -33,23 +33,25 @@ flowchart LR
 
 ## 🔵 In depth: equation of the complementary filter
 
-Using pitch $\beta$ estimation as an example, the complementary filter has this form (article Eq. 37):
+Using pitch $`\beta`$ estimation as an example, the complementary filter has this form (article Eq. 37):
 
-$$ \bar{\beta}_k = \kappa\,\hat{\beta}_k + (1-\kappa)\big(\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t\big) $$
+```math
+\bar{\beta}_k = \kappa\,\hat{\beta}_k + (1-\kappa)\big(\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t\big)
+```
 
-- $\hat{\beta}_k$ … Tilt from the **accelerometer** (the estimate from the previous page).
-- $\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\Delta t$ … Tilt predicted as “previous value + current change” by integrating the **gyro** angular velocity.
-- $\kappa$ ($0\le\kappa\le1$) … A **weight** for mixing the two.
+- $`\hat{\beta}_k`$ … Tilt from the **accelerometer** (the estimate from the previous page).
+- $`\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\Delta t`$ … Tilt predicted as “previous value + current change” by integrating the **gyro** angular velocity.
+- $`\kappa`$ ($`0\le\kappa\le1`$) … A **weight** for mixing the two.
 
-| Value of $\kappa$ | Meaning |
+| Value of $`\kappa`$ | Meaning |
 |---|---|
-| $\kappa=1$ | Trust only the accelerometer (ignore the gyro) |
-| $\kappa=0$ | Trust only the gyro (ignore the accelerometer) |
+| $`\kappa=1`$ | Trust only the accelerometer (ignore the gyro) |
+| $`\kappa=0`$ | Trust only the gyro (ignore the accelerometer) |
 | In between | Blend both (this is what is used in practice) |
 
 In signal-processing words, the structure is: apply a **low-pass** filter to the accelerometer side (pass only slow components), apply a **high-pass** filter to the gyro side (pass only fast components), then add them together. Because the two filters **sum to 1** (they are complementary), it is called a “complementary filter.”
 
-> 🧠 With one weight ($\kappa$), you adjust smoothness ⇄ response speed.
+> 🧠 With one weight ($`\kappa`$), you adjust smoothness ⇄ response speed.
 > It is lighter than a Kalman filter and runs easily on a microcontroller.
 
 ---
@@ -57,7 +59,7 @@ In signal-processing words, the structure is: apply a **low-pass** filter to the
 ### ✅ Quick check
 - What are the weaknesses of the accelerometer and gyro? (easy)
 - “Taking the best parts” means combining what with what? (easy)
-- 🔵 If $\kappa=0$, which sensor alone is used?
+- 🔵 If $`\kappa=0`$, which sensor alone is used?
 - 🔵 “Complementary (sums to 1)” describes the relationship between which two filters?
 
 ➡️ Next: [5. 3-D equations of motion (overview of the results)](./05-3d-equations.md)

@@ -61,7 +61,9 @@ In space and on the ground, small “unwanted turning forces” (**disturbance t
 Each one is small, but **they build up and disturb the orientation**. That is why the system must repeatedly measure and correct.
 
 ### Feedback control = “measure → compare → correct”
-$$ \text{error} = (\text{target orientation}) - (\text{current orientation}) \;\longrightarrow\; \text{output a torque that reduces the error} $$
+```math
+\text{error} = (\text{target orientation}) - (\text{current orientation}) \;\longrightarrow\; \text{output a torque that reduces the error}
+```
 
 - If the error is large, correct strongly; if it is small, correct gently. Move it toward zero and **keep** it there.
 - Bicycles, balancing a broom, and air conditioner temperature control are all in the same “measure and correct” family.

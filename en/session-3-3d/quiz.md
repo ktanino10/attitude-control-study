@@ -15,15 +15,17 @@ If you do not know an answer, it is OK to go back to the text. 🟢 is for Easy,
 
 ## 🔵 In depth
 
-9. About what pitch $\beta$ and roll $\gamma$ values describe the upright point where the cube stands on a corner?
-10. Around which axes are the Euler angles $(\alpha,\beta,\gamma)$ rotations?
-11. What function is used to get tilt from the gravity vector $^{B}\hat{g}$? Why can yaw $\alpha$ not be obtained?
+9. About what pitch $`\beta`$ and roll $`\gamma`$ values describe the upright point where the cube stands on a corner?
+10. Around which axes are the Euler angles $`(\alpha,\beta,\gamma)`$ rotations?
+11. What function is used to get tilt from the gravity vector $`^{B}\hat{g}`$? Why can yaw $`\alpha`$ not be obtained?
 12. In the complementary-filter equation
-$$ \bar{\beta}_k = \kappa\,\hat{\beta}_k + (1-\kappa)\big(\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t\big) $$
-what sensor alone is used when $\kappa=1$ / $\kappa=0$?
+```math
+\bar{\beta}_k = \kappa\,\hat{\beta}_k + (1-\kappa)\big(\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t\big)
+```
+what sensor alone is used when $`\kappa=1`$ / $`\kappa=0`$?
 13. In 3D, what does the moment of inertia become? What is the newly added “coupling” term called?
-14. How many dimensions does the state $\mathbf{x}$ have? Of those, how many dimensions can be controlled, and what is the remaining direction?
-15. What does it mean that the controllability matrix has rank $7<8$? What is the size (rows × columns) of the final LQR gain $G$?
+14. How many dimensions does the state $`\mathbf{x}`$ have? Of those, how many dimensions can be controlled, and what is the remaining direction?
+15. What does it mean that the controllability matrix has rank $`7<8`$? What is the size (rows × columns) of the final LQR gain $`G`$?
 
 ---
 

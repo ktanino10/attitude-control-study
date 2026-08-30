@@ -72,45 +72,57 @@ This is called **unloading**. (More in Lesson 3.)
 ### 1) Angular momentum L = Iω —— what rotational “momentum” really is
 Rotational momentum can be written with this simple formula.
 
-$$ L = I\,\omega $$
+```math
+L = I\,\omega
+```
 
-- $I$: **moment of inertia** (= how hard it is to rotate). It is larger when the object is heavier and when its mass is farther from the rotation axis (toward the outside). Unit: kg·m²
-- $\omega$ (omega): **angular velocity** (how many radians it turns per second). Unit: rad/s
+- $`I`$: **moment of inertia** (= how hard it is to rotate). It is larger when the object is heavier and when its mass is farther from the rotation axis (toward the outside). Unit: kg·m²
+- $`\omega`$ (omega): **angular velocity** (how many radians it turns per second). Unit: rad/s
 
-The feeling that “a heavy wheel spinning fast has more momentum” is just the multiplication of **weight/shape ($I$) × speed ($\omega$)**.
+The feeling that “a heavy wheel spinning fast has more momentum” is just the multiplication of **weight/shape ($`I`$) × speed ($`\omega`$)**.
 
 ### 2) Conservation of angular momentum —— the total does not change by itself
-If there is no external torque (twisting force), the total $L$ of the system is constant. If everything starts at rest, the total is zero, so:
+If there is no external torque (twisting force), the total $`L`$ of the system is constant. If everything starts at rest, the total is zero, so:
 
-$$ I_{\text{body}}\,\Omega_{\text{body}} + I_{\text{wheel}}\,\omega_{\text{wheel}} = 0 $$
+```math
+I_{\text{body}}\,\Omega_{\text{body}} + I_{\text{wheel}}\,\omega_{\text{wheel}} = 0
+```
 
-$$ \Rightarrow\quad \Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\,\omega_{\text{wheel}} $$
+```math
+\Rightarrow\quad \Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\,\omega_{\text{wheel}}
+```
 
-- If the wheel spins in the positive direction ($\omega_{\text{wheel}}>0$), the body rotates in the negative direction ($\Omega_{\text{body}}<0$). This is exactly the swivel-chair experiment.
-- The body is heavy ($I_{\text{body}}$ large), and the wheel is light ($I_{\text{wheel}}$ small). So the body rotates slowly while the wheel rotates fast.
+- If the wheel spins in the positive direction ($`\omega_{\text{wheel}}>0`$), the body rotates in the negative direction ($`\Omega_{\text{body}}<0`$). This is exactly the swivel-chair experiment.
+- The body is heavy ($`I_{\text{body}}`$ large), and the wheel is light ($`I_{\text{wheel}}`$ small). So the body rotates slowly while the wheel rotates fast.
 
 ### 3) “Changing orientation” = producing torque = “accelerating” the wheel
-To **change** orientation, torque $\tau$ (tau) is needed. Torque is the rate of change of angular momentum.
+To **change** orientation, torque $`\tau`$ (tau) is needed. Torque is the rate of change of angular momentum.
 
-$$ \tau = \frac{dL}{dt} = I\,\frac{d\omega}{dt} = I\,\dot{\omega} $$
+```math
+\tau = \frac{dL}{dt} = I\,\frac{d\omega}{dt} = I\,\dot{\omega}
+```
 
-The motor applies torque $\tau_w = I_{\text{wheel}}\,\dot{\omega}_{\text{wheel}}$ to the wheel.
-By action-reaction (Newton’s third law), the body receives the opposite torque $-\tau_w$.
+The motor applies torque $`\tau_w = I_{\text{wheel}}\,\dot{\omega}_{\text{wheel}}`$ to the wheel.
+By action-reaction (Newton’s third law), the body receives the opposite torque $`-\tau_w`$.
 
-$$ \dot{\Omega}_{\text{body}} = -\frac{\tau_w}{I_{\text{body}}} $$
+```math
+\dot{\Omega}_{\text{body}} = -\frac{\tau_w}{I_{\text{body}}}
+```
 
 > 🧠 **Most important point**: the body rotates (torque appears) only while the wheel is **accelerating or decelerating**.
 > If it keeps spinning at a constant speed, torque is zero (it is only “storing” momentum).
 > That is why control is done by **raising and lowering the wheel speed**.
 
 ### 4) Why an electromagnetic brake? —— saturation and large torque
-- The wheel speed $\omega_{\text{wheel}}$ has an upper limit. If it keeps increasing, it eventually hits the limit = **momentum saturation**.
-- The motor’s continuous torque is small (about $55\,\text{mNm}$ for the maxon EC 45 flat). Slow acceleration gives weak force.
-- So the system **stores energy by spinning at high speed** (kinetic energy $E=\tfrac12 I_{\text{wheel}}\,\omega^2$), then **stops it all at once with the brake over a short time $\Delta t$**. Because angular momentum $\Delta L$ is released in a short time,
+- The wheel speed $`\omega_{\text{wheel}}`$ has an upper limit. If it keeps increasing, it eventually hits the limit = **momentum saturation**.
+- The motor’s continuous torque is small (about $`55\,\text{mNm}`$ for the maxon EC 45 flat). Slow acceleration gives weak force.
+- So the system **stores energy by spinning at high speed** (kinetic energy $`E=\tfrac12 I_{\text{wheel}}\,\omega^2`$), then **stops it all at once with the brake over a short time $`\Delta t`$**. Because angular momentum $`\Delta L`$ is released in a short time,
 
-$$ \tau_{\text{brake}} = \frac{\Delta L}{\Delta t}\ \gg\ \tau_{\text{motor}} $$
+```math
+\tau_{\text{brake}} = \frac{\Delta L}{\Delta t}\ \gg\ \tau_{\text{motor}}
+```
 
-The smaller $\Delta t$ is, the larger the momentary torque becomes. This is the true source of the large torque that “stands up from a lying position” (we calculate actual numbers in Lesson 3).
+The smaller $`\Delta t`$ is, the larger the momentary torque becomes. This is the true source of the large torque that “stands up from a lying position” (we calculate actual numbers in Lesson 3).
 
 ### 5) Physics of unloading
 To return a saturated wheel, the wheel is slowed while applying **external torque** to the body.
@@ -124,7 +136,7 @@ A good image is “letting excess angular momentum escape outside the system.”
 - What are the strengths and weaknesses of thrusters and reaction wheels? (easy)
 - Explain the “law of conservation of angular momentum” using the swivel-chair example. (easy)
 - Why can an electromagnetic brake create a large force? (easy)
-- 🔵 Use $\tau = I\dot\omega$ to explain why “the body rotates only while the wheel is **accelerating**.”
-- 🔵 From $\Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\omega_{\text{wheel}}$, if you want the body to rotate slowly but by a large amount, should the wheel’s $I$ be larger or smaller?
+- 🔵 Use $`\tau = I\dot\omega`$ to explain why “the body rotates only while the wheel is **accelerating**.”
+- 🔵 From $`\Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\omega_{\text{wheel}}`$, if you want the body to rotate slowly but by a large amount, should the wheel’s $`I`$ be larger or smaller?
 
 ➡️ Next: [4. Introducing the JAXA module](./04-jaxa-module.md)

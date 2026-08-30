@@ -31,7 +31,7 @@
 | 16 | アクチュエータ | モータ（maxon EC 45 flat 30W）・ドライバ・電磁ブレーキ | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
 | 17 | マイコン | PSoC 5LP・ARM Cortex-M3・FreeRTOS・UDB | [`reference/system-block.md`](./reference/system-block.md)、[`GLOSSARY.md`](./GLOSSARY.md) | 🟢🔵 |
 | 18 | 電源 | リチウムポリマ電池 7.4V×2 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 19 | トルク計算 | 重力トルク $T=mgl\sin\theta$、モータ定格の約8倍 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（🔵） | 🔵 |
+| 19 | トルク計算 | 重力トルク $`T=mgl\sin\theta`$、モータ定格の約8倍 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（🔵） | 🔵 |
 | 20 | 参考文献（maxonデータシート等） | 記事が引用する部品資料 | [`REFERENCES.md`](../REFERENCES.md) | — |
 
 ---

@@ -34,22 +34,24 @@ Attitude control also switches between these two.
 
 ## 🔵 In depth: Euler angles and the upright point
 
-The three angles that represent orientation are called **Euler angles** $(\alpha,\beta,\gamma)$ (the article uses rotations in XYZ order).
+The three angles that represent orientation are called **Euler angles** $`(\alpha,\beta,\gamma)`$ (the article uses rotations in XYZ order).
 
 | Symbol | Name | Around which axis |
 |---|---|---|
-| $\alpha$ | Yaw | Around the Z axis |
-| $\beta$ | Pitch | Around the Y axis |
-| $\gamma$ | Roll | Around the X axis |
+| $`\alpha`$ | Yaw | Around the Z axis |
+| $`\beta`$ | Pitch | Around the Y axis |
+| $`\gamma`$ | Roll | Around the X axis |
 
 Multiplying these three rotations in order determines the **rotation** from {I} to {B}.
 The upright point where the cube stands **on a corner** is the tilted attitude whose Euler angles are
 
-$$ \beta = \arctan\!\frac{1}{\sqrt{2}} \approx 35.26^\circ,\qquad \gamma = 45^\circ $$
+```math
+\beta = \arctan\!\frac{1}{\sqrt{2}} \approx 35.26^\circ,\qquad \gamma = 45^\circ
+```
 
 Control keeps correcting “small deviations” around this point (the same idea as linearization in Session 2).
 
-> 🧠 Only yaw $\alpha$ later gets a special status: it is **unmeasurable and uncontrollable** (Pages 3 and 6).
+> 🧠 Only yaw $`\alpha`$ later gets a special status: it is **unmeasurable and uncontrollable** (Pages 3 and 6).
 > The reason is that twisting the cube around the vertical axis does not change how it looks from gravity.
 
 ---
@@ -58,6 +60,6 @@ Control keeps correcting “small deviations” around this point (the same idea
 - Which coordinate frames are “the world map” and “your own direction”? (easy)
 - Try explaining yaw, pitch, and roll using head movements. (easy)
 - 🔵 Attitude is what kind of thing from which coordinate frame to which coordinate frame?
-- 🔵 About how many degrees is the pitch $\beta$ at the corner-standing upright point?
+- 🔵 About how many degrees is the pitch $`\beta`$ at the corner-standing upright point?
 
 ➡️ Next: [3. Measuring tilt with an accelerometer](./03-tilt-estimation.md)

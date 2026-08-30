@@ -24,25 +24,31 @@ In 3D, this increases to **nine numbers** (for three directions).
 ## 🔵 In depth: inertia tensor, gyroscopic terms, and the 9-D state
 
 ### Moment of inertia becomes a “tensor”
-In 1 axis, the moment of inertia was one number. In 3D, because the difficulty of rotating differs by direction, it becomes a **3×3 table (inertia tensor)** $\mathbf{I}$ (article Eq. 41).
+In 1 axis, the moment of inertia was one number. In 3D, because the difficulty of rotating differs by direction, it becomes a **3×3 table (inertia tensor)** $`\mathbf{I}`$ (article Eq. 41).
 
-$$ \mathbf{I} = \begin{pmatrix} I_{xx} & I_{xy} & I_{xz} \\ I_{yx} & I_{yy} & I_{yz} \\ I_{zx} & I_{zy} & I_{zz} \end{pmatrix} $$
+```math
+\mathbf{I} = \begin{pmatrix} I_{xx} & I_{xy} & I_{xz} \\ I_{yx} & I_{yy} & I_{yz} \\ I_{zx} & I_{zy} & I_{zz} \end{pmatrix}
+```
 
 ### Gyroscopic effect (coupling terms)
-In 3-D rotation, terms from the **gyroscopic effect** appear, such as the cross product between angular velocities, $\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})$. This is the true source of the coupling where “moving one direction also moves another direction” (collected as a multi-body system of the body plus three wheels in article Eq. 39).
+In 3-D rotation, terms from the **gyroscopic effect** appear, such as the cross product between angular velocities, $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$. This is the true source of the coupling where “moving one direction also moves another direction” (collected as a multi-body system of the body plus three wheels in article Eq. 39).
 
 ### 9-D state equation
-The state is a vector $\mathbf{x}\in\mathbb{R}^9$ that collects nine variables:
+The state is a vector $`\mathbf{x}\in\mathbb{R}^9`$ that collects nine variables:
 
-$$ \mathbf{x} = \begin{pmatrix} \boldsymbol{\phi} \\ \boldsymbol{\omega}_h \\ \boldsymbol{\omega}_w \end{pmatrix} \quad(\text{attitude angles, body ang. velocities, wheel ang. velocities — 3 each}) $$
+```math
+\mathbf{x} = \begin{pmatrix} \boldsymbol{\phi} \\ \boldsymbol{\omega}_h \\ \boldsymbol{\omega}_w \end{pmatrix} \quad(\text{attitude angles, body ang. velocities, wheel ang. velocities — 3 each})
+```
 
 When this is **linearized** around the upright point, it takes a form just like Session 2 (article Eqs. 42-45):
 
-$$ \dot{\mathbf{x}} = A\,\mathbf{x} + B\,\mathbf{u} $$
+```math
+\dot{\mathbf{x}} = A\,\mathbf{x} + B\,\mathbf{u}
+```
 
-The differences are that $A$ is $9\times9$, and the input $\mathbf{u}$ has three components (three motors). **The form is the same as Session 2**.
+The differences are that $`A`$ is $`9\times9`$, and the input $`\mathbf{u}`$ has three components (three motors). **The form is the same as Session 2**.
 
-> 🧠 The column confirms that “if the body friction $C_b$ is set to zero, the 3-D equations return to the 1-axis equations from Session 2.”
+> 🧠 The column confirms that “if the body friction $`C_b`$ is set to zero, the 3-D equations return to the 1-axis equations from Session 2.”
 > This is a **consistency check** showing that the 3-D version is a natural extension of the 1-D version.
 
 ---
@@ -51,6 +57,6 @@ The differences are that $A$ is $9\times9$, and the input $\mathbf{u}$ has three
 - The number of states goes from three in 1 axis to how many in 3 axes? (easy)
 - What is the effect called where the three directions “pull on each other”? (easy)
 - 🔵 In 3D, what does the moment of inertia become? (What shape?)
-- 🔵 Compared with Session 2, what changes in the linearized equation $\dot{\mathbf{x}} = A\mathbf{x}+B\mathbf{u}$?
+- 🔵 Compared with Session 2, what changes in the linearized equation $`\dot{\mathbf{x}} = A\mathbf{x}+B\mathbf{u}`$?
 
 ➡️ Next: [6. Controllability, observability, and LQR](./06-controllability-lqr.md)

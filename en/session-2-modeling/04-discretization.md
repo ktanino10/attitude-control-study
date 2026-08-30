@@ -2,9 +2,9 @@
 
 ## Problem: the microcontroller cannot calculate “continuously”
 
-The previous page’s $\dot{\mathbf{x}} = A\mathbf{x} + Bu$ is a **continuous-time** equation (time flows smoothly).
+The previous page’s $`\dot{\mathbf{x}} = A\mathbf{x} + Bu`$ is a **continuous-time** equation (time flows smoothly).
 But a microcontroller only repeats “measure -> calculate -> output” at fixed intervals.
-So we rewrite the equation to match that step size $\Delta t$ (here, **20 ms**). This is **discretization**.
+So we rewrite the equation to match that step size $`\Delta t`$ (here, **20 ms**). This is **discretization**.
 
 ![Discretization](../../assets/en/discretization.svg)
 
@@ -20,33 +20,41 @@ The world seen by the microcontroller is the same: time is made of **20 ms frame
 - At each frame, the microcontroller predicts one step ahead: “Because things are like this now, they will be like this in the **next frame**.”
 
 > 🧠 Discretization means translating a “continuous equation” into an “**equation that predicts one frame ahead**.”
-> From the state at frame $k$, it calculates frame $k{+}1$.
+> From the state at frame $`k`$, it calculates frame $`k{+}1`$.
 
-$$ \mathbf{x}[k{+}1] = A_d\,\mathbf{x}[k] + B_d\,u[k] $$
+```math
+\mathbf{x}[k{+}1] = A_d\,\mathbf{x}[k] + B_d\,u[k]
+```
 
-($[k]$ means “the $k$-th frame.” It predicts the next frame $[k{+}1]$.)
+($`[k]`$ means “the $`k`$-th frame.” It predicts the next frame $`[k{+}1]`$.)
 
 ---
 
 ## 🔵 In depth: discretization equations and whether 20 ms is reasonable
 
-From the continuous $A,\ B$, we make the discrete $A_d,\ B_d$. With the simplest approximation (forward Euler method),
+From the continuous $`A,\ B`$, we make the discrete $`A_d,\ B_d`$. With the simplest approximation (forward Euler method),
 
-$$ \mathbf{x}[k{+}1] = A_d\,\mathbf{x}[k] + B_d\,u[k] \qquad(\text{article Eq. 16}) $$
+```math
+\mathbf{x}[k{+}1] = A_d\,\mathbf{x}[k] + B_d\,u[k] \qquad(\text{article Eq. 16})
+```
 
-$$ A_d = I_3 + \Delta t\,A, \qquad B_d = \Delta t\,B \qquad(\text{Eqs. 17, 18}) $$
+```math
+A_d = I_3 + \Delta t\,A, \qquad B_d = \Delta t\,B \qquad(\text{Eqs. 17, 18})
+```
 
-- $I_3$: a 3×3 **identity matrix** (1 on the diagonal, 0 elsewhere).
-- $\Delta t = 20\,\text{ms}$: **sampling period**.
+- $`I_3`$: a 3×3 **identity matrix** (1 on the diagonal, 0 elsewhere).
+- $`\Delta t = 20\,\text{ms}`$: **sampling period**.
 
 ### Why 20 ms is enough (stability check)
-An inverted pendulum is an **unstable** system: if left alone, it falls. In the linearized model, how “unstable” it is can be seen from the **eigenvalues** of the matrix $A$. For this body, the unstable eigenvalue is
+An inverted pendulum is an **unstable** system: if left alone, it falls. In the linearized model, how “unstable” it is can be seen from the **eigenvalues** of the matrix $`A`$. For this body, the unstable eigenvalue is
 
-$$ \lambda \approx 11.57\ \ [1/\text{s}] $$
+```math
+\lambda \approx 11.57\ \ [1/\text{s}]
+```
 
-A rough time scale for falling (divergence) to become noticeable is about $2\pi/\lambda \approx 0.54\,\text{s} = 540\,\text{ms}$.
-The sampling period is $20\,\text{ms}$, so it can **check and correct about 27 times faster than the falling progresses**.
--> This means $20\,\text{ms}$ is a sampling period with plenty of margin to “make it in time before it falls.”
+A rough time scale for falling (divergence) to become noticeable is about $`2\pi/\lambda \approx 0.54\,\text{s} = 540\,\text{ms}`$.
+The sampling period is $`20\,\text{ms}`$, so it can **check and correct about 27 times faster than the falling progresses**.
+-> This means $`20\,\text{ms}`$ is a sampling period with plenty of margin to “make it in time before it falls.”
 
 > 🧠 In control, the golden rule is to “**sample much faster than the phenomenon**.”
 > If sampling is too slow, the body falls between frames and cannot be corrected.
@@ -55,8 +63,8 @@ The sampling period is $20\,\text{ms}$, so it can **check and correct about 27 t
 
 ### ✅ Quick check
 - What is the “flip-book animation” an analogy for? (easy)
-- What was $\Delta t$ (the sampling period)? (easy)
-- 🔵 In $A_d = I_3 + \Delta t\,A$, what is $I_3$?
+- What was $`\Delta t`$ (the sampling period)? (easy)
+- 🔵 In $`A_d = I_3 + \Delta t\,A`$, what is $`I_3`$?
 - 🔵 Why can we say 20 ms is “fast enough before it falls”?
 
 ➡️ Next: [5. Control law (deciding u = −Kx)](./05-control-law.md)

@@ -54,9 +54,9 @@ It is a list of **“who talks to whom, and by what rules.”**
 
 ### Command voltage → current → torque
 - The D-A converter’s output is trimmed by the amplifier to the command level the motor driver expects.
-- Motor torque is almost proportional to current: $\tau = k_t \, I$. The maxon EC 45 flat has a **torque constant $k_t \approx 25.5\ \text{mNm/A}$**.
+- Motor torque is almost proportional to current: $`\tau = k_t \, I`$. The maxon EC 45 flat has a **torque constant $`k_t \approx 25.5\ \text{mNm/A}`$**.
 - In other words, strength is controlled by this chain: “raise the command voltage → the driver’s current ↑ → torque ↑.”
-- When the motor rotates, **back-EMF** $E = k_e\,\omega$ appears, and the actual current is set by the supply voltage, winding resistance, and speed (the faster it spins, the harder it is for current to flow).
+- When the motor rotates, **back-EMF** $`E = k_e\,\omega`$ appears, and the actual current is set by the supply voltage, winding resistance, and speed (the faster it spins, the harder it is for current to flow).
 
 ### Pulse counting: reading rotation by “counting”
 - The Hall sensor emits a pulse each time the motor turns a little; counting the pulses over a fixed time gives the rotation speed.

@@ -24,25 +24,31 @@
 ## 🔵 くわしく：慣性テンソル・ジャイロ項・9次元の状態
 
 ### 慣性モーメントが「テンソル」になる
-1軸では慣性モーメントは1つの数でした。3次元では、方向によって回りにくさが違うので、**3×3の表（慣性テンソル）** $\mathbf{I}$ になります（記事の式41）。
+1軸では慣性モーメントは1つの数でした。3次元では、方向によって回りにくさが違うので、**3×3の表（慣性テンソル）** $`\mathbf{I}`$ になります（記事の式41）。
 
-$$ \mathbf{I} = \begin{pmatrix} I_{xx} & I_{xy} & I_{xz} \\ I_{yx} & I_{yy} & I_{yz} \\ I_{zx} & I_{zy} & I_{zz} \end{pmatrix} $$
+```math
+\mathbf{I} = \begin{pmatrix} I_{xx} & I_{xy} & I_{xz} \\ I_{yx} & I_{yy} & I_{yz} \\ I_{zx} & I_{zy} & I_{zz} \end{pmatrix}
+```
 
 ### ジャイロ効果（絡み合いの項）
-3次元の回転では、角速度どうしの外積 $\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})$ のような**ジャイロ効果**の項が現れます。これが「1方向動かすと別方向も動く」絡み合いの正体です（本体＋3ホイールの多体系として、記事の式39でまとめられています）。
+3次元の回転では、角速度どうしの外積 $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ のような**ジャイロ効果**の項が現れます。これが「1方向動かすと別方向も動く」絡み合いの正体です（本体＋3ホイールの多体系として、記事の式39でまとめられています）。
 
 ### 9次元の状態方程式
-状態は9個の変数をまとめたベクトル $\mathbf{x}\in\mathbb{R}^9$：
+状態は9個の変数をまとめたベクトル $`\mathbf{x}\in\mathbb{R}^9`$：
 
-$$ \mathbf{x} = \begin{pmatrix} \boldsymbol{\phi} \\ \boldsymbol{\omega}_h \\ \boldsymbol{\omega}_w \end{pmatrix} \quad(\text{姿勢角・本体角速度・ホイール角速度、各3つ}) $$
+```math
+\mathbf{x} = \begin{pmatrix} \boldsymbol{\phi} \\ \boldsymbol{\omega}_h \\ \boldsymbol{\omega}_w \end{pmatrix} \quad(\text{姿勢角・本体角速度・ホイール角速度、各3つ})
+```
 
 これを倒立点まわりで**線形化**すると、第2回とそっくりな形になります（記事の式42〜45）：
 
-$$ \dot{\mathbf{x}} = A\,\mathbf{x} + B\,\mathbf{u} $$
+```math
+\dot{\mathbf{x}} = A\,\mathbf{x} + B\,\mathbf{u}
+```
 
-ちがいは、$A$ が $9\times9$、入力 $\mathbf{u}$ が3つ（3モータ）になったこと。**形は第2回と同じ**です。
+ちがいは、$`A`$ が $`9\times9`$、入力 $`\mathbf{u}`$ が3つ（3モータ）になったこと。**形は第2回と同じ**です。
 
-> 🧠 コラムでは「本体の摩擦 $C_b$ をゼロにすると、3次元の式が第2回の1軸の式に戻る」ことが確認されています。
+> 🧠 コラムでは「本体の摩擦 $`C_b`$ をゼロにすると、3次元の式が第2回の1軸の式に戻る」ことが確認されています。
 > これは「3次元版は1次元版の自然な拡張になっている」という**整合性のチェック**です。
 
 ---
@@ -51,6 +57,6 @@ $$ \dot{\mathbf{x}} = A\,\mathbf{x} + B\,\mathbf{u} $$
 - 状態の数は、1軸の3つから3軸で何個になった？（やさしく）
 - 3方向が「引っぱり合う」効果を何と呼ぶ？（やさしく）
 - 🔵 3次元で慣性モーメントは何になる？（形は？）
-- 🔵 線形化後の式 $\dot{\mathbf{x}} = A\mathbf{x}+B\mathbf{u}$ は、第2回と比べて何が変わった？
+- 🔵 線形化後の式 $`\dot{\mathbf{x}} = A\mathbf{x}+B\mathbf{u}`$ は、第2回と比べて何が変わった？
 
 ➡️ 次は [6. 可制御性・可観測性とLQR](./06-controllability-lqr.md)

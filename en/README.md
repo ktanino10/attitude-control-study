@@ -13,7 +13,7 @@ I explain difficult technical terms in **words a middle school student can under
 ### 🟢🔵 Written at two levels
 - **🟢 Easy**: Mostly examples for middle school readers. Use this to get the big picture first.
 - **🔵 In depth**: For readers who want a little more. Explains “why” using physics formulas and electrical ideas.
-- Formulas display cleanly on GitHub ($\LaTeX$ notation). If they feel hard, it is OK to skip the 🔵 parts.
+- Formulas display cleanly on GitHub ($`\LaTeX`$ notation). If they feel hard, it is OK to skip the 🔵 parts.
 
 ---
 

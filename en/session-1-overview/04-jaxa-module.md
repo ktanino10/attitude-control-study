@@ -63,14 +63,16 @@ This is exactly a real example of **“3-axis attitude control.”** It is a gro
 - Unstable equilibrium can **never be maintained if left alone**. That is why **fast feedback** (measure → correct) is essential, and the wheels keep producing torque ahead of the falling direction.
 
 ### Standing up: why does it need “sudden braking”? (thinking with numbers)
-To lift the center of gravity from a lying position, the system must beat the torque that gravity uses to pull it back. When the tilt is $\theta$, the gravitational torque on the center of gravity is:
+To lift the center of gravity from a lying position, the system must beat the torque that gravity uses to pull it back. When the tilt is $`\theta`$, the gravitational torque on the center of gravity is:
 
-$$ \tau_{\text{gravity}} = m\,g\,l\,\sin\theta $$
+```math
+\tau_{\text{gravity}} = m\,g\,l\,\sin\theta
+```
 
-- Example: if $m=1\,\text{kg}$, $g=9.8\,\text{m/s}^2$, $l=0.07\,\text{m}$, and $\theta=45^\circ$,
-  $\tau_{\text{gravity}} \approx 1 \times 9.8 \times 0.07 \times 0.707 \approx 0.48\,\text{N·m}$.
-- This is about **8 to 9 times** the motor’s continuous torque (about $0.055\,\text{N·m}$). Slowly spinning the motor is nowhere near enough.
-- So the system **stores momentum with high-speed rotation and releases it all at once using the electromagnetic brake**, creating a large momentary torque (→ the formula in 03, $\tau_{\text{brake}}=\Delta L/\Delta t$). Detailed calculation is in Lesson 3.
+- Example: if $`m=1\,\text{kg}`$, $`g=9.8\,\text{m/s}^2`$, $`l=0.07\,\text{m}`$, and $`\theta=45^\circ`$,
+  $`\tau_{\text{gravity}} \approx 1 \times 9.8 \times 0.07 \times 0.707 \approx 0.48\,\text{N·m}`$.
+- This is about **8 to 9 times** the motor’s continuous torque (about $`0.055\,\text{N·m}`$). Slowly spinning the motor is nowhere near enough.
+- So the system **stores momentum with high-speed rotation and releases it all at once using the electromagnetic brake**, creating a large momentary torque (→ the formula in 03, $`\tau_{\text{brake}}=\Delta L/\Delta t`$). Detailed calculation is in Lesson 3.
 
 > 🧠 Summary: ① Balancing on a point is unstable → maintained by high-speed feedback. ② Standing up must beat gravitational torque → uses the brake’s large momentary torque.
 

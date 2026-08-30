@@ -30,7 +30,7 @@ This table shows **where and at what level** these notes explain the content of 
 | 16 | Actuators | Motor (maxon EC 45 flat 30 W), driver, electromagnetic brake | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md), [`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
 | 17 | Microcontroller | PSoC 5LP, ARM Cortex-M3, FreeRTOS, UDB | [`reference/system-block.md`](./reference/system-block.md), [`GLOSSARY.md`](./GLOSSARY.md) | 🟢🔵 |
 | 18 | Power supply | Lithium polymer batteries, 7.4 V x2 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md), [`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 19 | Torque calculation | Gravitational torque $T=mgl\sin\theta$, about 8 times the motor rating | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) (🔵) | 🔵 |
+| 19 | Torque calculation | Gravitational torque $`T=mgl\sin\theta`$, about 8 times the motor rating | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) (🔵) | 🔵 |
 | 20 | References (maxon datasheet, etc.) | Component documents cited by the article | [`REFERENCES.md`](../REFERENCES.md) | — |
 
 ---
