@@ -57,4 +57,4 @@ flowchart LR
 ## 💡 Keywords for this session (details in the text and [glossary](../GLOSSARY.md))
 Attitude / 3-axis / roll, pitch, yaw / torque / inertia / reaction wheel / angular momentum / inverted pendulum
 
-Next time 👉 [Lesson Session 2: Sensors and attitude estimation](../session-2-sensing/README.md) (how it “knows” its own tilt)
+Next time 👉 [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md) (turning motion into equations to control it)

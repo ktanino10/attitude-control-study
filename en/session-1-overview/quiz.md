@@ -85,4 +85,4 @@ The game of **balancing a broom (stick) on your palm**. It is the challenge of k
 ---
 
 🎉 If you can answer all of these, Lesson 1 is complete!
-Next time 👉 [Lesson Session 2: Sensors and attitude estimation](../session-2-sensing/README.md)
+Next time 👉 [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md)

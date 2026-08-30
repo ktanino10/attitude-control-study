@@ -99,7 +99,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 🔢 Symbols used in formulas (used in Lesson Session 3)
+## 🔢 Symbols in formulas (gravitational-torque formula)
 
 | Symbol | Reading | Meaning |
 |---|---|---|
@@ -108,7 +108,42 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 | g | gravitational acceleration | 9.8 m/s² (how strongly objects fall on Earth) |
 | l | length | Distance from the vertex to the center of gravity (m) |
 | θ (theta) | angle | Tilt angle (degrees) |
-| T꜀ᵍ = mgl·sin(θ) | — | Formula for the **gravitational torque** on a tilted object. Details in Lesson Session 3. |
+| T꜀ᵍ = mgl·sin(θ) | — | Formula for the **gravitational torque** on a tilted object. Details in Session 1 [`04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md). |
+
+---
+
+## ⚙️ Equations of motion and microcontroller control (Session 2)
+
+| Term | Reading / Japanese | Simple meaning |
+|---|---|---|
+| Equation of motion | 運動方程式 | A formula for **how an object moves when it receives a force/torque**. Newton's law applied to rotation. |
+| Modeling | モデリング | The work of replacing real motion with **rules written as formulas**. The first step of control. |
+| Friction torque | 摩擦トルク | The friction that resists rotation. The part proportional to speed (viscous) is put into the formula. |
+| Linearization | 線形化 | Looking only **near the inverted point** and approximating a curve (like sinθ) with a **straight line**. |
+| Taylor expansion | テイラー展開 | A way to write a function as a sum of "1st + 2nd + …" order terms. Dropping the small higher-order terms gives linearization. |
+| Equilibrium point (inverted point) | 平衡点（倒立点） | A posture where forces balance so it "could stay still on its own." For the inverted pendulum, the upright point. |
+| State-space model | 状態空間モデル | A formula that gathers the state into a vector and writes it as $\dot{x}=Ax+Bu$. Matrices handle everything at once. |
+| State variable | 状態変数 | The set of numbers describing "the current state" (e.g., tilt, angular velocity, wheel speed). The vector $x$. |
+| Discretization | 離散化 | Rewriting a continuous-time formula as one that steps every fixed interval (20 ms): $x[k{+}1]=A_d x[k]+B_d u[k]$. |
+| Sampling period | サンプリング周期 $\Delta t$ | The **time of one step** to read sensors, compute, and output. On this machine, 20 ms. |
+| State feedback | 状態フィードバック | Control that looks at the current state $x$ and sets the input as $u=-Kx$. "Push back in proportion to how much it tilted." |
+| Gain | ゲイン $K$ | The strength setting for "how hard to push back." Larger means snappier motion. |
+| LQR | Linear Quadratic Regulator | A method that automatically chooses the gain $K$ to minimize a cost function $J$ (penalizing error and input). |
+
+---
+
+## 🧊 Extension to 3D (Session 3)
+
+| Term | Reading / Japanese | Simple meaning |
+|---|---|---|
+| Attitude estimation | 姿勢推定 | Working out "how much it is tilted right now" from sensor values. |
+| Least squares | 最小二乗法 | A calculation that finds the answer that **best fits** many measurements. Used to get the gravity direction from 6 accelerometers. |
+| Gyroscopic effect | ジャイロ効果 | In 3D, rotations **influence each other**. It appears as the $\omega\times(I\omega)$ term. |
+| Inertia tensor | 慣性テンソル | The 3D version of the moment of inertia. A **3×3 table** showing how hard it is to rotate in each direction. |
+| State equation | 状態方程式 | A formula of the form $\dot{x}=Ax+Bu$. In 3D the state grows to 9 numbers. |
+| Controllability | 可制御性 | Whether the input (motors) can move the state **as you want**. On this machine, yaw cannot be moved. |
+| Observability | 可観測性 | Whether the state can be **told from the sensors**. Yaw is invisible from gravity. |
+| Kalman canonical decomposition | カルマン正準分解 | A way to sort a system into "controllable & visible / not" parts. Only the 7-dimensional part is used for control. |
 
 ---
 

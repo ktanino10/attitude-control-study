@@ -27,18 +27,18 @@
 | 12 | I²Cが3系統ある理由 | MPU-6050のアドレスが2個→1本に2個まで→6個で3本 | [`reference/interfaces.md`](./reference/interfaces.md)、[`system-block.md`](./reference/system-block.md) | 🔵 |
 | 13 | 写真1：モジュールの外観／内部 | ホイールの直交配置・IMU分散・電池と基板の詰め方 | [`reference/mechanical.md`](./reference/mechanical.md)（図 `module-cube.svg`） | 🟢🔵 |
 | 14 | センサ（IMU 6個） | 加速度センサ＋ジャイロ、MPU-6050、6軸×6 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 15 | 姿勢推定（カルマン等） | 2つのセンサの合体（センサフュージョン） | [`GLOSSARY.md`](./GLOSSARY.md)、[`session-2-sensing/`](./session-2-sensing/README.md)（次回本番） | 🟢🔵 |
+| 15 | 姿勢推定（カルマン等） | 2つのセンサの合体（センサフュージョン） | [`GLOSSARY.md`](./GLOSSARY.md)、[`session-3-3d/`](./session-3-3d/README.md)（座学3で解説） | 🟢🔵 |
 | 16 | アクチュエータ | モータ（maxon EC 45 flat 30W）・ドライバ・電磁ブレーキ | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
 | 17 | マイコン | PSoC 5LP・ARM Cortex-M3・FreeRTOS・UDB | [`reference/system-block.md`](./reference/system-block.md)、[`GLOSSARY.md`](./GLOSSARY.md) | 🟢🔵 |
 | 18 | 電源 | リチウムポリマ電池 7.4V×2 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 19 | トルク計算 | 重力トルク $T=mgl\sin\theta$、モータ定格の約8倍 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（🔵）、[`session-3-control/`](./session-3-control/README.md)（次々回で計算） | 🔵 |
+| 19 | トルク計算 | 重力トルク $T=mgl\sin\theta$、モータ定格の約8倍 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（🔵） | 🔵 |
 | 20 | 参考文献（maxonデータシート等） | 記事が引用する部品資料 | [`REFERENCES.md`](../REFERENCES.md) | — |
 
 ---
 
 ## 補足：3回の座学への割りふり
 
-- 元記事は概要記事なので、センサ推定（カルマン）と制御計算（トルク・PID）は**第2回・第3回**で扱います。
-- 第1回（今回）は、全体像と基本用語を中心にまとめています。各項目の解説場所は上の表のとおりです。
+- 元記事の第1回（写真の内容）は概要中心なので、運動方程式とマイコン制御は**第2回**、3次元への拡張と姿勢推定は**第3回**で扱います。
+- 第1回は、全体像と基本用語を中心にまとめています。各項目の解説場所は上の表のとおりです。
 
 📎 用語の意味は [`GLOSSARY.md`](./GLOSSARY.md)、出典は [`REFERENCES.md`](../REFERENCES.md) を参照してください。

@@ -26,18 +26,18 @@ This table shows **where and at what level** these notes explain the content of 
 | 12 | Why there are three I²C systems | MPU-6050 has only two addresses → up to two per bus → six sensors require three buses | [`reference/interfaces.md`](./reference/interfaces.md), [`system-block.md`](./reference/system-block.md) | 🔵 |
 | 13 | Photo 1: module exterior/interior | Orthogonal wheel placement, distributed IMUs, packing batteries and boards | [`reference/mechanical.md`](./reference/mechanical.md) (figure `module-cube.svg`) | 🟢🔵 |
 | 14 | Sensors (six IMUs) | Accelerometer + gyro, MPU-6050, 6 axes x6 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md), [`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 15 | Attitude estimation (Kalman, etc.) | Combining two sensors (sensor fusion) | [`GLOSSARY.md`](./GLOSSARY.md), [`session-2-sensing/`](./session-2-sensing/README.md) (main topic next time) | 🟢🔵 |
+| 15 | Attitude estimation (Kalman, etc.) | Combining two sensors (sensor fusion) | [`GLOSSARY.md`](./GLOSSARY.md), [`session-3-3d/`](./session-3-3d/README.md) (explained in Session 3) | 🟢🔵 |
 | 16 | Actuators | Motor (maxon EC 45 flat 30 W), driver, electromagnetic brake | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md), [`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
 | 17 | Microcontroller | PSoC 5LP, ARM Cortex-M3, FreeRTOS, UDB | [`reference/system-block.md`](./reference/system-block.md), [`GLOSSARY.md`](./GLOSSARY.md) | 🟢🔵 |
 | 18 | Power supply | Lithium polymer batteries, 7.4 V x2 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md), [`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
-| 19 | Torque calculation | Gravitational torque $T=mgl\sin\theta$, about 8 times the motor rating | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) (🔵), [`session-3-control/`](./session-3-control/README.md) (calculation in a later session) | 🔵 |
+| 19 | Torque calculation | Gravitational torque $T=mgl\sin\theta$, about 8 times the motor rating | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) (🔵) | 🔵 |
 | 20 | References (maxon datasheet, etc.) | Component documents cited by the article | [`REFERENCES.md`](../REFERENCES.md) | — |
 
 ---
 
 ## Note: how the three lesson sessions are divided
 
-- The original article is an overview article, so sensor estimation (Kalman) and control calculation (torque and PID) are handled in **Session 2 and Session 3**.
-- Session 1 (this session) focuses on the overall picture and basic terms. The table above shows where each item is explained.
+- Part 1 of the article (the content of the photos) is mostly an overview, so the equations of motion and microcontroller control are covered in **Session 2**, and the extension to 3D together with attitude estimation is covered in **Session 3**.
+- Session 1 focuses on the overall picture and basic terms. The table above shows where each item is explained.
 
 📎 For term meanings, see [`GLOSSARY.md`](./GLOSSARY.md). For sources, see [`REFERENCES.md`](../REFERENCES.md).

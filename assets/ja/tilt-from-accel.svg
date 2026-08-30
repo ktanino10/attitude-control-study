@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="ta" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#455a64"/></marker>
+    <marker id="tg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c62828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="620" height="400" fill="#ffffff"/>
+  <text x="310" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">加速度センサで「傾き」を知る</text>
+
+  <!-- body frame (tilted) -->
+  <g>
+    <circle cx="230" cy="230" r="4" fill="#455a64"/>
+    <line x1="230" y1="230" x2="230" y2="110" stroke="#90a4ae" stroke-width="2.4" marker-end="url(#ta)"/>
+    <text x="238" y="118" font-size="13" fill="#607d8b">Z_B</text>
+    <line x1="230" y1="230" x2="130" y2="286" stroke="#90a4ae" stroke-width="2.4" marker-end="url(#ta)"/>
+    <text x="104" y="300" font-size="13" fill="#607d8b">X_B</text>
+    <line x1="230" y1="230" x2="338" y2="272" stroke="#90a4ae" stroke-width="2.4" marker-end="url(#ta)"/>
+    <text x="344" y="278" font-size="13" fill="#607d8b">Y_B</text>
+  </g>
+
+  <!-- gravity vector in body frame (points down in real world) -->
+  <line x1="230" y1="230" x2="292" y2="342" stroke="#c62828" stroke-width="3.4" marker-end="url(#tg)"/>
+  <text x="298" y="342" font-size="14" fill="#c62828" font-weight="bold">重力ベクトル ᴮg</text>
+  <text x="150" y="352" font-size="12.5" fill="#c62828">（本物の「下」の向き）</text>
+
+  <!-- angle hint between Z_B and gravity -->
+  <path d="M230,150 A80 80 0 0 1 258,168" fill="none" stroke="#455a64" stroke-width="1.5"/>
+  <text x="250" y="150" font-size="12" fill="#455a64">傾き</text>
+
+  <!-- sensor note -->
+  <text x="470" y="110" text-anchor="middle" font-size="13" fill="#1565c0">6個の加速度センサ</text>
+  <text x="470" y="130" text-anchor="middle" font-size="12.5" fill="#607d8b">↓ 最小二乗で合成</text>
+  <rect x="376" y="146" width="196" height="70" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.6"/>
+  <text x="474" y="172" text-anchor="middle" font-size="12.5" fill="#1565c0">重力の向き ᴮg を推定</text>
+  <text x="474" y="194" text-anchor="middle" font-size="12.5" fill="#1565c0">→ ピッチ β・ロール γ が出る</text>
+
+  <text x="474" y="250" text-anchor="middle" font-size="12.5" fill="#8d6e63">⚠ ヨー α は重力では分からない</text>
+  <text x="474" y="270" text-anchor="middle" font-size="11.5" fill="#a1887f">（縦軸まわりに回っても「下」は変わらない）</text>
+
+  <text x="310" y="384" text-anchor="middle" font-size="12.5" fill="#555">「下（重力）の向き」を機体の軸で見れば、機体がどれだけ傾いているか（β・γ）が計算できる。</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="fi" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#37474f"/></marker>
+    <marker id="fb" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1565c0"/></marker>
+    <marker id="fg" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#c62828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff"/>
+  <text x="320" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">2つの座標系：慣性 {I} と ボディ {B}</text>
+
+  <!-- ===== Inertial frame {I} (left) ===== -->
+  <g>
+    <!-- origin -->
+    <circle cx="150" cy="250" r="4" fill="#37474f"/>
+    <!-- Z up -->
+    <line x1="150" y1="250" x2="150" y2="110" stroke="#37474f" stroke-width="2.6" marker-end="url(#fi)"/>
+    <text x="158" y="112" font-size="14" fill="#37474f">Z_I（上＝重力の逆）</text>
+    <!-- X down-left -->
+    <line x1="150" y1="250" x2="70" y2="300" stroke="#37474f" stroke-width="2.6" marker-end="url(#fi)"/>
+    <text x="36" y="318" font-size="14" fill="#37474f">X_I</text>
+    <!-- Y down-right -->
+    <line x1="150" y1="250" x2="252" y2="292" stroke="#37474f" stroke-width="2.6" marker-end="url(#fi)"/>
+    <text x="256" y="298" font-size="14" fill="#37474f">Y_I</text>
+    <text x="150" y="352" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#37474f">慣性座標系 {I}</text>
+    <text x="150" y="372" text-anchor="middle" font-size="12" fill="#607d8b">動かない・重力を基準にした軸</text>
+  </g>
+
+  <!-- gravity -->
+  <line x1="300" y1="120" x2="300" y2="210" stroke="#c62828" stroke-width="3" marker-end="url(#fg)"/>
+  <text x="308" y="175" font-size="13" fill="#c62828">重力 g</text>
+
+  <!-- ===== Body frame {B} (right, tilted) ===== -->
+  <g transform="rotate(28 480 240)">
+    <!-- small cube icon -->
+    <rect x="450" y="210" width="60" height="60" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <circle cx="480" cy="240" r="4" fill="#1565c0"/>
+    <line x1="480" y1="240" x2="480" y2="120" stroke="#1565c0" stroke-width="2.6" marker-end="url(#fb)"/>
+    <text x="488" y="130" font-size="14" fill="#1565c0">Z_B</text>
+    <line x1="480" y1="240" x2="392" y2="284" stroke="#1565c0" stroke-width="2.6" marker-end="url(#fb)"/>
+    <text x="360" y="300" font-size="14" fill="#1565c0">X_B</text>
+    <line x1="480" y1="240" x2="586" y2="278" stroke="#1565c0" stroke-width="2.6" marker-end="url(#fb)"/>
+    <text x="590" y="286" font-size="14" fill="#1565c0">Y_B</text>
+  </g>
+  <text x="480" y="356" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1565c0">ボディ座標系 {B}</text>
+  <text x="480" y="376" text-anchor="middle" font-size="12" fill="#607d8b">機体に固定・いっしょに傾く</text>
+
+  <text x="320" y="70" text-anchor="middle" font-size="12.5" fill="#555">同じ「向き」を、動かない世界の軸 {I} と、機体の軸 {B} の2通りで表す。姿勢＝{I}から{B}への回転。</text>
+</svg>

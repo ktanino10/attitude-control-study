@@ -85,4 +85,4 @@
 ---
 
 🎉 全部答えられたら座学1クリア！
-次回 👉 [座学2：センサと姿勢推定](../session-2-sensing/README.md)
+次回 👉 [座学2：運動方程式とマイコン制御](../session-2-modeling/README.md)

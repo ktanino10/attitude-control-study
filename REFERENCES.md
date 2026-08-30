@@ -10,14 +10,20 @@
 ## 🇯🇵 参考文献（日本語）
 
 ### 一次資料（この学習ノートの元記事）
-1. 巳谷 真司（JAXA）, 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」
-   【第1回】1次元倒立振子のメカニズム（副題：自立で起き上がって静かに倒立する立方体）,
-   **トランジスタ技術 2020年6月号**, CQ出版社, pp.121–127.
+巳谷 真司（JAXA）, 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」（全3回）, CQ出版社.
+1. 【第1回】1次元倒立振子のメカニズム（副題：自立で起き上がって静かに倒立する立方体）,
+   **トランジスタ技術 2020年6月号**, pp.121–127.
    - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202006/>
    - 書籍情報: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
    - PDF版（電子版）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
+2. 【第2回】1次元倒立振子の運動方程式とマイコン制御,
+   **トランジスタ技術 2020年7月号**, pp.131–136.
+   - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202007/>
+3. 【第3回】3次元の姿勢制御,
+   **トランジスタ技術 2020年8月号**, pp.140–149.
+   - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202008/>
+
    - 著者情報（KAKEN 研究者DB）: <https://nrid.nii.ac.jp/ja/nrid/1000000747446/>
-   - ※ 全3回の連載（第2回：1次元モジュールのモデリングと制御／第3回：3次元モジュールの倒立メカニズムと制御）。
 
 ### 元記事が引用している一次文献（The Cubli）
 - M. Gajamohan, M. Merz, I. Thommen, R. D'Andrea, "The Cubli: A Cube that can Jump Up and Balance,"
@@ -47,7 +53,7 @@
 ### 概念・理論の参考
 8. R. E. Kálmán, "A New Approach to Linear Filtering and Prediction Problems,"
    *Transactions of the ASME – Journal of Basic Engineering*, Vol.82, No.1, pp.35–45, 1960. DOI: 10.1115/1.3662552.
-   （カルマンフィルタの原典。座学2で使用）
+   （カルマン・フィルタの原典。カルマン正準分解も同氏の名にちなむ→座学3）
 9. 角運動量保存則（conservation of angular momentum）・倒立振子（inverted pendulum）
    — 一般的な力学の教科書レベルの概念。参考: <https://ja.wikipedia.org/wiki/角運動量保存の法則> , <https://ja.wikipedia.org/wiki/倒立振子>
 
@@ -68,14 +74,20 @@ This is a study note (secondary material) for learning purposes. All figures wer
 **no photographs or figures from the original article are reproduced.** Always consult the primary sources below.
 
 ### Primary source (the article this note is based on)
-1. Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module,"
-   **Part 1: Mechanism of a 1-D Inverted Pendulum** (subtitle: "A cube that stands itself up and balances quietly"),
-   **Transistor Gijutsu (Transistor Technology), June 2020**, CQ Publishing, pp.121–127. *(Japanese)*
+Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module" (3 parts), CQ Publishing. *(Japanese)*
+1. **Part 1: Mechanism of a 1-D Inverted Pendulum** (subtitle: "A cube that stands itself up and balances quietly"),
+   **Transistor Gijutsu (Transistor Technology), June 2020**, pp.121–127.
    - Issue page: <https://toragi.cqpub.co.jp/magazine/202006/>
    - Book info: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
    - PDF (e-edition): <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
+2. **Part 2: Equations of Motion and Microcontroller Control of the 1-D Inverted Pendulum**,
+   **Transistor Gijutsu, July 2020**, pp.131–136.
+   - Issue page: <https://toragi.cqpub.co.jp/magazine/202007/>
+3. **Part 3: 3-D Attitude Control**,
+   **Transistor Gijutsu, August 2020**, pp.140–149.
+   - Issue page: <https://toragi.cqpub.co.jp/magazine/202008/>
+
    - Author profile (KAKEN researcher DB): <https://nrid.nii.ac.jp/nrid/1000000747446/>
-   - *A 3-part serial (Part 2: modeling & control of the 1-D module; Part 3: inverted mechanism & control of the 3-D module).*
 
 ### Primary references cited by the article (The Cubli)
 - M. Gajamohan, M. Merz, I. Thommen, R. D'Andrea, "The Cubli: A Cube that can Jump Up and Balance,"

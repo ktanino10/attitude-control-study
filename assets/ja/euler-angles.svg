@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 320" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="ea" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#455a64"/></marker>
+    <marker id="er" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c62828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="320" fill="#ffffff"/>
+  <text x="330" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">オイラー角：3つの回転で「どんな向き」も表す</text>
+
+  <line x1="220" y1="52" x2="220" y2="296" stroke="#eee" stroke-width="2"/>
+  <line x1="440" y1="52" x2="440" y2="296" stroke="#eee" stroke-width="2"/>
+
+  <!-- Panel 1: yaw about Z -->
+  <text x="110" y="76" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">① ヨー α（Z軸まわり）</text>
+  <g stroke-width="2.4">
+    <line x1="110" y1="200" x2="110" y2="120" stroke="#c62828" marker-end="url(#ea)"/>
+    <line x1="110" y1="200" x2="62" y2="232" stroke="#90a4ae" marker-end="url(#ea)"/>
+    <line x1="110" y1="200" x2="168" y2="228" stroke="#90a4ae" marker-end="url(#ea)"/>
+  </g>
+  <ellipse cx="110" cy="128" rx="40" ry="15" fill="none" stroke="#c62828" stroke-width="2.2" stroke-dasharray="0"/>
+  <path d="M150,128 A40 15 0 0 1 110,143" fill="none" stroke="#c62828" stroke-width="2.4" marker-end="url(#er)"/>
+  <text x="122" y="118" font-size="12.5" fill="#c62828">Z</text>
+  <text x="110" y="262" text-anchor="middle" font-size="12" fill="#607d8b">左右に首を振る</text>
+
+  <!-- Panel 2: pitch about Y -->
+  <text x="330" y="76" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">② ピッチ β（Y軸まわり）</text>
+  <g stroke-width="2.4">
+    <line x1="330" y1="200" x2="330" y2="120" stroke="#90a4ae" marker-end="url(#ea)"/>
+    <line x1="330" y1="200" x2="282" y2="232" stroke="#90a4ae" marker-end="url(#ea)"/>
+    <line x1="330" y1="200" x2="398" y2="228" stroke="#2e7d32" marker-end="url(#ea)"/>
+  </g>
+  <path d="M330,150 A50 24 -20 0 1 372,204" fill="none" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#er)"/>
+  <text x="402" y="232" font-size="12.5" fill="#2e7d32">Y</text>
+  <text x="330" y="262" text-anchor="middle" font-size="12" fill="#607d8b">前後にうなずく</text>
+
+  <!-- Panel 3: roll about X -->
+  <text x="550" y="76" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">③ ロール γ（X軸まわり）</text>
+  <g stroke-width="2.4">
+    <line x1="550" y1="200" x2="550" y2="120" stroke="#90a4ae" marker-end="url(#ea)"/>
+    <line x1="550" y1="200" x2="502" y2="232" stroke="#1565c0" marker-end="url(#ea)"/>
+    <line x1="550" y1="200" x2="608" y2="228" stroke="#90a4ae" marker-end="url(#ea)"/>
+  </g>
+  <path d="M512,222 A50 24 20 0 1 566,178" fill="none" stroke="#1565c0" stroke-width="2.4" marker-end="url(#er)"/>
+  <text x="474" y="238" font-size="12.5" fill="#1565c0">X</text>
+  <text x="550" y="262" text-anchor="middle" font-size="12" fill="#607d8b">横に傾ける</text>
+
+  <text x="330" y="300" text-anchor="middle" font-size="12.5" fill="#555">この3つ（ヨー→ピッチ→ロール）を順に組み合わせると、立方体のどんな姿勢も表せる。</text>
+</svg>
