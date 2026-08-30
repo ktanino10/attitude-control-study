@@ -7,8 +7,8 @@ It is a list of **“who talks to whom, and by what rules.”**
 |---|---|---|---|
 | **I²C** | Serial communication | Six IMU sensors → microcontroller. Sends tilt data | Multiple chips taking turns chatting over two wires |
 | **UART** | Serial communication | Wireless module ⇄ microcontroller. Sends and receives remote-control commands | A one-to-one phone call |
-| **PWM** | Output signal | Microcontroller → motor driver. Tells it “how much to spin” | Adjusting strength by turning electricity ON/OFF quickly (strong/medium/weak fan speeds) |
-| **A-D converter** (ADC) | Conversion | Motor rotation speed (analog voltage) → numbers. Read by the microcontroller | Translating a voice (analog) into text (numbers) |
+| **D-A converter** (DAC) + **amplifier** (PGA) | Output signal | Microcontroller → analog command → amplified and fed to the motor driver | Translating numbers (digital) into a voice (analog), then setting the volume |
+| **Hall sensor + pulse counter** | Input signal | Motor rotation (Hall signal) → pulses counted into rotation speed. Read by the microcontroller | A tachometer that counts rotation “click by click” |
 | **MOSFET** | Switching element | Microcontroller → electromagnetic brake. Turns large current ON/OFF | An electronic switch that quickly switches large current on and off |
 | **GPIO** | General-purpose pin | Output pin on the microcontroller. Turns the MOSFET ON/OFF | A simple “electricity ON/OFF port” |
 
@@ -25,13 +25,14 @@ It is a list of **“who talks to whom, and by what rules.”**
 - A basic communication method with one transmit line and one receive line.
 - It connects to the wireless module and talks with the handheld remote controller.
 
-### PWM: how to tell the motor “accelerator opening”
-- Electricity is turned **ON/OFF very quickly**, and strength is represented by the ON ratio (duty ratio).
-- For example, “spin at 70% power” means a PWM ON ratio of 70%.
+### D-A + amplifier: how to send the motor a current “command”
+- The microcontroller converts “how much to spin” into an analog signal (voltage) with a **D-A converter** and outputs it.
+- A **programmable-gain amplifier (PGA) plus a fixed-gain stage** adjusts the signal level and passes it to the **motor driver**.
+- The driver sends **drive current** to the motor according to this command, and the wheel spins.
 
-### A-D conversion: to “watch” motor rotation speed
-- The motor driver tells the current rotation speed as an **analog voltage**.
-- A-D converts it into numbers, and the microcontroller checks whether the wheel is spinning too fast.
+### Hall sensor + pulse counting: to “watch” motor rotation speed
+- The motor driver outputs the motor’s rotation position as a **Hall-sensor signal**.
+- A **pulse-count circuit** counts it to obtain rotation speed, and the microcontroller checks whether the wheel is spinning too fast.
 - A wheel that has spun too much needs **unloading** (returning its rotation), which is covered in Lesson Session 3.
 
 ### MOSFET: a strong switch for the electromagnetic brake
@@ -51,15 +52,15 @@ It is a list of **“who talks to whom, and by what rules.”**
 - This is the real reason the circuit diagram has **three I²C systems**. (There are also speed and load-sharing benefits, but the essential constraint is “only two addresses.”)
 - Note: SDA/SCL are **open-drain**, so **pull-up resistors** are needed. The master (microcontroller) provides the clock, and the slaves (sensors) respond.
 
-### PWM → voltage → current → torque
-- The duty ratio $D$ (ON ratio) sets the average voltage: $V_{\text{avg}} = D \times V_{\text{supply}}$.
+### Command voltage → current → torque
+- The D-A converter’s output is trimmed by the amplifier to the command level the motor driver expects.
 - Motor torque is almost proportional to current: $\tau = k_t \, I$. The maxon EC 45 flat has a **torque constant $k_t \approx 25.5\ \text{mNm/A}$**.
-- In other words, strength is controlled by this chain: “raise the PWM ON ratio → average voltage ↑ → current ↑ → torque ↑.”
-- When the motor rotates, **back-EMF** $E = k_e\,\omega$ appears, and the actual current is determined by $(V_{\text{avg}} - E)/R$ (the faster it spins, the harder it is for current to flow).
+- In other words, strength is controlled by this chain: “raise the command voltage → the driver’s current ↑ → torque ↑.”
+- When the motor rotates, **back-EMF** $E = k_e\,\omega$ appears, and the actual current is set by the supply voltage, winding resistance, and speed (the faster it spins, the harder it is for current to flow).
 
-### A-D conversion: reading analog as “scale marks”
-- With $n$-bit resolution, voltage is divided into $2^n$ steps and converted into a number. Example: 10 bits → 1024 steps.
-- The system reads tachometer voltage proportional to motor speed and monitors whether the wheel is close to **saturation**.
+### Pulse counting: reading rotation by “counting”
+- The Hall sensor emits a pulse each time the motor turns a little; counting the pulses over a fixed time gives the rotation speed.
+- Reading the pulse order (forward/reverse) also gives the direction, so the system can monitor whether the wheel is close to **saturation**.
 
 ### MOSFET: switching an inductive load (coil)
 - The electromagnetic brake coil has **inductance**. If the current is suddenly cut, a high reverse voltage (spike) can appear and damage parts.

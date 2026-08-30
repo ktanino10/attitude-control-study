@@ -19,7 +19,7 @@
 | Torque calculation | Gravitational torque on a tilted cube, `T꜀ᵍ = mgl·sin(θ)` | Torque / gravity |
 | How much force is needed? | Example: at 45°, `T > 0.48 N·m` → more than **8 times** the motor rating is needed | Rating / momentary output |
 | Motor | maxon EC45 (30 W). Can be used at about three times the rating for a moment | Brushless motor |
-| Motor driver | Receives commands and controls drive current. Returns rotation speed as analog voltage | Drive current / A-D |
+| Motor driver | Receives commands and controls drive current. Rotation is sensed by a Hall sensor | Drive current / Hall sensor |
 | Microcontroller and control | Real-time behavior is critical. FreeRTOS calculates at a fixed period | PSoC 5LP / FreeRTOS |
 | Control loop | Repeats measuring and correcting error at high speed | Feedback control |
 
@@ -40,7 +40,7 @@ T꜀ᵍ = m · g · l · sin(θ)
 - Feedback control loop diagram
 
 ## 🔗 Related references
-- [`reference/system-block.md`](../reference/system-block.md) (PWM → driver → motor, GPIO → MOSFET → brake)
+- [`reference/system-block.md`](../reference/system-block.md) (D-A → amplifier → driver → motor, GPIO → MOSFET → brake)
 - [`reference/parts-list.md`](../reference/parts-list.md) (motor and brake specifications)
 
 ⬅️ Previous: [Lesson 2](../session-2-sensing/README.md) / Back to the start 👉 [Lesson 1](../session-1-overview/README.md)

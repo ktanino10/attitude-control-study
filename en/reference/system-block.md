@@ -1,6 +1,6 @@
 # Circuit structure (system block diagram)
 
-This is a redrawn and explained version of the original article’s “Fig. 2 System block of the 3-axis attitude control module.”
+This is a redrawn and explained version of the original article’s “Fig. 5 Control system of the attitude control module.”
 The key point is that **almost all parts connect directly to one PSoC 5LP microcontroller** (= simple wiring).
 
 ---
@@ -19,8 +19,8 @@ flowchart LR
         I2C2["I2C"]
         I2C3["I2C"]
         CPU["CPU / ARM Cortex-M3<br/>estimates attitude and calculates commands"]
-        PWM["PWM x3"]
-        ADC["A-D conversion x3"]
+        DAC["D-A conversion x3"]
+        PC["Pulse counters x3"]
         GPIO["GPIO x3"]
     end
 
@@ -28,6 +28,7 @@ flowchart LR
     IMU34["IMU sensors 3 and 4"]
     IMU56["IMU sensors 5 and 6"]
 
+    AMP["Amplifiers x3<br/>PGA + fixed gain"]
     MD["Motor drivers x3"]
     RW["Reaction wheels x3"]
     MF["MOSFETs x3"]
@@ -41,12 +42,12 @@ flowchart LR
     IMU34 -->|"tilt data"| I2C2 --> CPU
     IMU56 -->|"tilt data"| I2C3 --> CPU
 
-    CPU --> PWM -->|"command"| MD -->|"current"| RW
-    RW -.->|"rotation speed (voltage)"| ADC --> CPU
+    CPU --> DAC -->|"analog command"| AMP -->|"current command"| MD -->|"drive current"| RW
+    RW -.->|"Hall signal"| MD -.->|"rotation pulses"| PC --> CPU
     CPU --> GPIO --> MF -->|"ON/OFF"| BR
 ```
 
-> **Meaning of x3**: the wheels, motors, brakes, PWM, and A-D are **three sets for the X, Y, and Z axes**.
+> **Meaning of x3**: the wheels, motors, drivers, amplifiers, brakes, D-A, and pulse counters are **three sets for the X, Y, and Z axes**.
 > The diagram combines them into one representative line to make it easier to read (the real system has three parallel channels).
 
 ---
@@ -58,9 +59,10 @@ flowchart LR
 - The six sensors are split into three I²C buses, two sensors per bus (to avoid congestion).
 
 ### ② Output, spinning: brain → motor (“Change the orientation”)
-- The microcontroller uses **PWM** (fast ON/OFF) to command the motor driver how much to spin.
-- The motor driver sends **current** to the motor, and the reaction wheel spins.
-- The wheel’s **rotation speed** returns from the motor driver as an **analog voltage**. The **A-D converter** changes it into numbers so the microcontroller can read it (= a guard against spinning too much).
+- The microcontroller converts its computed command into an analog signal with a **D-A converter** and outputs it.
+- An external **amplifier (a programmable-gain PGA plus a fixed-gain stage)** adjusts the signal level and feeds it to the **motor driver**.
+- The motor driver sends **drive current** to the motor, and the reaction wheel spins.
+- The wheel’s **rotation speed** comes from the motor driver’s **Hall-sensor signal**, which a **pulse-count circuit** counts into rotation pulses for the microcontroller to read (= a guard against spinning too much).
 
 ### ③ Output, stopping: brain → brake (“Stop instantly and create a large force”)
 - The microcontroller turns a **MOSFET** (electrical switch) ON using **GPIO**.
@@ -94,7 +96,7 @@ Attitude control is feedback control that repeats the following four steps **at 
 flowchart LR
     S["Sense<br/>IMU x6 / I2C"] --> E["Estimate<br/>calculate tilt and angular velocity<br/>(complementary/Kalman)"]
     E --> C["Control<br/>required torque from target error<br/>(PID etc.)"]
-    C --> A["Actuate<br/>PWM to motor / GPIO to brake"]
+    C --> A["Actuate<br/>D-A to motor / GPIO to brake"]
     A --> S
 ```
 
@@ -102,21 +104,21 @@ flowchart LR
 - That is why **accurate timing (real-time behavior)** is critical. **FreeRTOS** guarantees that “this process always runs at this period.”
 
 ### The “three parallel channels” structure
-- Wheels, motors, brakes, PWM, and A-D are **three sets for X/Y/Z**. The three axes can be controlled **independently**.
+- Wheels, motors, drivers, amplifiers, brakes, D-A, and pulse counters are **three sets for X/Y/Z**. The three axes can be controlled **independently**.
 - There are three I²C buses because the MPU-6050 has only two possible addresses (→ [`interfaces.md`](./interfaces.md)).
   Be careful: the “three I²C buses for sensors” and the “three actuator sets” are **different threes**.
 
 ### Why gather everything into one microcontroller?
-- To run sensor reading, estimation, control calculation, PWM generation, A-D, and communication on **the same time base**, it is safest to manage everything with one chip.
-- PSoC can “grow” as many peripherals such as PWM and counters as needed using **UDB** (flexible circuit blocks). That is why one chip can cover three channels x several kinds of input/output.
+- To run sensor reading, estimation, control calculation, D-A output, pulse counting, and communication on **the same time base**, it is safest to manage everything with one chip.
+- PSoC can “grow” as many peripherals such as D-A and counters as needed using **UDB** (flexible circuit blocks). That is why one chip can cover three channels x several kinds of input/output.
 
 ---
 
 ## Questions this circuit answers when building
 
 - **What does it measure?** → Tilt (six IMUs / I²C)
-- **How does it move?** → Spin wheels (PWM → driver → motor) + stop them (GPIO → MOSFET → electromagnetic brake)
-- **How does it avoid over-spinning?** → Reads rotation speed with A-D and monitors it
+- **How does it move?** → Spin wheels (D-A → amplifier → driver → motor) + stop them (GPIO → MOSFET → electromagnetic brake)
+- **How does it avoid over-spinning?** → Reads rotation speed with a Hall sensor + pulse counting and monitors it
 - **How does a person operate it?** → Wireless → UART
 
 📎 For the parts list, see [`parts-list.md`](./parts-list.md). For detailed explanations of each communication method, see [`interfaces.md`](./interfaces.md).

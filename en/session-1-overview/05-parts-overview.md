@@ -85,7 +85,7 @@ If you look at each part by “what physical quantity it reads or changes,” th
 | Reaction wheel | Angular momentum $L=I\omega$ | $\tau=I\dot\omega$ (torque by acceleration) |
 | Electromagnetic brake | Sudden release of angular momentum | $\tau=\Delta L/\Delta t$ |
 | Motor / driver | Current → torque | $\tau=k_t I$ ($k_t\approx 25.5\,\text{mNm/A}$) |
-| A-D + tachometer voltage | Monitoring rotation speed | Saturation detection → unloading |
+| Hall sensor + pulse counting | Monitoring rotation speed | Saturation detection → unloading |
 
 > 🧠 “Sensors = read quantities,” “actuators = change quantities,” and “microcontroller = decides the next quantity from the quantities it read.”
 > This role split leads into Lesson 2 (read) and Lesson 3 (change).

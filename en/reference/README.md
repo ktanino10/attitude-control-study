@@ -12,7 +12,7 @@ It is separated from the lessons (understanding) so you can look up **circuit st
 | [`system-block.md`](./system-block.md) | Circuit structure (system block diagram) | **Overall wiring diagram**: how the brain, eyes, and muscles connect |
 | [`parts-list.md`](./parts-list.md) | Parts list (BOM) | A list of **what you need and how many** |
 | [`mechanical.md`](./mechanical.md) | Mechanical structure | **How to place the wheels and sensors** |
-| [`interfaces.md`](./interfaces.md) | Signal interfaces | Roles of **I²C / UART / PWM / MOSFET / A-D** |
+| [`interfaces.md`](./interfaces.md) | Signal interfaces | Roles of **I²C / UART / D-A / MOSFET / pulse counting** |
 
 ## Big picture (remember it as three part groups)
 

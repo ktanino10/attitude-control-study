@@ -19,7 +19,7 @@
 | トルクの計算 | 傾いた立方体にかかる重力トルク `T꜀ᵍ = mgl·sin(θ)` | トルク / 重力 |
 | どれだけ力がいる？ | 例：45°で `T > 0.48 N·m` → モータ定格の**8倍以上**必要 | 定格 / 瞬間出力 |
 | モータ | maxon EC45（30W）。一瞬なら定格の約3倍で使う | ブラシレスモータ |
-| モータドライバ | 指令を受けて駆動電流を制御。回転数をアナログ電圧で返す | 駆動電流 / A-D |
+| モータドライバ | 指令を受けて駆動電流を制御。回転はホール・センサで検知 | 駆動電流 / ホール・センサ |
 | マイコンと制御 | リアルタイム性が命。FreeRTOSで一定周期で計算 | PSoC 5LP / FreeRTOS |
 | 制御ループ | ずれを測って直すを高速反復 | フィードバック制御 |
 
@@ -40,7 +40,7 @@ T꜀ᵍ = m · g · l · sin(θ)
 - フィードバック制御ループ図
 
 ## 🔗 関連リファレンス
-- [`reference/system-block.md`](../reference/system-block.md)（PWM→ドライバ→モータ、GPIO→MOSFET→ブレーキ）
+- [`reference/system-block.md`](../reference/system-block.md)（D-A→アンプ→ドライバ→モータ、GPIO→MOSFET→ブレーキ）
 - [`reference/parts-list.md`](../reference/parts-list.md)（モータ・ブレーキの仕様）
 
 ⬅️ 前回 [座学2](../session-2-sensing/README.md) ／ 最初へ 👉 [座学1](../session-1-overview/README.md)

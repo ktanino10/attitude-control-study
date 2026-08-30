@@ -16,16 +16,16 @@
 | 1 | リード文／モジュールの狙い | 1辺10cmに全部入れ、小型・軽量・高密度・低コストで**地上実演** | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)、[`README.md`](./README.md) | 🟢 |
 | 2 | Int-Ball との関係 | 宇宙ステーション内の撮影ロボの姿勢制御を地上で見せる教材 | [`session-1-overview/02-why-needed.md`](./session-1-overview/02-why-needed.md) | 🟢 |
 | 3 | こうのとり（HTV）などの実例 | 正しい向きが必要な宇宙機の例 | [`session-1-overview/02-why-needed.md`](./session-1-overview/02-why-needed.md) | 🟢 |
-| 4 | 図1：起き上がり〜倒立のシーケンス | 寝た状態(a)→起き上がり(b)→辺で倒立(c)→(d)→頂点で倒立(e) | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（図 `standup-sequence.svg`） | 🟢 |
+| 4 | 写真2・写真3：起き上がり〜倒立のシーケンス | 寝た状態→辺で倒立→頂点で倒立 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md)（図 `standup-sequence.svg`） | 🟢 |
 | 5 | 3つの機能 | 辺による倒立／起き上がり／頂点による倒立 | [`session-1-overview/04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) | 🟢🔵 |
 | 6 | 姿勢制御の基礎（3軸・RPY） | 姿勢とは・XYZ軸・ロール/ピッチ/ヨー | [`session-1-overview/01-what-is-attitude.md`](./session-1-overview/01-what-is-attitude.md) | 🟢🔵 |
 | 7 | リアクションホイールの原理 | 角運動量保存則・作用反作用・回転いす | [`session-1-overview/03-how-to-turn-in-space.md`](./session-1-overview/03-how-to-turn-in-space.md)（図 `reaction-wheel-principle.svg`） | 🟢🔵 |
 | 8 | 電磁ブレーキ／起き上がり | 高速回転を急停止して瞬間大トルク | [`session-1-overview/03-how-to-turn-in-space.md`](./session-1-overview/03-how-to-turn-in-space.md)、[`04-jaxa-module.md`](./session-1-overview/04-jaxa-module.md) | 🟢🔵 |
 | 9 | アンローディング | 回しすぎたホイールを戻す操作 | [`session-1-overview/03-how-to-turn-in-space.md`](./session-1-overview/03-how-to-turn-in-space.md) | 🟢🔵 |
-| 10 | 図2：システム・ブロック図 | PSoC中心の全体配線・信号の流れ | [`reference/system-block.md`](./reference/system-block.md) | 🟢🔵 |
-| 11 | 各インターフェース | I²C・UART・PWM・A-D・MOSFET・GPIO の役割 | [`reference/interfaces.md`](./reference/interfaces.md) | 🟢🔵 |
+| 10 | 図5：制御システム（システム・ブロック図） | PSoC中心の全体配線・信号の流れ | [`reference/system-block.md`](./reference/system-block.md) | 🟢🔵 |
+| 11 | 各インターフェース | I²C・UART・D-A・パルスカウント・MOSFET・GPIO の役割 | [`reference/interfaces.md`](./reference/interfaces.md) | 🟢🔵 |
 | 12 | I²Cが3系統ある理由 | MPU-6050のアドレスが2個→1本に2個まで→6個で3本 | [`reference/interfaces.md`](./reference/interfaces.md)、[`system-block.md`](./reference/system-block.md) | 🔵 |
-| 13 | 図3：メカの構造 | ホイールの直交配置・IMU分散・電池と基板の詰め方 | [`reference/mechanical.md`](./reference/mechanical.md)（図 `module-cube.svg`） | 🟢🔵 |
+| 13 | 写真1：モジュールの外観／内部 | ホイールの直交配置・IMU分散・電池と基板の詰め方 | [`reference/mechanical.md`](./reference/mechanical.md)（図 `module-cube.svg`） | 🟢🔵 |
 | 14 | センサ（IMU 6個） | 加速度センサ＋ジャイロ、MPU-6050、6軸×6 | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |
 | 15 | 姿勢推定（カルマン等） | 2つのセンサの合体（センサフュージョン） | [`GLOSSARY.md`](./GLOSSARY.md)、[`session-2-sensing/`](./session-2-sensing/README.md)（次回本番） | 🟢🔵 |
 | 16 | アクチュエータ | モータ（maxon EC 45 flat 30W）・ドライバ・電磁ブレーキ | [`session-1-overview/05-parts-overview.md`](./session-1-overview/05-parts-overview.md)、[`reference/parts-list.md`](./reference/parts-list.md) | 🟢 |

@@ -85,8 +85,8 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 | PSoC 5LP | PSoC | The microcontroller used in this article. Its feature is that you can **make many kinds of circuits inside it by programming**. |
 | ARM Cortex-M3 | — | The computing core inside the PSoC 5LP (a type of CPU). |
 | CPU | CPU | The part that calculates and makes decisions. |
-| A-D converter | ADC | A part that converts **analog (voltage level) → digital (numbers)**. It translates the sensor’s voice into numbers. |
-| PWM | PWM | A method that adjusts average strength by turning electricity **ON/OFF very quickly**. Imagine making “strong, medium, weak” fan speeds. |
+| D-A converter | DAC | A part that converts **digital (numbers) → analog (voltage level)**. It turns the microcontroller’s command into a voltage. |
+| Hall sensor | Hall sensor | Detects **motor rotation** from a magnet’s orientation. Counting its output pulses gives the rotation speed. |
 | MOSFET | MOSFET | An electrical **switch** (a part that quickly turns large current ON/OFF). Used to turn the electromagnetic brake ON/OFF. |
 | I²C | I²C | A communication rule where chips **talk over two wires**. Used for conversations between sensors and the microcontroller. |
 | UART | UART | Another **serial communication** rule. Used for talking with the wireless module. |
@@ -133,7 +133,7 @@ These are slightly technical terms that appear in the “🔵 In depth” parts.
 | PID control | PID control | A standard control method that uses three things: error size, accumulated error, and rate of change (→ Lesson 3). |
 | Complementary filter | complementary filter | A simple estimation method that combines accelerometer data (low frequency) and gyro data (high frequency) by dividing their roles by frequency. |
 | Back-EMF | back-EMF $E=k_e\omega$ | A “reverse voltage” generated when a motor rotates. The faster it rotates, the harder it is for current to flow. |
-| Duty ratio | duty ratio | The ratio of PWM ON time. Average voltage $=D\times V_{\text{supply}}$. |
+| PGA | Programmable Gain Amplifier | An amplifier whose gain can be set in software. It trims the D-A output for the motor driver. |
 | Torque constant | torque constant $k_t$ | Torque per 1 A of current. About 25.5 mNm/A for the maxon EC 45 flat. $\tau=k_t I$. |
 | Open-drain / pull-up | open-drain / pull-up | The wiring method used by I²C. A resistor that “pulls up” the line is needed. |
 | Flyback diode | flyback diode | A part that protects components from reverse voltage when a coil (electromagnetic brake) is suddenly turned off. |

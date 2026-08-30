@@ -12,7 +12,7 @@
 | [`system-block.md`](./system-block.md) | 回路構成（システム・ブロック図） | **全体の配線図**：脳・目・筋肉のつながり |
 | [`parts-list.md`](./parts-list.md) | 部品表（BOM） | **何が何個いるか**リスト |
 | [`mechanical.md`](./mechanical.md) | メカ構造 | **ホイールとセンサの置き方** |
-| [`interfaces.md`](./interfaces.md) | 信号インターフェース | **I²C / UART / PWM / MOSFET / A-D** の役割 |
+| [`interfaces.md`](./interfaces.md) | 信号インターフェース | **I²C / UART / D-A / MOSFET / パルスカウント** の役割 |
 
 ## 全体像（3つの部品グループで覚える）
 

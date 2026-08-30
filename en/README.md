@@ -50,10 +50,10 @@ This is where you can look up “How is this circuit put together?”
 
 | File | Content |
 |---|---|
-| [`reference/system-block.md`](./reference/system-block.md) | **Circuit structure** (system block diagram = original article Fig. 2, redrawn and explained) |
+| [`reference/system-block.md`](./reference/system-block.md) | **Circuit structure** (system block diagram = original article Fig. 5, redrawn and explained) |
 | [`reference/parts-list.md`](./reference/parts-list.md) | **Parts list (BOM)** — what parts, how many, roles, and model numbers |
-| [`reference/mechanical.md`](./reference/mechanical.md) | **Mechanical structure** — wheel and sensor placement (original article Fig. 3) |
-| [`reference/interfaces.md`](./reference/interfaces.md) | **How signals connect** — roles of I²C / UART / PWM / MOSFET / A-D |
+| [`reference/mechanical.md`](./reference/mechanical.md) | **Mechanical structure** — wheel and sensor placement (original article Photo 1) |
+| [`reference/interfaces.md`](./reference/interfaces.md) | **How signals connect** — roles of I²C / UART / D-A / MOSFET / pulse counting |
 
 ---
 

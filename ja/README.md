@@ -50,10 +50,10 @@
 
 | ファイル | 内容 |
 |---|---|
-| [`reference/system-block.md`](./reference/system-block.md) | **回路構成**（システム・ブロック図＝元記事 図2 を自分で描き直し＋解説） |
+| [`reference/system-block.md`](./reference/system-block.md) | **回路構成**（システム・ブロック図＝元記事 図5 を自分で描き直し＋解説） |
 | [`reference/parts-list.md`](./reference/parts-list.md) | **部品表（BOM）** — 何が何個、役割、型番 |
-| [`reference/mechanical.md`](./reference/mechanical.md) | **メカ構造** — ホイールとセンサの配置（元記事 図3） |
-| [`reference/interfaces.md`](./reference/interfaces.md) | **信号のつなぎ方** — I²C / UART / PWM / MOSFET / A-D の役割 |
+| [`reference/mechanical.md`](./reference/mechanical.md) | **メカ構造** — ホイールとセンサの配置（元記事 写真1） |
+| [`reference/interfaces.md`](./reference/interfaces.md) | **信号のつなぎ方** — I²C / UART / D-A / MOSFET / パルスカウント の役割 |
 
 ---
 

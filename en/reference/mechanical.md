@@ -1,6 +1,6 @@
 # Mechanical structure (how the parts are placed)
 
-Based on the original article’s “Fig. 3 Mechanical structure of the 3-axis attitude control module,” this page explains **how the parts are arranged**.
+Based on the original article’s **Photo 1 (module exterior)** and its text, this page explains **how the parts are arranged**.
 There is a good reason why the inside is packed so tightly.
 
 ![Inside the module](../../assets/en/module-cube.svg)
