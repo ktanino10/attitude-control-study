@@ -7,7 +7,7 @@ What remains is the rule for “**looking at the current state $`\mathbf{x}`$ an
 
 ---
 
-## 🟢 Easy: push back in the opposite direction by the amount it tilts
+## Easy: push back in the opposite direction by the amount it tilts
 
 When you stand on a bicycle, if you lean right you move right, and if you lean left you move left, returning your body **by the amount of the tilt**, right?
 Control of an inverted pendulum uses exactly the same idea.
@@ -26,12 +26,12 @@ u = -K\,\mathbf{x}
 - $`K`$: **gain** = the “strength setting” for how strongly to push back for a tilt of 1.
 - Minus (−) = push back in the **opposite** direction from the tilt.
 
-> 🧠 Just repeating this every 20 ms lets the inverted pendulum keep standing.
+> Just repeating this every 20 ms lets the inverted pendulum keep standing.
 > The main program is actually only **a few multiplications and additions**. The hard part is deciding $`K`$.
 
 ---
 
-## 🔵 In depth: state feedback and LQR
+## In depth: state feedback and LQR
 
 ### State feedback
 The control law for the discrete model is **state feedback** (article Eq. 19):
@@ -54,7 +54,7 @@ The input $`u`$ disappears, leaving “next state = **one matrix** $`(A_d-B_d K_
 - **Left alone** ($`K_d=0`$): the eigenvalues of $`A_d`$ have **magnitude greater than 1**, so the state **grows** every step = it falls.
 - **With feedback**: the eigenvalues become those of $`(A_d-B_d K_d)`$. If we choose $`K_d`$ so that **all eigenvalues have magnitude below 1** ($`|\lambda|<1`$), the state **shrinks** every step back to the upright point = stable.
 
-> 🧠 The **minus** in $`u=-K\mathbf x`$ is the mark of “pull back in the direction that cancels the error.” The essence of feedback is to **move the matrix's eigenvalues ‘inward’ and turn instability into stability**. Choosing where to move them *optimally* is the job of LQR, next.
+> The **minus** in $`u=-K\mathbf x`$ is the mark of “pull back in the direction that cancels the error.” The essence of feedback is to **move the matrix's eigenvalues ‘inward’ and turn instability into stability**. Choosing where to move them *optimally* is the job of LQR, next.
 
 ### How to decide the gain $`K_d`$: LQR
 **LQR (linear-quadratic regulator)** answers the question “How should we choose $`K_d`$?” It uses mathematics (the Riccati equation) to minimize the following **cost function** $`J`$ and find the corresponding $`K_d`$ in one shot.
@@ -72,7 +72,7 @@ J = \sum_{k=0}^{\infty}\Big(\mathbf{x}[k]^\top Q\,\mathbf{x}[k] + u[k]^\top R\,u
 | Large $`Q`$ | Strongly dislikes error -> returns **sharply**, but uses more current |
 | Large $`R`$ | Strongly dislikes input -> is **gentler**, but returns more slowly |
 
-> 🧠 Just by changing the **balance** between $`Q`$ and $`R`$, you can tune “sharp ⇄ gentle.”
+> Just by changing the **balance** between $`Q`$ and $`R`$, you can tune “sharp ⇄ gentle.”
 > That is the convenience of LQR. You do not have to tune gains by trial and error by hand.
 
 ### Offset of the upright point (shifting the target)
@@ -90,10 +90,10 @@ Every 20 ms:
 
 ---
 
-### ✅ Quick check
+### Quick check
 - Try explaining “push back in the opposite direction by the amount it tilts” with a bicycle. (easy)
 - What does the minus sign in $`u=-K\mathbf{x}`$ mean? (easy)
-- 🔵 What do the two terms in the LQR cost function $`J`$ penalize?
-- 🔵 If you want it to return sharply, what should you do with $`Q`$ and $`R`$?
+- (In depth) What do the two terms in the LQR cost function $`J`$ penalize?
+- (In depth) If you want it to return sharply, what should you do with $`Q`$ and $`R`$?
 
-➡️ Next: [6. Physics of standing up (column)](./06-standup-energy.md)
+Next: [6. Physics of standing up (column)](./06-standup-energy.md)

@@ -1,6 +1,6 @@
 # 4. Introducing JAXA’s 3-axis attitude control module
 
-Now it is time to introduce the main device. The article’s star is this 👇
+Now it is time to introduce the main device. The article’s star is this
 
 > A device that packs **everything needed for attitude control** into a cube with side length about **10 cm**.
 > Its goals are **small size, light weight, high density, and low cost**. It can **demonstrate 3-axis control** for artificial satellites on the ground.
@@ -39,7 +39,7 @@ Flow in the figure above:
 - **(b) Standing up**: spin a wheel and brake suddenly → the reaction lifts it up
 - **(c) Balancing on one edge**: balances on an edge
 - **(d) Stands up one more time**
-- **(e) Balancing on a vertex**: finally standing on a point! 🎉
+- **(e) Balancing on a vertex**: finally standing on a point!
 
 ---
 
@@ -53,7 +53,7 @@ This is exactly a real example of **“3-axis attitude control.”** It is a gro
 
 ---
 
-## 🔵 In depth: unstable equilibrium and the physics of standing up
+## In depth: unstable equilibrium and the physics of standing up
 
 > Why are “standing on a point” and “standing up” difficult, and why can this mechanism achieve them?
 
@@ -74,15 +74,15 @@ To lift the center of gravity from a lying position, the system must beat the to
 - This is about **8 to 9 times** the motor’s continuous torque (about $`0.055\,\text{N·m}`$). Slowly spinning the motor is nowhere near enough.
 - So the system **stores momentum with high-speed rotation and releases it all at once using the electromagnetic brake**, creating a large momentary torque (→ the formula in 03, $`\tau_{\text{brake}}=\Delta L/\Delta t`$). Detailed calculation is in Lesson 3.
 
-> 🧠 Summary: ① Balancing on a point is unstable → maintained by high-speed feedback. ② Standing up must beat gravitational torque → uses the brake’s large momentary torque.
+> Summary: ① Balancing on a point is unstable → maintained by high-speed feedback. ② Standing up must beat gravitational torque → uses the brake’s large momentary torque.
 
 ---
 
-### ✅ Quick check
+### Quick check
 - Can you name the device’s “three tricks”? (easy)
 - What everyday game is an inverted pendulum like? (easy)
 - Why is the cube shape convenient for 3-axis control? (easy)
-- 🔵 Explain the difference between “stable equilibrium” and “unstable equilibrium” using a ball as an example.
-- 🔵 Why is slow motor rotation alone not enough to stand up? Explain using the formula.
+- (In depth) Explain the difference between “stable equilibrium” and “unstable equilibrium” using a ball as an example.
+- (In depth) Why is slow motor rotation alone not enough to stand up? Explain using the formula.
 
-➡️ Next: [5. Quick overview of the parts](./05-parts-overview.md)
+Next: [5. Quick overview of the parts](./05-parts-overview.md)

@@ -14,7 +14,7 @@ It is like “a rod standing on a point (an inverted pendulum), with a flywheel 
 
 ---
 
-## 🟢 Easy: only three “forces” appear
+## Easy: only three “forces” appear
 
 Only three forces (effects) decide whether this rod falls or stands.
 
@@ -22,12 +22,12 @@ Only three forces (effects) decide whether this rod falls or stands.
 2. **Motor force (torque)** … Spins the wheel. By reaction, it also works in the direction that raises the body. ← The “swivel chair” from Session 1!
 3. **Friction** … A nuisance that brakes rotation. It exists at both the body axis and the wheel axis.
 
-> 🧠 Modeling means putting the balance of these “force that makes it fall, force that raises it, and force that gets in the way” into **one equation**.
+> Modeling means putting the balance of these “force that makes it fall, force that raises it, and force that gets in the way” into **one equation**.
 > Once we have an equation, the microcontroller can calculate and predict “which way and how much it will move now.”
 
 ---
 
-## 🔵 In depth: equation of motion
+## In depth: equation of motion
 
 We write Newton’s equation of motion for rotation (torque = moment of inertia × angular acceleration) for the body and the wheel.
 
@@ -65,7 +65,7 @@ T_m = K_m\,u
 - $`K_m`$: **torque constant** [Nm/A]. How many Nm of torque are produced per 1 A of current (-> glossary).
 - In other words, **the only thing the microcontroller can operate is the current $`u`$**. This becomes the “input” from here on.
 
-> 🧠 Looking at the numerator, the $`g\sin\theta_b`$ term (gravity making it fall) and the $`-T_m`$ term (motor raising it) appear with opposite signs.
+> Looking at the numerator, the $`g\sin\theta_b`$ term (gravity making it fall) and the $`-T_m`$ term (motor raising it) appear with opposite signs.
 > It is a tug-of-war between the “falling force” and the “raising force.” The goal of control is to keep this at $`\theta_b=0`$.
 
 ### Why $`\sin\theta_b`$?
@@ -113,9 +113,9 @@ With $`L=T-U`$, compute $`\frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot q}
 I_w(\ddot\theta_b+\ddot\theta_w) = T_m - C_w\dot\theta_w
 ```
 
-→ **exactly Eq. 9** ✅
+→ **exactly Eq. 9**
 
-> 🧠 This is “Newton’s law for the wheel”: **absolute angular acceleration $`(\ddot\theta_b+\ddot\theta_w)`$ × inertia $`I_w`$ = applied torque (motor − bearing friction)**.
+> This is “Newton’s law for the wheel”: **absolute angular acceleration $`(\ddot\theta_b+\ddot\theta_w)`$ × inertia $`I_w`$ = applied torque (motor − bearing friction)**.
 
 *Body $`\theta_b`$:*
 
@@ -135,9 +135,9 @@ I_w(\ddot\theta_b+\ddot\theta_w) = T_m - C_w\dot\theta_w
 (I_b+m_w l^{2})\ddot\theta_b = (m_b l_b+m_w l)\,g\,\sin\theta_b - T_m + C_w\dot\theta_w - C_b\dot\theta_b
 ```
 
-Divide both sides by $`I_b+m_w l^{2}`$ to get **Eq. 10** ✅
+Divide both sides by $`I_b+m_w l^{2}`$ to get **Eq. 10**
 
-> 🧠 **Why $`-T_m`$?** Because the **reaction** to the motor spinning the wheel comes straight back onto the body (action–reaction). Just like the “swivel chair” in Session 1: spin the wheel one way and the body rights itself the other way. Substituting Eq. 9 is exactly the step that moves this reaction torque $`-(T_m-C_w\dot\theta_w)`$ onto the body.
+> **Why $`-T_m`$?** Because the **reaction** to the motor spinning the wheel comes straight back onto the body (action–reaction). Just like the “swivel chair” in Session 1: spin the wheel one way and the body rights itself the other way. Substituting Eq. 9 is exactly the step that moves this reaction torque $`-(T_m-C_w\dot\theta_w)`$ onto the body.
 
 **⑥ A preview of linearization**
 Near the upright point $`\theta_b\approx0`$, $`\sin\theta_b\approx\theta_b`$. Dropping friction and motor,
@@ -150,9 +150,9 @@ The coefficient on the right is **positive**, so $`\theta_b`$ grows on its own =
 
 ---
 
-### ✅ Quick check
+### Quick check
 - What are the three “forces” that decide this rod’s motion? (easy)
-- 🔵 In the numerator of Eq. (10), which term points in the “falling” direction and which term points in the “raising” direction?
-- 🔵 What quantity (input) can the microcontroller directly change? Why is it current?
+- (In depth) In the numerator of Eq. (10), which term points in the “falling” direction and which term points in the “raising” direction?
+- (In depth) What quantity (input) can the microcontroller directly change? Why is it current?
 
-➡️ Next: [3. Linearization (turning a curve into a line)](./03-linearization.md)
+Next: [3. Linearization (turning a curve into a line)](./03-linearization.md)

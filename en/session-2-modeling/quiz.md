@@ -1,8 +1,8 @@
-# ✔️ Lesson Session 2 Understanding check
+# Lesson Session 2 Understanding check
 
-If you do not know an answer, it is OK to go back to the text. 🟢 is for easy questions, and 🔵 is for in-depth questions.
+If you do not know an answer, it is OK to go back to the text. Items are split into easy and in-depth questions.
 
-## 🟢 Easy
+## Easy
 
 1. Say the **four steps** for making a microcontroller control program in order.
 2. Roughly speaking, what does “modeling” mean?
@@ -12,7 +12,7 @@ If you do not know an answer, it is OK to go back to the text. 🟢 is for easy 
 6. What does the **minus sign** in $`u = -K\mathbf{x}`$ mean?
 7. Say the three “store, release, and rise” steps for standing up from a lying position.
 
-## 🔵 In depth
+## In depth
 
 8. In the numerator of the equation of motion (Eq. 10), which terms point in the “falling” direction and the “raising” direction?
 9. What input can the microcontroller directly change, and how is it connected to torque? ($`T_m = K_m u`$)
@@ -28,11 +28,11 @@ if 1) the target angle $`\theta_b`$ is made larger, and 2) the wheel inertia $`I
 
 ---
 
-## ✅ Answers (click to reveal)
+## Answers (click to reveal)
 
-Try answering in your own words first. 🟢 Easy, 🔵 In depth.
+Try answering in your own words first. “Easy” and “In depth”.
 
-**🟢 Easy**
+**Easy**
 
 <details><summary>1. The four steps</summary>
 
@@ -69,7 +69,7 @@ Push back in the **opposite direction to the tilt** (negative feedback) to cance
 (1) **Store** (spin the wheel up fast) → (2) **Release** (stop it at once with the magnetic brake) → (3) **Rise** (the reaction turns the body and lifts the center of mass).
 </details>
 
-**🔵 In depth**
+**In depth**
 
 <details><summary>8. Falling vs. raising terms in Eq. 10</summary>
 
@@ -108,8 +108,8 @@ Term 1 $`\mathbf{x}^\top Q\mathbf{x}`$ penalizes **state error**; term 2 $`u^\to
 
 ---
 
-### 🌟 Summary in one sentence
+### Summary in one sentence
 The star of this session is **translating “real motion -> equations the microcontroller can handle -> rules for recovery.”**
 If you understand the four steps: 1) modeling, 2) linearization, 3) discretization, and 4) control law, you can apply them to other control problems too.
 
-⬅️ [Back to Lesson Session 2 top](./README.md) ／ Next time 👉 [Lesson Session 3: Extension to 3D](../session-3-3d/README.md)
+[Back to Lesson Session 2 top](./README.md) ／ Next time [Lesson Session 3: Extension to 3D](../session-3-3d/README.md)

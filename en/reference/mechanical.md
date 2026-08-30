@@ -40,7 +40,7 @@ There is a good reason why the inside is packed so tightly.
 
 ---
 
-## 🔵 In depth: why three orthogonal wheels are enough / physics of distributed placement
+## In depth: why three orthogonal wheels are enough / physics of distributed placement
 
 ### Three orthogonal wheels = a three-dimensional “basis”
 - The torque you want to create is a **vector** $`\boldsymbol{\tau}`$ with direction and magnitude. Any vector in 3D space can always be broken into **components along three orthogonal directions**.
@@ -57,7 +57,7 @@ There is a good reason why the inside is packed so tightly.
 - IMUs at different positions have different $`a`$, so **differences in acceleration → information about rotation**.
 - Also, averaging the six measurements reduces each sensor’s random error (noise) to about $`1/\sqrt{6}`$. This improves both accuracy and reliability.
 
-> 🧠 Summary: three orthogonal wheels are “the minimum tool set for creating 3D torque.” Distributed IMUs improve accuracy by using “position differences + averaging.”
+> Summary: three orthogonal wheels are “the minimum tool set for creating 3D torque.” Distributed IMUs improve accuracy by using “position differences + averaging.”
 
 ---
 
@@ -68,4 +68,4 @@ There is a good reason why the inside is packed so tightly.
 From lying down (a), the system spins a wheel and brakes it suddenly (b) → balances on one edge (c) → does it again (d) → **balances on a vertex (point)** (e).
 It can keep standing on a point because the three-axis wheels **constantly cancel the direction it is about to fall**.
 
-📎 Why it can stand on a point (action-reaction and inverted pendulum) is explained in [Lesson 1](../session-1-overview/README.md) and Lesson 3.
+Why it can stand on a point (action-reaction and inverted pendulum) is explained in [Lesson 1](../session-1-overview/README.md) and Lesson 3.

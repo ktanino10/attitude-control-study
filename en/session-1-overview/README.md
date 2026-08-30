@@ -1,9 +1,9 @@
-# Lesson Session 1: Big picture and basic concepts 🛰️
+# Lesson Session 1: Big picture and basic concepts
 
 Welcome! Here, we learn **“What is 3-axis attitude control in the first place?”** without difficult formulas,
-mainly through images and analogies. This is today’s goal 👇
+mainly through images and analogies. This is today’s goal
 
-## 🎯 Goals for this session
+## Goals for this session
 - [ ] Explain what “attitude” and “3 axes (XYZ)” mean
 - [ ] Say why artificial satellites need attitude control
 - [ ] Understand how to change direction in space (even when there is nothing to grab)
@@ -12,18 +12,18 @@ mainly through images and analogies. This is today’s goal 👇
 
 ---
 
-## 🟢🔵 How to read these notes (two levels)
+## How to read these notes (two levels)
 
 Each page is written in **two stages**. Choose based on your goal.
 
-- **🟢 Easy** … Mostly analogies that even a middle school student can understand. If you read only this, you will get the big picture.
-- **🔵 In depth** … For readers who want a little more. Explains **“why it works”** using physics formulas and electrical ideas. If it feels hard, you can skip it.
+- **Easy** … Mostly analogies that even a middle school student can understand. If you read only this, you will get the big picture.
+- **In depth** … For readers who want a little more. Explains **“why it works”** using physics formulas and electrical ideas. If it feels hard, you can skip it.
 
-> If you want to understand the mechanism carefully, read through the 🔵 parts. If you first want to grasp the flow, read only the 🟢 parts.
+> If you want to understand the mechanism carefully, read through the “In depth” parts. If you first want to grasp the flow, read only the “Easy” parts.
 
 ---
 
-## 📖 Reading order
+## Reading order
 
 | No. | File | Content | Analogy |
 |---|---|---|---|
@@ -32,11 +32,11 @@ Each page is written in **two stages**. Choose based on your goal.
 | 3 | [`03-how-to-turn-in-space.md`](./03-how-to-turn-in-space.md) | How to turn in space | The magic of a swivel chair |
 | 4 | [`04-jaxa-module.md`](./04-jaxa-module.md) | Introducing the JAXA module | A cube that stands on a point |
 | 5 | [`05-parts-overview.md`](./05-parts-overview.md) | Quick overview of parts | Eyes, brain, and muscles |
-| ✔️ | [`quiz.md`](./quiz.md) | Understanding check | Test your strength |
+| Check | [`quiz.md`](./quiz.md) | Understanding check | Test your strength |
 
 ---
 
-## 🧩 One-page summary for this session
+## One-page summary for this session
 
 Attitude control is this **repeating** three-step cycle.
 
@@ -54,7 +54,7 @@ flowchart LR
 
 ---
 
-## 💡 Keywords for this session (details in the text and [glossary](../GLOSSARY.md))
+## Keywords for this session (details in the text and [glossary](../GLOSSARY.md))
 Attitude / 3-axis / roll, pitch, yaw / torque / inertia / reaction wheel / angular momentum / inverted pendulum
 
-Next time 👉 [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md) (turning motion into equations to control it)
+Next time [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md) (turning motion into equations to control it)

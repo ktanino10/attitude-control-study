@@ -1,13 +1,13 @@
 # 参考文献・出典 / References
 
-> 🇯🇵 日本語 ・ 🇬🇧 [English](#-references-english) ｜ ⬅️ [日本語トップ](./ja/README.md) ・ [English Top](./en/README.md)
+> 日本語 ・ [English](#references-english) ｜ [日本語トップ](./ja/README.md) ・ [English Top](./en/README.md)
 
 このノートは学習目的の二次資料です。図はすべて筆者が描き直したもので、**元記事の写真・図版は転載していません**。
 一次情報は必ず下記の出典をご確認ください。
 
 ---
 
-## 🇯🇵 参考文献（日本語）
+## 参考文献（日本語）
 
 ### 一次資料（この学習ノートの元記事）
 巳谷 真司（JAXA）, 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」（全3回）, CQ出版社.
@@ -78,9 +78,9 @@
 
 <a id="-references-english"></a>
 
-## 🇬🇧 References (English)
+## References (English)
 
-> 🇬🇧 English ・ 🇯🇵 [日本語](#参考文献出典--references) ｜ ⬅️ [English Top](./en/README.md) ・ [日本語トップ](./ja/README.md)
+> English ・ [日本語](#参考文献出典--references) ｜ [English Top](./en/README.md) ・ [日本語トップ](./ja/README.md)
 
 This is a study note (secondary material) for learning purposes. All figures were redrawn by the author;
 **no photographs or figures from the original article are reproduced.** Always consult the primary sources below.

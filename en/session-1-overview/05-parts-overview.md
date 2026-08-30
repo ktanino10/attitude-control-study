@@ -23,7 +23,7 @@ flowchart LR
 
 ---
 
-## 👀 Eyes and ears: sensors
+## Eyes and ears: sensors
 
 | Part | Role | In one phrase |
 |---|---|---|
@@ -33,7 +33,7 @@ flowchart LR
 - **Gyro**: senses rotational speed. → Good at fast motion.
 - Combining the two makes both slow and fast motion accurate (the main topic of Lesson 2).
 
-## 🧠 Brain: microcontroller
+## Brain: microcontroller
 
 | Part | Role | In one phrase |
 |---|---|---|
@@ -41,7 +41,7 @@ flowchart LR
 
 - Attitude control depends heavily on **timing**, so a **real-time OS (FreeRTOS)** keeps an accurate rhythm.
 
-## 💪 Muscles: moving parts (actuators)
+## Muscles: moving parts (actuators)
 
 | Part | Role | In one phrase |
 |---|---|---|
@@ -49,7 +49,7 @@ flowchart LR
 | **Reaction wheels x3** | Spin and change the body’s orientation | One for each of the X/Y/Z axes. |
 | **Electromagnetic brakes x3** | Stop instantly and create large force | The special move for “standing up.” |
 
-## 🔌 Other parts
+## Other parts
 
 | Part | Role |
 |---|---|
@@ -62,19 +62,19 @@ flowchart LR
 ## Summary: map of this chapter
 
 ```
-👀 Eyes (IMUs x6) → 🧠 Brain (PSoC) → 💪 Muscles (motor → wheel / brake) x3 axes
+Eyes (IMUs x6) → Brain (PSoC) → Muscles (motor → wheel / brake) x3 axes
                      ↑______________ Check again with the eyes (repeat)
 ```
 
-- **Lesson 2** looks closely at the 👀 “eyes” = sensors (how it “knows” its own tilt)
-- **Lesson 3** looks closely at the 💪 “muscles” = wheels, brakes, motors, and control (how it “moves”)
+- **Lesson 2** looks closely at the “eyes” = sensors (how it “knows” its own tilt)
+- **Lesson 3** looks closely at the “muscles” = wheels, brakes, motors, and control (how it “moves”)
 
 Detailed parts information for building is in [`reference/parts-list.md`](../reference/parts-list.md),
 and wiring is summarized in [`reference/system-block.md`](../reference/system-block.md).
 
 ---
 
-## 🔵 In depth: what physical quantity each part “touches”
+## In depth: what physical quantity each part “touches”
 
 If you look at each part by “what physical quantity it reads or changes,” the whole device starts to look like one computer.
 
@@ -87,15 +87,15 @@ If you look at each part by “what physical quantity it reads or changes,” th
 | Motor / driver | Current → torque | $`\tau=k_t I`$ ($`k_t\approx 25.5\,\text{mNm/A}`$) |
 | Hall sensor + pulse counting | Monitoring rotation speed | Saturation detection → unloading |
 
-> 🧠 “Sensors = read quantities,” “actuators = change quantities,” and “microcontroller = decides the next quantity from the quantities it read.”
+> “Sensors = read quantities,” “actuators = change quantities,” and “microcontroller = decides the next quantity from the quantities it read.”
 > This role split leads into Lesson 2 (read) and Lesson 3 (change).
 
 ---
 
-### ✅ Quick check
+### Quick check
 - Sort the parts into “eyes, brain, and muscles.” (easy)
 - What are accelerometers and gyros each good at? (easy)
 - Why are many parts “x3”? (easy)
-- 🔵 What physical quantities do the reaction wheel and motor each “handle”?
+- (In depth) What physical quantities do the reaction wheel and motor each “handle”?
 
-➡️ Test your knowledge! [`quiz.md`](./quiz.md)
+Test your knowledge! [`quiz.md`](./quiz.md)

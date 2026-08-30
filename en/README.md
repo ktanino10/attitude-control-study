@@ -1,6 +1,6 @@
-# 3-Axis Attitude Control Study Notes 🛰️
+# 3-Axis Attitude Control Study Notes
 
-**🌐 言語 / Language:** [日本語](../ja/README.md) ・ English (current) ｜ [🏠 Top](../README.md) ・ [📚 References](../REFERENCES.md)
+**言語 / Language:** [日本語](../ja/README.md) ・ English (current) ｜ [Top](../README.md) ・ [References](../REFERENCES.md)
 
 These are study notes for learning **3-axis attitude control** as a hobby, with the goal of eventually building it myself.
 I explain difficult technical terms in **words a middle school student can understand**.
@@ -8,16 +8,16 @@ I explain difficult technical terms in **words a middle school student can under
 > **Original source**: Transistor Gijutsu (Transistor Technology) June–August 2020, short serial “Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module” (3 parts; Shinji Mitani / JAXA). See [`REFERENCES.md`](../REFERENCES.md) for per-part page numbers.
 > These notes do not use photos from the article. They are made only from **diagrams I redrew myself** and **summaries in my own words**.
 
-- 📎 See [`coverage-map.md`](./coverage-map.md) for the map to the original article, and [`REFERENCES.md`](../REFERENCES.md) for sources.
+- See [`coverage-map.md`](./coverage-map.md) for the map to the original article, and [`REFERENCES.md`](../REFERENCES.md) for sources.
 
-### 🟢🔵 Written at two levels
-- **🟢 Easy**: Mostly examples for middle school readers. Use this to get the big picture first.
-- **🔵 In depth**: For readers who want a little more. Explains “why” using physics formulas and electrical ideas.
-- Formulas display cleanly on GitHub ($`\LaTeX`$ notation). If they feel hard, it is OK to skip the 🔵 parts.
+### Written at two levels
+- **Easy**: Mostly examples for middle school readers. Use this to get the big picture first.
+- **In depth**: For readers who want a little more. Explains “why” using physics formulas and electrical ideas.
+- Formulas display cleanly on GitHub ($`\LaTeX`$ notation). If they feel hard, it is OK to skip the “In depth” parts.
 
 ---
 
-## 📚 Structure of these notes
+## Structure of these notes
 
 There are two main parts.
 
@@ -30,7 +30,7 @@ There are two main parts.
 
 ---
 
-## 🗺️ Lesson map (3 sessions)
+## Lesson map (3 sessions)
 
 You will learn in this order: “first see the whole picture → turn one axis into equations and stabilize it → extend to three dimensions.”
 
@@ -40,11 +40,11 @@ You will learn in this order: “first see the whole picture → turn one axis i
 | Session 2 | Equations of motion and microcontroller control | Modeling, linearization, discretization, state feedback, LQR (turn one axis into equations) | [`session-2-modeling/`](./session-2-modeling/README.md) |
 | Session 3 | Extension to 3D | Frames, Euler angles, attitude estimation, complementary filter, controllability/observability (extend to 3 axes) | [`session-3-3d/`](./session-3-3d/README.md) |
 
-➡️ **Start with [Lesson Session 1](./session-1-overview/README.md).**
+**Start with [Lesson Session 1](./session-1-overview/README.md).**
 
 ---
 
-## 🧭 Equation map (one backbone)
+## Equation map (one backbone)
 
 The equations form **one connected line**: “basics → stabilize one axis → extend to three axes.” Numbers are the article's equation numbers (basic Eqs. 1–6 are the running numbers we assigned in these notes).
 
@@ -76,7 +76,7 @@ Eqs. 39,41,42 (3-D equations of motion: gyro term, inertia tensor, 9-D)
 
 ---
 
-## 🔧 Reference (information needed to build)
+## Reference (information needed to build)
 
 This is where you can look up “How is this circuit put together?”
 
@@ -89,7 +89,7 @@ This is where you can look up “How is this circuit put together?”
 
 ---
 
-## 🖼️ Diagram list (`assets/`)
+## Diagram list (`assets/`)
 
 - `xyz-axes.svg` — the three rotations that define attitude (roll, pitch, yaw)
 - `module-cube.svg` — a rough look inside the module
@@ -98,11 +98,11 @@ This is where you can look up “How is this circuit put together?”
 
 ---
 
-## ✅ Recommended way to study
+## Recommended way to study
 
 1. Read `session-1-overview/README.md` from the top
 2. If you find a word you do not know, check `GLOSSARY.md`
 3. Check your understanding with `quiz.md` at the end of each session
 4. When you feel like building it, read `reference/`
 
-Have fun learning 🚀
+Have fun learning

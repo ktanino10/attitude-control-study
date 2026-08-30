@@ -1,13 +1,13 @@
 # Glossary (all in words a middle school student can understand)
 
-**🌐 言語 / Language:** [日本語](../ja/GLOSSARY.md) ・ English (current) ｜ [🏠 Top](../README.md)
+**言語 / Language:** [日本語](../ja/GLOSSARY.md) ・ English (current) ｜ [Top](../README.md)
 
 This glossary explains words that appear in the article and in attitude control, with easy analogies.
 If you see a word you do not know, look it up here. The terms are grouped by category.
 
 ---
 
-## 🧭 Basic terms
+## Basic terms
 
 | Term | Reading / English | Simple meaning (analogy) |
 |---|---|---|
@@ -27,7 +27,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 🛰️ Space and satellite terms
+## Space and satellite terms
 
 | Term | Reading / English | Simple meaning |
 |---|---|---|
@@ -41,7 +41,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 👀 Sensors (to “know” its own orientation)
+## Sensors (to “know” its own orientation)
 
 | Term | Reading / English | Simple meaning |
 |---|---|---|
@@ -59,7 +59,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 💪 Actuators (to “change” orientation)
+## Actuators (to “change” orientation)
 
 | Term | Reading / English | Simple meaning |
 |---|---|---|
@@ -77,7 +77,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 🧠 Electronics and microcontrollers
+## Electronics and microcontrollers
 
 | Term | Reading / English | Simple meaning |
 |---|---|---|
@@ -99,7 +99,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 🔢 Symbols in formulas (gravitational-torque formula)
+## Symbols in formulas (gravitational-torque formula)
 
 | Symbol | Reading | Meaning |
 |---|---|---|
@@ -112,7 +112,7 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
-## 🧮 Math basics (linear, matrix, derivative, eigenvalue)
+## Math basics (linear, matrix, derivative, eigenvalue)
 
 The plainest possible take on the math words used from Session 2 on. Get these and you can read the "feel" of each formula.
 
@@ -129,7 +129,7 @@ The plainest possible take on the math words used from Session 2 on. Get these a
 
 ---
 
-## ⚙️ Equations of motion and microcontroller control (Session 2)
+## Equations of motion and microcontroller control (Session 2)
 
 | Term | Reading / Japanese | Simple meaning |
 |---|---|---|
@@ -149,7 +149,7 @@ The plainest possible take on the math words used from Session 2 on. Get these a
 
 ---
 
-## 🧊 Extension to 3D (Session 3)
+## Extension to 3D (Session 3)
 
 | Term | Reading / Japanese | Simple meaning |
 |---|---|---|
@@ -164,9 +164,9 @@ The plainest possible take on the math words used from Session 2 on. Get these a
 
 ---
 
-## 🔵 In depth: terms for going one step further
+## In depth: terms for going one step further
 
-These are slightly technical terms that appear in the “🔵 In depth” parts.
+These are slightly technical terms that appear in the “In depth” parts.
 
 | Term | Reading / English | Simple meaning |
 |---|---|---|
@@ -192,4 +192,4 @@ These are slightly technical terms that appear in the “🔵 In depth” parts.
 
 ---
 
-📌 If a word not listed here appears, it is also explained in the lesson text.
+If a word not listed here appears, it is also explained in the lesson text.

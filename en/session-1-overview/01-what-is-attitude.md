@@ -22,7 +22,7 @@ This is what **3-axis** means. The three reference lines are called the **X-axis
 
 ![Three rotations](../../assets/en/xyz-axes.svg)
 
-Using an airplane as an example, these rotations have names 👇
+Using an airplane as an example, these rotations have names
 
 | Rotation | Name | Motion | Everyday analogy |
 |---|---|---|---|
@@ -30,7 +30,7 @@ Using an airplane as an example, these rotations have names 👇
 | Around the Y-axis | **Pitch** | Nods forward and back | Bowing / nose up and down |
 | Around the Z-axis | **Yaw** | Turns left and right | Shaking your head “no” |
 
-> 🧠 **Memory tip**: roll = rolling around, pitch = nodding down, yaw = shaking your head no.
+> **Memory tip**: roll = rolling around, pitch = nodding down, yaw = shaking your head no.
 
 ---
 
@@ -53,7 +53,7 @@ That is why it is called “3-axis attitude control.” It can freely control th
 
 ---
 
-## 🔵 In depth: expressing orientation as “numbers”
+## In depth: expressing orientation as “numbers”
 
 > A machine needs numbers to handle “orientation.” Here is the basic idea.
 
@@ -73,14 +73,14 @@ Hold a book and try “tilt it forward 90° → tilt it right 90°” and “til
 - Angles (roll, pitch, yaw = Euler angles) are intuitive for humans, but they have a weakness called **gimbal lock**, where axes overlap at certain orientations and cannot represent rotation well.
 - So real machines often store attitude using **quaternions (sets of four numbers)**, which handle order and singularities better (more in Lesson 2).
 
-> 🧠 Summary: **attitude = 3 rotational degrees of freedom**. Angles (RPY) are easy for humans, while quaternions are convenient for computers because they handle order well. They are just different ways to represent the same “orientation.”
+> Summary: **attitude = 3 rotational degrees of freedom**. Angles (RPY) are easy for humans, while quaternions are convenient for computers because they handle order well. They are just different ways to represent the same “orientation.”
 
 ---
 
-### ✅ Quick check
+### Quick check
 - What is the difference between “position” and “attitude”? (easy)
 - Try making roll, pitch, and yaw motions with your own head. (easy)
-- 🔵 Why does attitude have “3” degrees of freedom? Which part of the 6 degrees of freedom is it?
-- 🔵 Use a book to demonstrate that “rotation order changes the result.”
+- (In depth) Why does attitude have “3” degrees of freedom? Which part of the 6 degrees of freedom is it?
+- (In depth) Use a book to demonstrate that “rotation order changes the result.”
 
-➡️ Next: [2. Why is attitude control needed?](./02-why-needed.md)
+Next: [2. Why is attitude control needed?](./02-why-needed.md)

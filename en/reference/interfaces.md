@@ -41,11 +41,11 @@ It is a list of **“who talks to whom, and by what rules.”**
 
 ---
 
-## 🔵 In depth: electrical and communication principles
+## In depth: electrical and communication principles
 
 > This section explains “why this part and this number of lines” from first principles. It becomes useful when building the circuit.
 
-### I²C: why are there “three systems”? (the address issue) ⭐️
+### I²C: why are there “three systems”? (the address issue)
 - I²C selects the other chip using a **7-bit address**. **Two devices with the same address cannot live on the same bus**.
 - The MPU-6050 address is set by the **AD0 pin**, and there are only **two choices**: `AD0 = L → 0x68` / `AD0 = H → 0x69`.
 - That means **one I²C bus can hold at most two MPU-6050 sensors**. To use six sensors, **6 ÷ 2 = 3 buses** are needed.
@@ -68,4 +68,4 @@ It is a list of **“who talks to whom, and by what rules.”**
 
 ---
 
-📎 To see how these signals connect in the whole system, see [`system-block.md`](./system-block.md).
+To see how these signals connect in the whole system, see [`system-block.md`](./system-block.md).

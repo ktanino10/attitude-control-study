@@ -12,12 +12,12 @@ So how can you change direction? There are two main methods.
 ## Method A: spray gas (thruster / RCS)
 
 Like a rocket, the spacecraft **sprays gas** and turns using the reaction.
-- ✅ It can create strong force
-- ❌ Once the gas (fuel) is used up, it is over. Not suitable for small devices.
+- **Pro**: It can create strong force
+- **Con**: Once the gas (fuel) is used up, it is over. Not suitable for small devices.
 
 ---
 
-## Method B: spin a “flywheel” inside (reaction wheel) ⭐️
+## Method B: spin a “flywheel” inside (reaction wheel)
 
 This is the star of this lesson. It is a magical-looking method that **does not need fuel**.
 
@@ -38,7 +38,7 @@ At first, nobody is rotating (total momentum = zero).
 When you **spin the wheel to the right**, the body must rotate to the left
 so the total momentum stays zero (positive and negative cancel).
 
-> 🧠 In short: **just spinning an internal wheel can change the body’s orientation without outside force.**
+> In short: **just spinning an internal wheel can change the body’s orientation without outside force.**
 > Perfect for spacecraft!
 
 ---
@@ -64,12 +64,12 @@ This is called **unloading**. (More in Lesson 3.)
 
 ---
 
-## 🔵 In depth: physics of angular momentum and torque
+## In depth: physics of angular momentum and torque
 
 > From here on, this is for readers who want a little more. We check “why it rotates” using middle-school-plus physics formulas.
-> If it feels difficult, it is OK to read only the 🧠 summary boxes.
+> If it feels difficult, it is OK to read only the summary boxes.
 
-> 📌 **About numbering**: The article numbers its equations continuously — roughly **Part 1 (overview) = Eqs. 1–8, Part 2 (this chapter) = Eqs. 9–, Part 3 = Eqs. 36–42**. In this note we label Part 1’s rotational physics as **Foundational Eqs. (1)–(6)** and, at the end, show how they connect to **Eqs. 9 and 10** in Session 2 (not a one-to-one match with the article’s numbers).
+> **About numbering**: The article numbers its equations continuously — roughly **Part 1 (overview) = Eqs. 1–8, Part 2 (this chapter) = Eqs. 9–, Part 3 = Eqs. 36–42**. In this note we label Part 1’s rotational physics as **Foundational Eqs. (1)–(6)** and, at the end, show how they connect to **Eqs. 9 and 10** in Session 2 (not a one-to-one match with the article’s numbers).
 
 ### 1) Angular momentum L = Iω —— what rotational “momentum” really is
 Rotational momentum can be written with this simple formula. (**Foundational Eq. 1**)
@@ -111,7 +111,7 @@ By action-reaction (Newton’s third law), the body receives the opposite torque
 \dot{\Omega}_{\text{body}} = -\frac{\tau_w}{I_{\text{body}}}
 ```
 
-> 🧠 **Most important point**: the body rotates (torque appears) only while the wheel is **accelerating or decelerating**.
+> **Most important point**: the body rotates (torque appears) only while the wheel is **accelerating or decelerating**.
 > If it keeps spinning at a constant speed, torque is zero (it is only “storing” momentum).
 > That is why control is done by **raising and lowering the wheel speed**.
 
@@ -132,22 +132,22 @@ To return a saturated wheel, the wheel is slowed while applying **external torqu
 - Space: a **magnetic torquer** (using Earth’s magnetic field) or **thrusters** are used.
 A good image is “letting excess angular momentum escape outside the system.”
 
-### ⭐ Foundational Eqs. →　Session 2’s Eqs. 9 and 10 (the link)
+### Foundational Eqs. →　Session 2’s Eqs. 9 and 10 (the link)
 
 Session 2’s equations of motion are just **Foundational Eq. 3 $`\tau=I\dot\omega`$ (Newton for rotation) written once for the wheel and once for the body**, plus gravity, friction, and the motor:
 
 - **Wheel**: absolute angular acceleration $`(\ddot\theta_b+\ddot\theta_w)`$ × inertia $`I_w`$ = motor $`T_m`$ − bearing friction $`C_w\dot\theta_w`$ → **Eq. 9**.
 - **Body**: about the pivot, gravity torque $`(m_b l_b+m_w l)\,g\,\sin\theta_b`$ + the wheel’s reaction (**Foundational Eq. 4**) − friction → **Eq. 10**.
 
-> 🧠 So **Foundational Eqs. (1)–(6) (article Part 1) → Eqs. 9 and 10 (Session 2)** are one continuous story: Part 1 gives “words + foundational formulas,” Part 2 gives the “finished equations of motion.” The from-scratch derivation of Eqs. 9 and 10 is in [Session 2 “Modeling”](../session-2-modeling/02-modeling.md).
+> So **Foundational Eqs. (1)–(6) (article Part 1) → Eqs. 9 and 10 (Session 2)** are one continuous story: Part 1 gives “words + foundational formulas,” Part 2 gives the “finished equations of motion.” The from-scratch derivation of Eqs. 9 and 10 is in [Session 2 “Modeling”](../session-2-modeling/02-modeling.md).
 
 ---
 
-### ✅ Quick check
+### Quick check
 - What are the strengths and weaknesses of thrusters and reaction wheels? (easy)
 - Explain the “law of conservation of angular momentum” using the swivel-chair example. (easy)
 - Why can an electromagnetic brake create a large force? (easy)
-- 🔵 Use $`\tau = I\dot\omega`$ to explain why “the body rotates only while the wheel is **accelerating**.”
-- 🔵 From $`\Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\omega_{\text{wheel}}`$, if you want the body to rotate slowly but by a large amount, should the wheel’s $`I`$ be larger or smaller?
+- (In depth) Use $`\tau = I\dot\omega`$ to explain why “the body rotates only while the wheel is **accelerating**.”
+- (In depth) From $`\Omega_{\text{body}} = -\frac{I_{\text{wheel}}}{I_{\text{body}}}\omega_{\text{wheel}}`$, if you want the body to rotate slowly but by a large amount, should the wheel’s $`I`$ be larger or smaller?
 
-➡️ Next: [4. Introducing the JAXA module](./04-jaxa-module.md)
+Next: [4. Introducing the JAXA module](./04-jaxa-module.md)

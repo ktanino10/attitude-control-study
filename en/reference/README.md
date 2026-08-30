@@ -1,4 +1,4 @@
-# Reference: information needed to build 🔧
+# Reference: information needed to build
 
 This area collects material you can look back at when you are “actually building it.”
 It is separated from the lessons (understanding) so you can look up **circuit structure, parts, and connections** in reverse.
@@ -40,4 +40,4 @@ flowchart LR
 Attitude control is the loop of “**see with the eyes → think with the brain → move with the muscles → see again**,”
 repeated hundreds of times per second (= **feedback control**).
 
-➡️ For wiring details, go to [`system-block.md`](./system-block.md).
+For wiring details, go to [`system-block.md`](./system-block.md).

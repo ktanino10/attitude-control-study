@@ -85,7 +85,7 @@ flowchart LR
 
 ---
 
-## 🔵 くわしく：制御ループとタイミング
+## くわしく：制御ループとタイミング
 
 > 「配線（空間）」だけでなく「時間の流れ」を理解すると、なぜRTOSでこの構成なのかが腑に落ちます。
 
@@ -121,4 +121,4 @@ flowchart LR
 - **回しすぎない工夫は？** → 回転数をホール・センサ＋パルスカウントで読んで見張る
 - **人はどう操作する？** → 無線→UART
 
-📎 使う部品の一覧は [`parts-list.md`](./parts-list.md)、各通信の詳しい説明は [`interfaces.md`](./interfaces.md) へ。
+使う部品の一覧は [`parts-list.md`](./parts-list.md)、各通信の詳しい説明は [`interfaces.md`](./interfaces.md) へ。

@@ -1,4 +1,4 @@
-# Lesson 1 knowledge-check quiz ✍️
+# Lesson 1 knowledge-check quiz
 
 Click “▶ Show answer” on each line to see the answer (it opens on GitHub).
 First, try answering in your own words.
@@ -84,5 +84,5 @@ The game of **balancing a broom (stick) on your palm**. It is the challenge of k
 
 ---
 
-🎉 If you can answer all of these, Lesson 1 is complete!
-Next time 👉 [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md)
+If you can answer all of these, Lesson 1 is complete!
+Next time [Lesson Session 2: Equations of motion and microcontroller control](../session-2-modeling/README.md)

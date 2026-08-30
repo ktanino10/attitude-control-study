@@ -1,4 +1,4 @@
-# Lesson Session 2: Equations of motion and microcontroller control ⚙️
+# Lesson Session 2: Equations of motion and microcontroller control
 
 In Session 1, we learned the **mechanism**: “when you spin a reaction wheel, the body rotates by the reaction.”
 This time we go one step further. We follow **how the microcontroller calculates what to do so the body recovers instead of falling over**.
@@ -7,7 +7,7 @@ This time we go one step further. We follow **how the microcontroller calculates
 
 ---
 
-## 🎯 Goals for this session
+## Goals for this session
 - [ ] Say the **four steps** for making a microcontroller control program
 - [ ] Explain what an “equation of motion (modeling)” represents
 - [ ] Understand why “linearization” and “discretization” are needed
@@ -16,13 +16,13 @@ This time we go one step further. We follow **how the microcontroller calculates
 
 ---
 
-## 🟢🔵 How to read these notes (two levels)
-- **🟢 Easy** … Mostly analogies for middle school readers. Use this to get the flow without formulas.
-- **🔵 In depth** … Uses equations of motion and matrices to explain why. If it feels difficult, reading only the 🧠 boxes is OK.
+## How to read these notes (two levels)
+- **Easy** … Mostly analogies for middle school readers. Use this to get the flow without formulas.
+- **In depth** … Uses equations of motion and matrices to explain why. If it feels difficult, reading only the note boxes is OK.
 
 ---
 
-## 📖 Reading order
+## Reading order
 
 | No. | File | Content | In one phrase |
 |---|---|---|---|
@@ -32,11 +32,11 @@ This time we go one step further. We follow **how the microcontroller calculates
 | 4 | [`04-discretization.md`](./04-discretization.md) | Discretization = rewrite it as 20 ms steps | A flip-book animation |
 | 5 | [`05-control-law.md`](./05-control-law.md) | Control law = decide u = −Kx | Decide how hard to push |
 | 6 | [`06-standup-energy.md`](./06-standup-energy.md) | Physics of standing up (column) | Store, release, and rise |
-| ✔️ | [`quiz.md`](./quiz.md) | Understanding check | Test your strength |
+| Check | [`quiz.md`](./quiz.md) | Understanding check | Test your strength |
 
 ---
 
-## 🧩 One-page summary for this session
+## One-page summary for this session
 
 The microcontroller control program is made with these **four steps**.
 
@@ -52,9 +52,9 @@ flowchart LR
 
 ---
 
-## 💡 Keywords for this session (details in the text and [glossary](../GLOSSARY.md))
+## Keywords for this session (details in the text and [glossary](../GLOSSARY.md))
 Equation of motion / modeling / moment of inertia / friction torque / linearization / Taylor expansion / equilibrium point (upright point) / state-space model / state variable / discretization / sampling period / state feedback / LQR / conservation of angular momentum
 
-⬅️ Previous: [Lesson Session 1: Big picture and basic concepts](../session-1-overview/README.md) ／ Next time 👉 [Lesson Session 3: Extension to 3D](../session-3-3d/README.md)
+Previous: [Lesson Session 1: Big picture and basic concepts](../session-1-overview/README.md) ／ Next time [Lesson Session 3: Extension to 3D](../session-3-3d/README.md)
 
-> 🔧 **Hands-on example (aside)**: There's a separate project where the author built a real 1-D inverted pendulum with GitHub Copilot CLI → [`ktanino10/copilot-cli-inverted-pendulum-m5stick`](https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick) (an independent hobby project; see [References](../../REFERENCES.md)).
+> **Hands-on example (aside)**: There's a separate project where the author built a real 1-D inverted pendulum with GitHub Copilot CLI → [`ktanino10/copilot-cli-inverted-pendulum-m5stick`](https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick) (an independent hobby project; see [References](../../REFERENCES.md)).

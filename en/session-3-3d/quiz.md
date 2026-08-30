@@ -1,8 +1,8 @@
-# ✔️ Lesson Session 3 understanding check
+# Lesson Session 3 understanding check
 
-If you do not know an answer, it is OK to go back to the text. 🟢 is for Easy, and 🔵 is for In depth.
+If you do not know an answer, it is OK to go back to the text. Items are split into “Easy” and “In depth”.
 
-## 🟢 Easy
+## Easy
 
 1. What is the biggest change when going from 1 axis to 3 axes?
 2. Where (at how many points) is the cube standing?
@@ -13,7 +13,7 @@ If you do not know an answer, it is OK to go back to the text. 🟢 is for Easy,
 7. In a complementary filter, “taking the best parts” means combining which sensor with which sensor?
 8. In what two senses is yaw the only “special” direction?
 
-## 🔵 In depth
+## In depth
 
 9. About what pitch $`\beta`$ and roll $`\gamma`$ values describe the upright point where the cube stands on a corner?
 10. Around which axes are the Euler angles $`(\alpha,\beta,\gamma)`$ rotations?
@@ -29,11 +29,11 @@ what sensor alone is used when $`\kappa=1`$ / $`\kappa=0`$?
 
 ---
 
-## ✅ Answers (click to reveal)
+## Answers (click to reveal)
 
-Try answering in your own words first. 🟢 Easy, 🔵 In depth.
+Try answering in your own words first. “Easy” and “In depth”.
 
-**🟢 Easy**
+**Easy**
 
 <details><summary>1. The biggest change from 1 to 3 axes</summary>
 
@@ -75,7 +75,7 @@ The **accelerometer** (accurate long-term but shaky) and the **gyro** (smooth sh
 (1) **Cannot be moved** (not controllable) and (2) **cannot be seen** (not observable — invisible to gravity).
 </details>
 
-**🔵 In depth**
+**In depth**
 
 <details><summary>9. Upright point β, γ</summary>
 
@@ -114,8 +114,8 @@ Only **7 of 8 directions can be moved** (1 direction — yaw — is not controll
 
 ---
 
-### 🌟 Summary in one sentence
+### Summary in one sentence
 The main theme this time is **“extend the 1-axis idea directly to 3 axes.”**
 Measure (complementary filter) -> extract the movable 7 dimensions (canonical decomposition) -> recover with LQR. The flow from Session 2 still works as-is.
 
-⬅️ [Back to the Lesson Session 3 top](./README.md) ／ Back to start 👉 [Lesson Session 1: Big picture and basic concepts](../session-1-overview/README.md)
+[Back to the Lesson Session 3 top](./README.md) ／ Back to start [Lesson Session 1: Big picture and basic concepts](../session-1-overview/README.md)

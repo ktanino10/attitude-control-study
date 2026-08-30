@@ -7,7 +7,7 @@ We find that tilt using an **accelerometer**.
 
 ---
 
-## 🟢 Easy: an accelerometer is a tool that feels “down”
+## Easy: an accelerometer is a tool that feels “down”
 
 When it is still, an accelerometer is a tool that **feels gravity (downward)**.
 A smartphone screen rotates when you tilt it because it detects “down” this way.
@@ -15,14 +15,14 @@ A smartphone screen rotates when you tilt it because it detects “down” this 
 - If we know which way “down (gravity)” points as seen from the cube, we can calculate **how much it is tilted**.
 - This cube uses **six** accelerometers to improve accuracy, and combines them to determine the “down direction.”
 
-> 🟢 **Connection to Session 2**: In Session 2 we built the controller assuming “tilt $`\theta_b`$ can be measured by a sensor.” This page is exactly *what that measurement is*. In 3D, we obtain pitch and roll by **calculating** them from the direction of gravity (Eq. 36).
+> **Connection to Session 2**: In Session 2 we built the controller assuming “tilt $`\theta_b`$ can be measured by a sensor.” This page is exactly *what that measurement is*. In 3D, we obtain pitch and roll by **calculating** them from the direction of gravity (Eq. 36).
 
-> 🧠 However, it can tell only **pitch and roll (front-back and left-right tilt)**.
+> However, it can tell only **pitch and roll (front-back and left-right tilt)**.
 > It **cannot tell yaw (twist around the vertical axis)**. That is because “down” does not change even if you spin it like a top.
 
 ---
 
-## 🔵 In depth: gravity vector by least squares, then angles
+## In depth: gravity vector by least squares, then angles
 
 Combining the outputs of the six accelerometers by **least squares** gives the **direction of gravity** $`^{B}\hat{g}`$ as seen from the body frame.
 From its components, we get estimates of pitch and roll (article Eq. 36).
@@ -42,15 +42,15 @@ From its components, we get estimates of pitch and roll (article Eq. 36).
 Gravity only points “down,” so **rotating around the vertical axis (yaw axis) does not change $`^{B}\hat{g}`$**.
 Therefore, yaw $`\alpha`$ **cannot be estimated from only the accelerometers (gravity)** (= it is not observable. This appears again on Page 6).
 
-> 🧠 “Tilt (β and γ) can be found from gravity,” but “twist (α) cannot be found from gravity.”
+> “Tilt (β and γ) can be found from gravity,” but “twist (α) cannot be found from gravity.”
 > This asymmetry directly affects the later control design.
 
 ---
 
-### ✅ Quick check
+### Quick check
 - What does an accelerometer feel when it is still? (easy)
 - Why use as many as six accelerometers? (easy)
-- 🔵 What function is used to get $`\hat\beta,\hat\gamma`$ from $`^{B}\hat{g}`$?
-- 🔵 Why can yaw $`\alpha`$ not be found from gravity?
+- (In depth) What function is used to get $`\hat\beta,\hat\gamma`$ from $`^{B}\hat{g}`$?
+- (In depth) Why can yaw $`\alpha`$ not be found from gravity?
 
-➡️ Next: [4. Combining with a complementary filter](./04-complementary-filter.md)
+Next: [4. Combining with a complementary filter](./04-complementary-filter.md)

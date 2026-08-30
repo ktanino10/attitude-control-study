@@ -85,7 +85,7 @@ flowchart LR
 
 ---
 
-## 🔵 In depth: control loop and timing
+## In depth: control loop and timing
 
 > When you understand not only the “wiring (space)” but also the “flow of time,” it becomes clear why this system uses an RTOS.
 
@@ -121,4 +121,4 @@ flowchart LR
 - **How does it avoid over-spinning?** → Reads rotation speed with a Hall sensor + pulse counting and monitors it
 - **How does a person operate it?** → Wireless → UART
 
-📎 For the parts list, see [`parts-list.md`](./parts-list.md). For detailed explanations of each communication method, see [`interfaces.md`](./interfaces.md).
+For the parts list, see [`parts-list.md`](./parts-list.md). For detailed explanations of each communication method, see [`interfaces.md`](./interfaces.md).

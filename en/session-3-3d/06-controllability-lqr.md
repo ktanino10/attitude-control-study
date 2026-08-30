@@ -5,7 +5,7 @@ We check **“which directions can be moved” and “which directions can be se
 
 ---
 
-## 🟢 Easy: there is a direction that cannot be moved or seen
+## Easy: there is a direction that cannot be moved or seen
 
 Among the three directions, **yaw (twist around the vertical axis)** is actually special.
 
@@ -14,10 +14,10 @@ Among the three directions, **yaw (twist around the vertical axis)** is actually
 
 So the control targets **only the remaining directions that can be moved and seen**.
 
-> 🟢 **Why is only yaw special? (connection to basic Eq. 2)**
+> **Why is only yaw special? (connection to basic Eq. 2)**
 > Two reasons combine. (1) **Heading does not appear in the equations**: the absolute yaw angle is “the same physics whichever way you face,” so it never shows up in the equations of motion (a “cyclic coordinate”). Unlike tilt, there is no natural force pulling yaw back to zero, so the control loop has no clue to grab onto. (2) **Everything is internal**: the reaction wheels are internal parts, and by basic Eq. 2 (conservation of angular momentum) they cannot create net total angular momentum from nothing unless torque comes from outside. Because of these two, yaw drops out of controllability/observability in the linear model.
 
-> 🧠 “Do not try to do what cannot be done.” Remove the yaw that cannot be moved or seen from the control target,
+> “Do not try to do what cannot be done.” Remove the yaw that cannot be moved or seen from the control target,
 > and recover only the remaining part properly — that is the smart approach.
 
 - **Controllability** … Whether the input can move the state as desired.
@@ -25,12 +25,12 @@ So the control targets **only the remaining directions that can be moved and see
 
 ---
 
-## 🔵 In depth: Kalman canonical decomposition and LQR gain
+## In depth: Kalman canonical decomposition and LQR gain
 
 ### Checking controllability
 Whether the linearized system $`(A,B)`$ “can be moved” is judged by the rank of the **controllability matrix** $`G_c`$.
 
-> 📝 The state on the previous page was 9-dimensional, but the **absolute yaw angle** is a “cyclic coordinate” that never appears in the equations of motion. So for controllability we drop that one and work in an **effectively 8-dimensional** state (the “8” below refers to this).
+> The state on the previous page was 9-dimensional, but the **absolute yaw angle** is a “cyclic coordinate” that never appears in the equations of motion. So for controllability we drop that one and work in an **effectively 8-dimensional** state (the “8” below refers to this).
 
 For this cube,
 
@@ -53,21 +53,21 @@ G \in \mathbb{R}^{3\times 7}
 
 After that, just like Session 2, we repeatedly apply $`\mathbf{u} = -G\,\mathbf{x}_{7}`$ (multiply the 7-D state by the gain and send it back in the opposite direction) at a fixed period.
 
-> 🧠 What we did in 3D can be summarized like this:
+> What we did in 3D can be summarized like this:
 > **“Measure (complementary filter) -> extract only the movable 7 dimensions (canonical decomposition) -> recover with LQR.”**
 > It is the same 1-axis idea (Session 2), extended directly to three axes.
 
 ---
 
-### ✅ Quick check
+### Quick check
 - In what two senses is yaw “special”? (easy)
 - What should we do with a direction that cannot be moved? (easy)
-- 🔵 What is the rank of the controllability matrix, and what does it mean?
-- 🔵 What size (rows × columns) is the gain $`G`$ designed by LQR?
+- (In depth) What is the rank of the controllability matrix, and what does it mean?
+- (In depth) What size (rows × columns) is the gain $`G`$ designed by LQR?
 
 ---
 
-This completes Lesson Session 3 (extension to 3D). Nice work! 🎉
+This completes Lesson Session 3 (extension to 3D). Nice work!
 Through the whole sequence, you should now see the backbone of attitude control: **“rotate by reaction -> write equations -> measure and recover.”**
 
-⬅️ Previous: [5. 3-D equations of motion](./05-3d-equations.md) ／ Test your strength 👉 [Understanding check](./quiz.md)
+Previous: [5. 3-D equations of motion](./05-3d-equations.md) ／ Test your strength [Understanding check](./quiz.md)

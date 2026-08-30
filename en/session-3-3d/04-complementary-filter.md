@@ -5,7 +5,7 @@ Accelerometers and gyros have **opposite strengths and weaknesses**, so we use t
 
 ---
 
-## 🟢 Easy: add the “strengths” of two sensors
+## Easy: add the “strengths” of two sensors
 
 | Sensor | Strength | Weakness |
 |---|---|---|
@@ -17,7 +17,7 @@ Accelerometers and gyros have **opposite strengths and weaknesses**, so we use t
 
 If we **take the best parts** of these two, we get a tilt that is “smooth” and “does not drift.” That is the complementary filter.
 
-> 🧠 The accelerometer’s “slow component” + the gyro’s “fast component” = just the right tilt.
+> The accelerometer’s “slow component” + the gyro’s “fast component” = just the right tilt.
 > How much to trust each side is adjusted with one weight, $`\kappa`$ (kappa).
 
 ```mermaid
@@ -31,7 +31,7 @@ flowchart LR
 
 ---
 
-## 🔵 In depth: equation of the complementary filter
+## In depth: equation of the complementary filter
 
 Using pitch $`\beta`$ estimation as an example, the complementary filter has this form (article Eq. 37):
 
@@ -51,17 +51,17 @@ Using pitch $`\beta`$ estimation as an example, the complementary filter has thi
 
 In signal-processing words, the structure is: apply a **low-pass** filter to the accelerometer side (pass only slow components), apply a **high-pass** filter to the gyro side (pass only fast components), then add them together. Because the two filters **sum to 1** (they are complementary), it is called a “complementary filter.”
 
-> 🧠 **Connection to Eq. 16**: $`\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t`$ is “previous value + angular velocity × time.” This is exactly the same **forward-Euler** “predict one step ahead” as the Session 2 discretization $`\mathbf{x}[k{+}1]\approx\mathbf{x}[k]+\Delta t\,\dot{\mathbf{x}}[k]`$ (Eq. 16). The same integration idea is at work inside the filter, too.
+> **Connection to Eq. 16**: $`\bar{\beta}_{k-1} + \dot{\hat{\beta}}_k\,\Delta t`$ is “previous value + angular velocity × time.” This is exactly the same **forward-Euler** “predict one step ahead” as the Session 2 discretization $`\mathbf{x}[k{+}1]\approx\mathbf{x}[k]+\Delta t\,\dot{\mathbf{x}}[k]`$ (Eq. 16). The same integration idea is at work inside the filter, too.
 
-> 🧠 With one weight ($`\kappa`$), you adjust smoothness ⇄ response speed.
+> With one weight ($`\kappa`$), you adjust smoothness ⇄ response speed.
 > It is lighter than a Kalman filter and runs easily on a microcontroller.
 
 ---
 
-### ✅ Quick check
+### Quick check
 - What are the weaknesses of the accelerometer and gyro? (easy)
 - “Taking the best parts” means combining what with what? (easy)
-- 🔵 If $`\kappa=0`$, which sensor alone is used?
-- 🔵 “Complementary (sums to 1)” describes the relationship between which two filters?
+- (In depth) If $`\kappa=0`$, which sensor alone is used?
+- (In depth) “Complementary (sums to 1)” describes the relationship between which two filters?
 
-➡️ Next: [5. 3-D equations of motion (overview of the results)](./05-3d-equations.md)
+Next: [5. 3-D equations of motion (overview of the results)](./05-3d-equations.md)

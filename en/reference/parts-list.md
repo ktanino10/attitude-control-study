@@ -35,4 +35,4 @@ The **wheels + motors + motor drivers + electromagnetic brakes** are
 - Two 7.4 V lithium polymer batteries power the motors, microcontroller, and sensors.
 - Motors can use large current for a moment → batteries and wiring need enough margin (a caution when building).
 
-📎 For placement (where parts go), see [`mechanical.md`](./mechanical.md). For connections, see [`system-block.md`](./system-block.md).
+For placement (where parts go), see [`mechanical.md`](./mechanical.md). For connections, see [`system-block.md`](./system-block.md).

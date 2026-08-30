@@ -35,4 +35,4 @@
 - リチウムポリマ 7.4V×2 で、モータ・マイコン・センサすべてをまかなう。
 - モータは瞬間的に大電流を使う → 電池・配線は余裕をもって選ぶ必要あり（作るときの注意点）。
 
-📎 配置（どこに置くか）は [`mechanical.md`](./mechanical.md)、つなぎ方は [`system-block.md`](./system-block.md) へ。
+配置（どこに置くか）は [`mechanical.md`](./mechanical.md)、つなぎ方は [`system-block.md`](./system-block.md) へ。

@@ -33,7 +33,7 @@
   <text x="474" y="172" text-anchor="middle" font-size="12.5" fill="#1565c0">重力の向き ᴮg を推定</text>
   <text x="474" y="194" text-anchor="middle" font-size="12.5" fill="#1565c0">→ ピッチ β・ロール γ が出る</text>
 
-  <text x="474" y="250" text-anchor="middle" font-size="12.5" fill="#8d6e63">⚠ ヨー α は重力では分からない</text>
+  <text x="474" y="250" text-anchor="middle" font-size="12.5" fill="#8d6e63">※ ヨー α は重力では分からない</text>
   <text x="474" y="270" text-anchor="middle" font-size="11.5" fill="#a1887f">（縦軸まわりに回っても「下」は変わらない）</text>
 
   <text x="310" y="384" text-anchor="middle" font-size="12.5" fill="#555">「下（重力）の向き」を機体の軸で見れば、機体がどれだけ傾いているか（β・γ）が計算できる。</text>

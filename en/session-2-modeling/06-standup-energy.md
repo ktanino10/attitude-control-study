@@ -1,6 +1,6 @@
 # 6. Physics of standing up (column)
 
-> This page is an **advanced section** corresponding to the article’s column. We check with **equations** the phenomenon introduced in Session 1: “spin at high speed, then brake suddenly -> stand up.” You can read only the 🟢 part.
+> This page is an **advanced section** corresponding to the article’s column. We check with **equations** the phenomenon introduced in Session 1: “spin at high speed, then brake suddenly -> stand up.” You can read only the part.
 
 ## How does it stand up from a lying position?
 
@@ -10,18 +10,18 @@ The control up to the previous page is for staying upright near the upright poin
 
 ---
 
-## 🟢 Easy: if you suddenly stop a spinning top, your hand feels a “thud”
+## Easy: if you suddenly stop a spinning top, your hand feels a “thud”
 
 1. **1) Store** … Use the motor to spin the wheel **at high speed**. Store rotational momentum (angular momentum).
 2. **2) Release** … Use the brake to **stop it in an instant**. The stored momentum **moves to the body** (momentum does not disappear; it moves = conservation of angular momentum).
 3. **3) Rise** … That momentum rotates the body, **lifts the center of mass**, and brings it to the upright point.
 
-> 🧠 The point is not to “push slowly,” but to “**release the stored momentum all at once**.”
+> The point is not to “push slowly,” but to “**release the stored momentum all at once**.”
 > That is why it can create a large force (the force needed to stand up) that the motor alone cannot produce.
 
 ---
 
-## 🔵 In depth: check with angular momentum and energy
+## In depth: check with angular momentum and energy
 
 ### Step 2: conservation of angular momentum (the instant of braking)
 At the instant when the brake locks the wheel and body together, external torque can be ignored, so **angular momentum is conserved**.
@@ -61,7 +61,7 @@ What we can read from it:
 - The larger $`g`$ or the masses are (= heavier and easier to fall), the larger the required $`\omega_w`$ becomes.
 - The smaller $`I_w`$ is (a lighter wheel), the **higher rotation speed** is needed for the same effect.
 
-> 🧠 This equation is a design equation for “**how much to spin the wheel before braking so it can stand up**.”
+> This equation is a design equation for “**how much to spin the wheel before braking so it can stand up**.”
 > From the wheel inertia $`I_w`$ and target angle $`\theta_b`$, you can calculate the required rotation speed backward.
 
 ### Why “all at once”? (review from Session 1)
@@ -75,10 +75,10 @@ Even with the same momentum $`\Delta L`$, releasing it in a short time makes the
 
 ---
 
-### ✅ Quick check
+### Quick check
 - Can you say the three steps “store, release, and rise”? (easy)
-- What is conserved at the instant of braking? (easy / 🔵)
-- 🔵 From Eq. C, if the target angle $`\theta_b`$ becomes larger, what happens to the required $`\omega_w`$?
-- 🔵 Why stop it “all at once” instead of “slowly”? (Explain with $`\tau=\Delta L/\Delta t`$.)
+- What is conserved at the instant of braking? (easy /)
+- (In depth) From Eq. C, if the target angle $`\theta_b`$ becomes larger, what happens to the required $`\omega_w`$?
+- (In depth) Why stop it “all at once” instead of “slowly”? (Explain with $`\tau=\Delta L/\Delta t`$.)
 
-➡️ [Understanding check (quiz)](./quiz.md) ／ ⬅️ [Back to Lesson Session 2 top](./README.md)
+[Understanding check (quiz)](./quiz.md) ／ [Back to Lesson Session 2 top](./README.md)
