@@ -26,6 +26,9 @@ So the control targets **only the remaining directions that can be moved and see
 
 ### Checking controllability
 Whether the linearized system $`(A,B)`$ “can be moved” is judged by the rank of the **controllability matrix** $`G_c`$.
+
+> 📝 The state on the previous page was 9-dimensional, but the **absolute yaw angle** is a “cyclic coordinate” that never appears in the equations of motion. So for controllability we drop that one and work in an **effectively 8-dimensional** state (the “8” below refers to this).
+
 For this cube,
 
 ```math
