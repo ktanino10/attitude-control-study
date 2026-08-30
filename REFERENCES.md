@@ -15,13 +15,17 @@
    **トランジスタ技術 2020年6月号**, pp.121–127.
    - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202006/>
    - 書籍情報: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
-   - PDF版（電子版）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
+   - PDF版（電子版, 号まるごと）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
 2. 【第2回】1次元倒立振子の運動方程式とマイコン制御,
    **トランジスタ技術 2020年7月号**, pp.131–136.
    - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202007/>
+   - 書籍情報: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202007.htm>
+   - PDF版（電子版, 号まるごと）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1273/>
 3. 【第3回】3次元の姿勢制御,
    **トランジスタ技術 2020年8月号**, pp.140–149.
    - 雑誌ページ: <https://toragi.cqpub.co.jp/magazine/202008/>
+   - 書籍情報: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202008.htm>
+   - PDF版（電子版, 号まるごと）: <https://cc.cqpub.co.jp/lib/system/doclib_item/1277/>
 
    - 著者情報（KAKEN 研究者DB）: <https://nrid.nii.ac.jp/ja/nrid/1000000747446/>
 
@@ -86,13 +90,17 @@ Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Micro
    **Transistor Gijutsu (Transistor Technology), June 2020**, pp.121–127.
    - Issue page: <https://toragi.cqpub.co.jp/magazine/202006/>
    - Book info: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202006.htm>
-   - PDF (e-edition): <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
+   - PDF (e-edition, full issue): <https://cc.cqpub.co.jp/lib/system/doclib_item/1270/>
 2. **Part 2: Equations of Motion and Microcontroller Control of the 1-D Inverted Pendulum**,
    **Transistor Gijutsu, July 2020**, pp.131–136.
    - Issue page: <https://toragi.cqpub.co.jp/magazine/202007/>
+   - Book info: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202007.htm>
+   - PDF (e-edition, full issue): <https://cc.cqpub.co.jp/lib/system/doclib_item/1273/>
 3. **Part 3: 3-D Attitude Control**,
    **Transistor Gijutsu, August 2020**, pp.140–149.
    - Issue page: <https://toragi.cqpub.co.jp/magazine/202008/>
+   - Book info: <https://www.cqpub.co.jp/hanbai/books/MTR/MTR202008.htm>
+   - PDF (e-edition, full issue): <https://cc.cqpub.co.jp/lib/system/doclib_item/1277/>
 
    - Author profile (KAKEN researcher DB): <https://nrid.nii.ac.jp/nrid/1000000747446/>
 
