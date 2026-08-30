@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="axh" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="560" height="400" fill="#ffffff"/>
+  <text x="280" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">線形化：倒立点の近くでは sinθ ≈ θ</text>
+
+  <!-- small-angle band -->
+  <rect x="90" y="70" width="96" height="230" fill="#e8f5e9"/>
+  <text x="138" y="322" text-anchor="middle" font-size="12.5" fill="#2e7d32">倒立点の近く</text>
+  <text x="138" y="340" text-anchor="middle" font-size="12.5" fill="#2e7d32">（θが小さい）</text>
+
+  <!-- axes -->
+  <line x1="90" y1="300" x2="520" y2="300" stroke="#333" stroke-width="2" marker-end="url(#axh)"/>
+  <line x1="90" y1="300" x2="90" y2="60" stroke="#333" stroke-width="2" marker-end="url(#axh)"/>
+  <text x="516" y="324" text-anchor="end" font-size="14" fill="#333">傾き θ →</text>
+  <text x="74" y="70" text-anchor="end" font-size="14" fill="#333">大きさ</text>
+  <text x="82" y="314" text-anchor="end" font-size="12" fill="#666">0</text>
+
+  <!-- straight line y = theta -->
+  <line x1="90" y1="300" x2="470" y2="86" stroke="#1565c0" stroke-width="2.6"/>
+  <text x="210" y="118" font-size="14" fill="#1565c0" font-weight="bold">y = θ（直線＝近似）</text>
+
+  <!-- sin curve -->
+  <path d="M90,300 L129,270 L168,241 L207,216 L246,196 L285,181 L324,171 L363,164 L402,159 L441,156 L480,155"
+        fill="none" stroke="#c62828" stroke-width="2.8"/>
+  <text x="238" y="214" font-size="14" fill="#c62828" font-weight="bold">y = sinθ（本当の重力トルク）</text>
+
+  <!-- divergence note -->
+  <line x1="470" y1="86" x2="470" y2="155" stroke="#999" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <text x="486" y="124" font-size="12" fill="#777">遠いほど</text>
+  <text x="486" y="140" font-size="12" fill="#777">ズレる</text>
+
+  <text x="280" y="378" text-anchor="middle" font-size="12.5" fill="#555">倒立点のまわりだけを考えれば、曲線を直線に置きかえてよい → マイコンで扱いやすい式になる。</text>
+</svg>

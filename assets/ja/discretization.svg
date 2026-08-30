@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 360" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="dxh" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+    <marker id="dd" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#555"/>
+    </marker>
+    <marker id="dds" markerWidth="9" markerHeight="9" refX="2" refY="3" orient="auto">
+      <path d="M7,0 L0,3 L7,6 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="580" height="360" fill="#ffffff"/>
+  <text x="290" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">離散化：連続の動きを一定間隔で読む</text>
+
+  <!-- sample gridlines -->
+  <g stroke="#e0e0e0" stroke-width="1">
+    <line x1="80" y1="80" x2="80" y2="280"/>
+    <line x1="144" y1="80" x2="144" y2="280"/>
+    <line x1="208" y1="80" x2="208" y2="280"/>
+    <line x1="272" y1="80" x2="272" y2="280"/>
+    <line x1="336" y1="80" x2="336" y2="280"/>
+    <line x1="400" y1="80" x2="400" y2="280"/>
+    <line x1="464" y1="80" x2="464" y2="280"/>
+  </g>
+
+  <!-- axes -->
+  <line x1="80" y1="280" x2="540" y2="280" stroke="#333" stroke-width="2" marker-end="url(#dxh)"/>
+  <line x1="80" y1="280" x2="80" y2="70" stroke="#333" stroke-width="2" marker-end="url(#dxh)"/>
+  <text x="534" y="304" text-anchor="end" font-size="14" fill="#333">時間 t →</text>
+
+  <!-- continuous smooth curve -->
+  <path d="M80,250 C160,250 180,140 272,132 C360,125 400,120 500,116" fill="none" stroke="#c62828" stroke-width="2.6"/>
+  <text x="300" y="104" font-size="13.5" fill="#c62828" font-weight="bold">連続（本物のなめらかな動き）</text>
+
+  <!-- sampled staircase (hold values at each sample) -->
+  <path d="M80,250 L144,250 L144,197 L208,197 L208,150 L272,150 L272,132 L336,132 L336,124 L400,124 L400,119 L464,119 L464,116 L500,116"
+        fill="none" stroke="#1565c0" stroke-width="2.4"/>
+  <!-- sample dots -->
+  <g fill="#1565c0">
+    <circle cx="80" cy="250" r="4"/>
+    <circle cx="144" cy="197" r="4"/>
+    <circle cx="208" cy="150" r="4"/>
+    <circle cx="272" cy="132" r="4"/>
+    <circle cx="336" cy="124" r="4"/>
+    <circle cx="400" cy="119" r="4"/>
+    <circle cx="464" cy="116" r="4"/>
+  </g>
+  <text x="150" y="238" font-size="13.5" fill="#1565c0" font-weight="bold">離散（マイコンが見る階段）</text>
+
+  <!-- delta t marker -->
+  <line x1="208" y1="300" x2="272" y2="300" stroke="#555" stroke-width="1.6" marker-start="url(#dds)" marker-end="url(#dd)"/>
+  <text x="240" y="320" text-anchor="middle" font-size="13" fill="#555">Δt = 20 ms</text>
+
+  <!-- k labels -->
+  <text x="208" y="298" text-anchor="middle" font-size="11" fill="#888">k</text>
+  <text x="272" y="298" text-anchor="middle" font-size="11" fill="#888">k+1</text>
+
+  <text x="290" y="348" text-anchor="middle" font-size="12.5" fill="#555">20 ms ごとに「測る→計算する→出力する」。だから式も1ステップ先を予測する形に直す。</text>
+</svg>
