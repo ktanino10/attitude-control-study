@@ -71,6 +71,83 @@ T_m = K_m\,u
 ### なぜ $`\sin\theta_b`$ なのか
 重力がボディを倒そうとする"ひねる力（トルク）"は、傾き $`\theta_b`$ が大きいほど強く、まっすぐ($`\theta_b=0`$)ならゼロ。この関係が $`\sin\theta_b`$ で表れます。この $`\sin`$ が、次のページで「じゃま」になります。
 
+### 式9・式10をゼロから導く（導出）
+
+「記事の式」と言われても腑に落ちないので、**エネルギーから機械的に出せる**ラグランジュ法で組み立てます。手順は4ステップだけ：**① 速度をそろえる → ② 運動エネルギー $`T`$ → ③ 位置エネルギー $`U`$ → ④ ラグランジュ方程式へ**。
+
+**① 座標と速度**
+- ホイールの**絶対角度**は「ボディの傾き＋ボディに対する回転」で $`\theta_b+\theta_w`$。よって**絶対角速度**は $`\dot\theta_b+\dot\theta_w`$。← 式9に $`\ddot\theta_b+\ddot\theta_w`$ が出る理由。
+- ホイール中心は支点から距離 $`l`$。ボディが $`\dot\theta_b`$ で回れば、中心は速さ $`l\,\dot\theta_b`$ で振り回される。
+
+**② 運動エネルギー $`T`$（回る・動くエネルギー）**
+
+```math
+T = \frac{1}{2} I_b\,\dot\theta_b^{2} + \frac{1}{2} m_w\,(l\,\dot\theta_b)^{2} + \frac{1}{2} I_w\,(\dot\theta_b+\dot\theta_w)^{2}
+```
+
+1項目＝ボディの回転、2項目＝ホイール中心が距離 $`l`$ で振り回される分、3項目＝ホイールの自転。ボディ回転の2つをまとめると：
+
+```math
+T = \frac{1}{2}\,(I_b + m_w l^{2})\,\dot\theta_b^{2} + \frac{1}{2} I_w\,(\dot\theta_b+\dot\theta_w)^{2}
+```
+
+早くも分母の $`I_b+m_w l^{2}`$（＝ボディ＋支点から見たホイールの回しにくさ）が顔を出しました。
+
+**③ 位置エネルギー $`U`$（高さのエネルギー）**
+支点から距離 $`r`$ の重りの高さは $`r\cos\theta_b`$。ボディ重心（$`l_b`$）とホイール（$`l`$）を足して：
+
+```math
+U = (m_b l_b + m_w l)\,g\,\cos\theta_b
+```
+
+**④ モータと摩擦（非保存の一般化力）**
+- ホイール座標 $`\theta_w`$ に効くもの：モータ $`+T_m`$、軸受け摩擦 $`-C_w\dot\theta_w`$ → $`Q_{\theta_w}=T_m-C_w\dot\theta_w`$。
+- ボディ座標 $`\theta_b`$ に効くもの：支点摩擦 $`-C_b\dot\theta_b`$ **だけ**。モータはボディとホイールの**内部の力**なので、相対座標 $`\theta_w`$ 側にしか現れません → $`Q_{\theta_b}=-C_b\dot\theta_b`$。
+
+**⑤ ラグランジュ方程式へ**
+$`L=T-U`$ とし、各座標で $`\frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot q}\right)-\frac{\partial L}{\partial q}=Q_q`$ を計算します。
+
+*ホイール $`\theta_w`$：* $`\partial L/\partial\dot\theta_w = I_w(\dot\theta_b+\dot\theta_w)`$、$`\partial L/\partial\theta_w = 0`$ なので
+
+```math
+I_w(\ddot\theta_b+\ddot\theta_w) = T_m - C_w\dot\theta_w
+```
+
+→ **式9そのもの** ✅
+
+> 🧠 これは「ホイールのニュートンの法則」。**絶対角加速度 $`(\ddot\theta_b+\ddot\theta_w)`$ × 慣性 $`I_w`$ ＝ かかるトルク（モータ − 軸摩擦）**、と読めます。
+
+*ボディ $`\theta_b`$：*
+
+```math
+\frac{\partial L}{\partial \dot\theta_b}=(I_b+m_w l^{2})\dot\theta_b+I_w(\dot\theta_b+\dot\theta_w),\qquad \frac{\partial L}{\partial \theta_b}=(m_b l_b+m_w l)\,g\,\sin\theta_b
+```
+
+（$`-\partial U/\partial\theta_b = +(m_b l_b+m_w l)\,g\,\sin\theta_b`$。ここで $`\sin`$ が出ます。）これらを入れると：
+
+```math
+(I_b+m_w l^{2})\ddot\theta_b + I_w(\ddot\theta_b+\ddot\theta_w) - (m_b l_b+m_w l)\,g\,\sin\theta_b = -C_b\dot\theta_b
+```
+
+**ここで式9を代入**し、$`I_w(\ddot\theta_b+\ddot\theta_w)`$ を $`T_m-C_w\dot\theta_w`$ に置き換えると：
+
+```math
+(I_b+m_w l^{2})\ddot\theta_b = (m_b l_b+m_w l)\,g\,\sin\theta_b - T_m + C_w\dot\theta_w - C_b\dot\theta_b
+```
+
+両辺を $`I_b+m_w l^{2}`$ で割れば **式10** ✅
+
+> 🧠 **なぜ $`-T_m`$ か**：モータがホイールを回した**反作用**が、そのままボディに返るから（作用・反作用）。第1回の「回転いす」と同じで、ホイールを一方向へ回すとボディは逆向きに起き上がります。式9を代入する操作は、この反作用トルク $`-(T_m-C_w\dot\theta_w)`$ をボディ側へ移す作業に対応します。
+
+**⑥ 線形化の予告**
+倒立点 $`\theta_b\approx0`$ では $`\sin\theta_b\approx\theta_b`$。摩擦とモータを省くと
+
+```math
+\ddot\theta_b \approx \frac{(m_b l_b+m_w l)\,g}{I_b+m_w l^{2}}\,\theta_b
+```
+
+右辺の係数が**プラス**なので $`\theta_b`$ は勝手に増える＝**不安定**（この係数の平方根が発散の速さ $`\lambda`$）。だから制御が要る——これが次ページ「線形化」の入口です。
+
 ---
 
 ### ✅ ミニ確認

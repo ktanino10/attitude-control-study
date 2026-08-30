@@ -71,6 +71,83 @@ T_m = K_m\,u
 ### Why $`\sin\theta_b`$?
 Gravity’s “twisting force (torque)” that tries to make the body fall is stronger when the tilt $`\theta_b`$ is larger, and zero when it is straight ($`\theta_b=0`$). This relationship appears as $`\sin\theta_b`$. This $`\sin`$ becomes a problem on the next page.
 
+### Deriving Eq. 9 and Eq. 10 from scratch
+
+Being told “the article’s equation” is not satisfying, so let’s build them with the **Lagrangian method**, which pops them out mechanically from energy. Only four steps: **① line up the velocities → ② kinetic energy $`T`$ → ③ potential energy $`U`$ → ④ plug into the Lagrange equation**.
+
+**① Coordinates and velocities**
+- The wheel’s **absolute angle** is “body tilt + rotation relative to the body” $`=\theta_b+\theta_w`$. So its **absolute angular velocity** is $`\dot\theta_b+\dot\theta_w`$. ← why $`\ddot\theta_b+\ddot\theta_w`$ shows up in Eq. 9.
+- The wheel center sits at distance $`l`$ from the pivot. When the body turns at $`\dot\theta_b`$, that center is swung around at speed $`l\,\dot\theta_b`$.
+
+**② Kinetic energy $`T`$**
+
+```math
+T = \frac{1}{2} I_b\,\dot\theta_b^{2} + \frac{1}{2} m_w\,(l\,\dot\theta_b)^{2} + \frac{1}{2} I_w\,(\dot\theta_b+\dot\theta_w)^{2}
+```
+
+Term 1 = body rotation, term 2 = the wheel center swung around at radius $`l`$, term 3 = the wheel spinning on its own axis. Combining the two body-rotation terms:
+
+```math
+T = \frac{1}{2}\,(I_b + m_w l^{2})\,\dot\theta_b^{2} + \frac{1}{2} I_w\,(\dot\theta_b+\dot\theta_w)^{2}
+```
+
+The denominator $`I_b+m_w l^{2}`$ (body + the wheel’s hard-to-rotate-ness seen from the pivot) already appears.
+
+**③ Potential energy $`U`$**
+A mass at distance $`r`$ from the pivot has height $`r\cos\theta_b`$. Adding the body center of mass ($`l_b`$) and the wheel ($`l`$):
+
+```math
+U = (m_b l_b + m_w l)\,g\,\cos\theta_b
+```
+
+**④ Motor and friction (non-conservative generalized forces)**
+- Acting on the wheel coordinate $`\theta_w`$: motor $`+T_m`$ and bearing friction $`-C_w\dot\theta_w`$ → $`Q_{\theta_w}=T_m-C_w\dot\theta_w`$.
+- Acting on the body coordinate $`\theta_b`$: **only** the pivot friction $`-C_b\dot\theta_b`$. The motor is an **internal** force (between body and wheel), so it appears only on the relative coordinate $`\theta_w`$ → $`Q_{\theta_b}=-C_b\dot\theta_b`$.
+
+**⑤ Into the Lagrange equation**
+With $`L=T-U`$, compute $`\frac{d}{dt}\!\left(\frac{\partial L}{\partial \dot q}\right)-\frac{\partial L}{\partial q}=Q_q`$ for each coordinate.
+
+*Wheel $`\theta_w`$:* since $`\partial L/\partial\dot\theta_w = I_w(\dot\theta_b+\dot\theta_w)`$ and $`\partial L/\partial\theta_w = 0`$,
+
+```math
+I_w(\ddot\theta_b+\ddot\theta_w) = T_m - C_w\dot\theta_w
+```
+
+→ **exactly Eq. 9** ✅
+
+> 🧠 This is “Newton’s law for the wheel”: **absolute angular acceleration $`(\ddot\theta_b+\ddot\theta_w)`$ × inertia $`I_w`$ = applied torque (motor − bearing friction)**.
+
+*Body $`\theta_b`$:*
+
+```math
+\frac{\partial L}{\partial \dot\theta_b}=(I_b+m_w l^{2})\dot\theta_b+I_w(\dot\theta_b+\dot\theta_w),\qquad \frac{\partial L}{\partial \theta_b}=(m_b l_b+m_w l)\,g\,\sin\theta_b
+```
+
+(Here $`-\partial U/\partial\theta_b = +(m_b l_b+m_w l)\,g\,\sin\theta_b`$ — this is where $`\sin`$ comes from.) Substituting:
+
+```math
+(I_b+m_w l^{2})\ddot\theta_b + I_w(\ddot\theta_b+\ddot\theta_w) - (m_b l_b+m_w l)\,g\,\sin\theta_b = -C_b\dot\theta_b
+```
+
+**Now substitute Eq. 9**, replacing $`I_w(\ddot\theta_b+\ddot\theta_w)`$ with $`T_m-C_w\dot\theta_w`$:
+
+```math
+(I_b+m_w l^{2})\ddot\theta_b = (m_b l_b+m_w l)\,g\,\sin\theta_b - T_m + C_w\dot\theta_w - C_b\dot\theta_b
+```
+
+Divide both sides by $`I_b+m_w l^{2}`$ to get **Eq. 10** ✅
+
+> 🧠 **Why $`-T_m`$?** Because the **reaction** to the motor spinning the wheel comes straight back onto the body (action–reaction). Just like the “swivel chair” in Session 1: spin the wheel one way and the body rights itself the other way. Substituting Eq. 9 is exactly the step that moves this reaction torque $`-(T_m-C_w\dot\theta_w)`$ onto the body.
+
+**⑥ A preview of linearization**
+Near the upright point $`\theta_b\approx0`$, $`\sin\theta_b\approx\theta_b`$. Dropping friction and motor,
+
+```math
+\ddot\theta_b \approx \frac{(m_b l_b+m_w l)\,g}{I_b+m_w l^{2}}\,\theta_b
+```
+
+The coefficient on the right is **positive**, so $`\theta_b`$ grows on its own = **unstable** (the square root of this coefficient is the divergence rate $`\lambda`$). That is why control is needed — the entry point to the next page, “Linearization.”
+
 ---
 
 ### ✅ Quick check
