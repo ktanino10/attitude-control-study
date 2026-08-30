@@ -69,8 +69,10 @@ This is called **unloading**. (More in Lesson 3.)
 > From here on, this is for readers who want a little more. We check “why it rotates” using middle-school-plus physics formulas.
 > If it feels difficult, it is OK to read only the 🧠 summary boxes.
 
+> 📌 **About numbering**: The article numbers its equations continuously — roughly **Part 1 (overview) = Eqs. 1–8, Part 2 (this chapter) = Eqs. 9–, Part 3 = Eqs. 36–42**. In this note we label Part 1’s rotational physics as **Foundational Eqs. (1)–(6)** and, at the end, show how they connect to **Eqs. 9 and 10** in Session 2 (not a one-to-one match with the article’s numbers).
+
 ### 1) Angular momentum L = Iω —— what rotational “momentum” really is
-Rotational momentum can be written with this simple formula.
+Rotational momentum can be written with this simple formula. (**Foundational Eq. 1**)
 
 ```math
 L = I\,\omega
@@ -82,7 +84,7 @@ L = I\,\omega
 The feeling that “a heavy wheel spinning fast has more momentum” is just the multiplication of **weight/shape ($`I`$) × speed ($`\omega`$)**.
 
 ### 2) Conservation of angular momentum —— the total does not change by itself
-If there is no external torque (twisting force), the total $`L`$ of the system is constant. If everything starts at rest, the total is zero, so:
+If there is no external torque (twisting force), the total $`L`$ of the system is constant. If everything starts at rest, the total is zero, so (**Foundational Eq. 2**):
 
 ```math
 I_{\text{body}}\,\Omega_{\text{body}} + I_{\text{wheel}}\,\omega_{\text{wheel}} = 0
@@ -96,14 +98,14 @@ I_{\text{body}}\,\Omega_{\text{body}} + I_{\text{wheel}}\,\omega_{\text{wheel}} 
 - The body is heavy ($`I_{\text{body}}`$ large), and the wheel is light ($`I_{\text{wheel}}`$ small). So the body rotates slowly while the wheel rotates fast.
 
 ### 3) “Changing orientation” = producing torque = “accelerating” the wheel
-To **change** orientation, torque $`\tau`$ (tau) is needed. Torque is the rate of change of angular momentum.
+To **change** orientation, torque $`\tau`$ (tau) is needed. Torque is the rate of change of angular momentum. (**Foundational Eq. 3**: Newton for rotation)
 
 ```math
 \tau = \frac{dL}{dt} = I\,\frac{d\omega}{dt} = I\,\dot{\omega}
 ```
 
 The motor applies torque $`\tau_w = I_{\text{wheel}}\,\dot{\omega}_{\text{wheel}}`$ to the wheel.
-By action-reaction (Newton’s third law), the body receives the opposite torque $`-\tau_w`$.
+By action-reaction (Newton’s third law), the body receives the opposite torque $`-\tau_w`$. (**Foundational Eq. 4**)
 
 ```math
 \dot{\Omega}_{\text{body}} = -\frac{\tau_w}{I_{\text{body}}}
@@ -116,7 +118,7 @@ By action-reaction (Newton’s third law), the body receives the opposite torque
 ### 4) Why an electromagnetic brake? —— saturation and large torque
 - The wheel speed $`\omega_{\text{wheel}}`$ has an upper limit. If it keeps increasing, it eventually hits the limit = **momentum saturation**.
 - The motor’s continuous torque is small (about $`55\,\text{mNm}`$ for the maxon EC 45 flat). Slow acceleration gives weak force.
-- So the system **stores energy by spinning at high speed** (kinetic energy $`E=\tfrac12 I_{\text{wheel}}\,\omega^2`$), then **stops it all at once with the brake over a short time $`\Delta t`$**. Because angular momentum $`\Delta L`$ is released in a short time,
+- So the system **stores energy by spinning at high speed** (kinetic energy $`E=\tfrac12 I_{\text{wheel}}\,\omega^2`$, **Foundational Eq. 5**), then **stops it all at once with the brake over a short time $`\Delta t`$**. Because angular momentum $`\Delta L`$ is released in a short time (next formula, **Foundational Eq. 6**),
 
 ```math
 \tau_{\text{brake}} = \frac{\Delta L}{\Delta t}\ \gg\ \tau_{\text{motor}}
@@ -129,6 +131,15 @@ To return a saturated wheel, the wheel is slowed while applying **external torqu
 - Ground experiment: table friction or a hand gives external torque.
 - Space: a **magnetic torquer** (using Earth’s magnetic field) or **thrusters** are used.
 A good image is “letting excess angular momentum escape outside the system.”
+
+### ⭐ Foundational Eqs. →　Session 2’s Eqs. 9 and 10 (the link)
+
+Session 2’s equations of motion are just **Foundational Eq. 3 $`\tau=I\dot\omega`$ (Newton for rotation) written once for the wheel and once for the body**, plus gravity, friction, and the motor:
+
+- **Wheel**: absolute angular acceleration $`(\ddot\theta_b+\ddot\theta_w)`$ × inertia $`I_w`$ = motor $`T_m`$ − bearing friction $`C_w\dot\theta_w`$ → **Eq. 9**.
+- **Body**: about the pivot, gravity torque $`(m_b l_b+m_w l)\,g\,\sin\theta_b`$ + the wheel’s reaction (**Foundational Eq. 4**) − friction → **Eq. 10**.
+
+> 🧠 So **Foundational Eqs. (1)–(6) (article Part 1) → Eqs. 9 and 10 (Session 2)** are one continuous story: Part 1 gives “words + foundational formulas,” Part 2 gives the “finished equations of motion.” The from-scratch derivation of Eqs. 9 and 10 is in [Session 2 “Modeling”](../session-2-modeling/02-modeling.md).
 
 ---
 
