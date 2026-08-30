@@ -57,6 +57,13 @@
 9. 角運動量保存則（conservation of angular momentum）・倒立振子（inverted pendulum）
    — 一般的な力学の教科書レベルの概念。参考: <https://ja.wikipedia.org/wiki/角運動量保存の法則> , <https://ja.wikipedia.org/wiki/倒立振子>
 
+### 関連プロジェクト（手を動かす例）
+- **実機の倒立振子を作った例（筆者の別プロジェクト）**: `ktanino10/copilot-cli-inverted-pendulum-m5stick`
+  - リポジトリ: <https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick>
+  - M5StickC Plus で自立バランスする1次元倒立振子。**PID制御＋カルマンフィルタ＋WebUI** を、GitHub Copilot CLI との対話でファーム開発・書き込み・デバッグまで行った実践記録。
+  - ブラウザ・デモ（実機不要）: <https://ktanino10.github.io/copilot-cli-inverted-pendulum-m5stick/>
+  - ※ この学習ノートとは独立した趣味プロジェクトで、上記トランジスタ技術の連載とは直接の関係はありません。座学1〜2の「1次元倒立振子」を手を動かして体験する際の参考としてどうぞ。
+
 ### 出典・著作権について
 - 本ノートの図（`assets/` 内のSVG・Mermaid）は**すべて筆者が独自に作成**したものです。
 - 元記事の写真・図版の**著作権は、個別に記載のある場合を除き JAXA**（一部は CQ出版社等の各権利者）に帰属し、本ノートには**転載していません**。
@@ -117,6 +124,13 @@ Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Micro
    *Transactions of the ASME – Journal of Basic Engineering*, 82(1):35–45, 1960. DOI: 10.1115/1.3662552.
 9. Conservation of angular momentum; inverted pendulum — standard mechanics topics.
    Ref: <https://en.wikipedia.org/wiki/Angular_momentum> , <https://en.wikipedia.org/wiki/Inverted_pendulum>
+
+### Related project (hands-on example)
+- **A working inverted pendulum the author built (separate personal project)**: `ktanino10/copilot-cli-inverted-pendulum-m5stick`
+  - Repository: <https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick>
+  - A 1-D self-balancing inverted pendulum on the M5StickC Plus. **PID control + Kalman filter + a web UI**, with firmware development, flashing, and debugging all carried out through GitHub Copilot CLI.
+  - Browser demo (no hardware needed): <https://ktanino10.github.io/copilot-cli-inverted-pendulum-m5stick/>
+  - Note: this is an independent hobby project, not affiliated with the Transistor Technology serial above. Offered as a hands-on companion for the "1-D inverted pendulum" covered in Sessions 1–2.
 
 ### Attribution & copyright
 - All figures in this repository (SVG/Mermaid under `assets/`) were **created independently by the author**.

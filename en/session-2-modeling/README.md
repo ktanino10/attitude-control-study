@@ -56,3 +56,5 @@ flowchart LR
 Equation of motion / modeling / moment of inertia / friction torque / linearization / Taylor expansion / equilibrium point (upright point) / state-space model / state variable / discretization / sampling period / state feedback / LQR / conservation of angular momentum
 
 ⬅️ Previous: [Lesson Session 1: Big picture and basic concepts](../session-1-overview/README.md) ／ Next time 👉 [Lesson Session 3: Extension to 3D](../session-3-3d/README.md)
+
+> 🔧 **Hands-on example (aside)**: There's a separate project where the author built a real 1-D inverted pendulum with GitHub Copilot CLI → [`ktanino10/copilot-cli-inverted-pendulum-m5stick`](https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick) (an independent hobby project; see [References](../../REFERENCES.md)).

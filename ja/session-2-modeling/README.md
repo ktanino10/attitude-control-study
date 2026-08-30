@@ -56,3 +56,5 @@ flowchart LR
 運動方程式 / モデリング / 慣性モーメント / 摩擦トルク / 線形化 / テイラー展開 / 平衡点（倒立点） / 状態空間モデル / 状態変数 / 離散化 / サンプリング周期 / 状態フィードバック / LQR / 角運動量保存
 
 ⬅️ 前回 [座学1：全体像と基礎概念](../session-1-overview/README.md) ／ 次回 👉 [座学3：3次元への拡張](../session-3-3d/README.md)
+
+> 🔧 **手を動かす例（参考）**：実機の1次元倒立振子を GitHub Copilot CLI で作った別プロジェクトもあります → [`ktanino10/copilot-cli-inverted-pendulum-m5stick`](https://github.com/ktanino10/copilot-cli-inverted-pendulum-m5stick)（この学習ノートとは独立した趣味プロジェクト。詳細は [参考文献](../../REFERENCES.md)）。
