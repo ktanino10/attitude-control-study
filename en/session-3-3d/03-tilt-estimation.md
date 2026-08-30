@@ -15,6 +15,8 @@ A smartphone screen rotates when you tilt it because it detects “down” this 
 - If we know which way “down (gravity)” points as seen from the cube, we can calculate **how much it is tilted**.
 - This cube uses **six** accelerometers to improve accuracy, and combines them to determine the “down direction.”
 
+> 🟢 **Connection to Session 2**: In Session 2 we built the controller assuming “tilt $`\theta_b`$ can be measured by a sensor.” This page is exactly *what that measurement is*. In 3D, we obtain pitch and roll by **calculating** them from the direction of gravity (Eq. 36).
+
 > 🧠 However, it can tell only **pitch and roll (front-back and left-right tilt)**.
 > It **cannot tell yaw (twist around the vertical axis)**. That is because “down” does not change even if you spin it like a top.
 

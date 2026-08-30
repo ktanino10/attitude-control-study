@@ -33,6 +33,29 @@
 ### ジャイロ効果（絡み合いの項）
 3次元の回転では、角速度どうしの外積 $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ のような**ジャイロ効果**の項が現れます。これが「1方向動かすと別方向も動く」絡み合いの正体です（本体＋3ホイールの多体系として、記事の式39でまとめられています）。
 
+### 補講：ジャイロ項 $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ はどこから来る？（基礎式3の3次元版）
+第1回の基礎式3 $`\tau=I\dot\omega`$ は、じつは**特別な場合**でした。もっと一般の回転の法則は「トルク＝角運動量の変化の速さ」で、基礎式1 $`\mathbf{L}=\mathbf{I}\boldsymbol{\omega}`$ を使って：
+
+```math
+\boldsymbol{\tau}=\frac{d\mathbf{L}}{dt},\qquad \mathbf{L}=\mathbf{I}\boldsymbol{\omega}
+```
+
+大事なのは、$`\mathbf{L}`$ が**2通りの変わり方**をすること：① **大きさ**が変わる（$`\mathbf{I}\dot{\boldsymbol{\omega}}`$）、② **向き**が変わる（本体が回ると $`\mathbf{L}`$ の向きも一緒に回るので、大きさはそのままでも変化する）。
+
+静止系から見た変化は「本体から見た変化＋回転による向きの変化」に分けられます（$`\text{in}`$＝静止系、$`\text{body}`$＝本体の視点）：
+
+```math
+\left.\frac{d\mathbf{L}}{dt}\right|_{\text{in}}=\left.\frac{d\mathbf{L}}{dt}\right|_{\text{body}}+\boldsymbol{\omega}\times\mathbf{L}
+```
+
+これを代入すると、**オイラーの運動方程式**になります：
+
+```math
+\boldsymbol{\tau}=\mathbf{I}\dot{\boldsymbol{\omega}}+\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})
+```
+
+第2項 $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ がジャイロ項です。**1軸では $`\boldsymbol{\omega}`$ と $`\mathbf{I}\boldsymbol{\omega}`$ が平行なので外積はゼロ**——だから基礎式3には出てこなかったのです。3方向が同時に回る3次元で、はじめて顔を出します。
+
 ### 9次元の状態方程式
 状態は9個の変数をまとめたベクトル $`\mathbf{x}\in\mathbb{R}^9`$：
 

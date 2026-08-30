@@ -14,6 +14,9 @@ Among the three directions, **yaw (twist around the vertical axis)** is actually
 
 So the control targets **only the remaining directions that can be moved and seen**.
 
+> 🟢 **Why is only yaw special? (connection to basic Eq. 2)**
+> Two reasons combine. (1) **Heading does not appear in the equations**: the absolute yaw angle is “the same physics whichever way you face,” so it never shows up in the equations of motion (a “cyclic coordinate”). Unlike tilt, there is no natural force pulling yaw back to zero, so the control loop has no clue to grab onto. (2) **Everything is internal**: the reaction wheels are internal parts, and by basic Eq. 2 (conservation of angular momentum) they cannot create net total angular momentum from nothing unless torque comes from outside. Because of these two, yaw drops out of controllability/observability in the linear model.
+
 > 🧠 “Do not try to do what cannot be done.” Remove the yaw that cannot be moved or seen from the control target,
 > and recover only the remaining part properly — that is the smart approach.
 

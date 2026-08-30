@@ -45,6 +45,23 @@ A_d = I_3 + \Delta t\,A, \qquad B_d = \Delta t\,B \qquad(\text{式17, 18})
 - $`I_3`$：3×3の**単位行列**（対角が1、他は0）。
 - $`\Delta t = 20\,\text{ms}`$：**サンプリング周期**。
 
+### この形はどこから来るの？（前進オイラー）
+むずかしくありません。「微分＝変化の速さ」の定義に戻るだけです。変化率 $`\dot{\mathbf x}`$ は、1コマ $`\Delta t`$ での差で近似できます：
+
+```math
+\dot{\mathbf x}\approx\frac{\mathbf x[k{+}1]-\mathbf x[k]}{\Delta t}\quad\Rightarrow\quad \mathbf x[k{+}1]\approx \mathbf x[k]+\Delta t\,\dot{\mathbf x}[k]
+```
+
+ここに連続の式 $`\dot{\mathbf x}=A\mathbf x+Bu`$ を入れると：
+
+```math
+\mathbf x[k{+}1]\approx \mathbf x[k]+\Delta t\,(A\mathbf x[k]+Bu[k]) = (I_3+\Delta t\,A)\,\mathbf x[k]+(\Delta t\,B)\,u[k]
+```
+
+見くらべれば $`A_d=I_3+\Delta t\,A`$、$`B_d=\Delta t\,B`$。これが式16〜18の正体です。
+
+> 🧠 これは一番素朴な近似（**前進オイラー法**）。厳密には $`A_d=e^{A\Delta t}`$（行列の指数）ですが、$`\Delta t`$ が十分小さければ、その1次分 $`I_3+\Delta t\,A`$ で足ります（テイラー展開の1次まで取ったもの）。
+
 ### なぜ 20 ms で足りるのか（安定性のチェック）
 倒立振子は**放っておくと倒れる（不安定）**システムです。線形化したモデルの"不安定さ"は、行列 $`A`$ の**固有値**でわかります。この機体では不安定な固有値が
 

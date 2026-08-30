@@ -35,7 +35,21 @@ I_w\,\omega_w = \left(I_w + I_b + m_w l^2\right)\,\omega_b
 - 右辺：ブレーキ直後、全体が回りはじめる勢い。
 
 ### ステップ③：エネルギーの保存（起き上がり）
-ブレーキ直後の**回転の運動エネルギー**が、重心を持ち上げる**位置エネルギー**にちょうど変わったとき、角度 $`\theta_b`$ まで起き上がれます。このつり合いから、必要なホイール回転数 $`\omega_w`$ が求まります（記事の式C）。
+ブレーキ直後の**回転の運動エネルギー**が、重心を持ち上げる**位置エネルギー**にちょうど変わったとき、角度 $`\theta_b`$ まで起き上がれます。
+
+回転の運動エネルギーは、第1回の**基礎式5** $`E=\tfrac12 I\omega^2`$ を全体 $`I_{\text{tot}}=I_w+I_b+m_w l^2`$ に当てはめたもの。これを、重心を角度 $`\theta_b`$ だけ持ち上げる位置エネルギーとつり合わせます：
+
+```math
+\tfrac12\,I_{\text{tot}}\,\omega_b^2 = \left(m_b l_b + m_w l\right) g\left(1-\cos\theta_b\right)
+```
+
+ここに、ステップ②の保存則（式A）から得た $`\omega_b = \dfrac{I_w\,\omega_w}{I_{\text{tot}}}`$ を代入します：
+
+```math
+\tfrac12\,I_{\text{tot}}\left(\frac{I_w\,\omega_w}{I_{\text{tot}}}\right)^2 = \left(m_b l_b + m_w l\right) g\left(1-\cos\theta_b\right)
+```
+
+$`\omega_w`$ について解くと、記事の**式C**になります（必要なホイール回転数）：
 
 ```math
 \omega_w^2 = \frac{2\left(1-\cos\theta_b\right)\left(I_w + I_b + m_w l^2\right)\left(m_b l_b + m_w l\right) g}{I_w^{\,2}}
@@ -51,7 +65,7 @@ I_w\,\omega_w = \left(I_w + I_b + m_w l^2\right)\,\omega_b
 > ホイールの慣性 $`I_w`$・目標角 $`\theta_b`$ から、必要な回転数を逆算できます。
 
 ### なぜ「一気に」なのか（第1回の復習）
-ブレーキ時間 $`\Delta t`$ が短いほど、放出トルクは大きい：
+ブレーキ時間 $`\Delta t`$ が短いほど、放出トルクは大きい（第1回の**基礎式6** $`\tau=\Delta L/\Delta t`$）：
 
 ```math
 \tau_{\text{brake}} = \frac{\Delta L}{\Delta t} \;\gg\; \tau_{\text{motor}}

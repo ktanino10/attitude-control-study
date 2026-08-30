@@ -112,6 +112,23 @@ If you see a word you do not know, look it up here. The terms are grouped by cat
 
 ---
 
+## 🧮 Math basics (linear, matrix, derivative, eigenvalue)
+
+The plainest possible take on the math words used from Session 2 on. Get these and you can read the "feel" of each formula.
+
+| Term | Reading / Japanese | Simple meaning |
+|---|---|---|
+| Linear | 線形 | The honest "double the input, double the answer" relation. Its graph is a **straight line**. Made of only addition and constant scaling, so **superposition** (solve pieces separately, then add) works. |
+| Nonlinear | 非線形 | Anything not a straight line: $`\sin\theta`$, squares, products of variables ($`\theta\times\omega`$). It is **not proportional**, so no single formula solves it in one shot. |
+| Approximation | 近似 | Replacing something hard with an easy **nearby** thing. "Only near the inverted point, $`\sin\theta\approx\theta`$" is the example. |
+| Vector | ベクトル | A stacked set of numbers. The tool that **bundles** separate states (tilt, angular velocity, …) into one $`\mathbf{x}`$. |
+| Matrix | 行列 | A rectangular table of numbers. The tool that **packs many simultaneous equations into one**. $`A\mathbf{x}`$ computes "how much each state contributes" all at once. |
+| Derivative | 微分 | The **rate of change**. $`\dot{x}`$ ("x-dot") is "how much $`x`$ changes per second." The derivative of angle is angular velocity. |
+| Integral | 積分 | **Summing up** changes to recover the original quantity. Integrating angular velocity gives angle. Used in the complementary filter and discretization. |
+| Eigenvalue | 固有値 | A number capturing the "habit" of matrix $`A`$: **positive means it grows on its own (unstable), negative means it settles (stable)**. The inverted pendulum has a positive eigenvalue, so it falls if left alone. |
+
+---
+
 ## ⚙️ Equations of motion and microcontroller control (Session 2)
 
 | Term | Reading / Japanese | Simple meaning |

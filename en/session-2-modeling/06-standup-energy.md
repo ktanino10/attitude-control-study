@@ -35,7 +35,21 @@ I_w\,\omega_w = \left(I_w + I_b + m_w l^2\right)\,\omega_b
 - Right side: momentum of the whole system just after braking, when it starts rotating.
 
 ### Step 3: conservation of energy (standing up)
-When the **rotational kinetic energy** just after braking has exactly changed into **potential energy** that lifts the center of mass, the body can rise up to the angle $`\theta_b`$. From this balance, we can find the required wheel rotation speed $`\omega_w`$ (article Eq. C).
+When the **rotational kinetic energy** just after braking has exactly changed into **potential energy** that lifts the center of mass, the body can rise up to the angle $`\theta_b`$.
+
+The rotational kinetic energy is **basic Eq. 5** from Session 1, $`E=\tfrac12 I\omega^2`$, applied to the whole body $`I_{\text{tot}}=I_w+I_b+m_w l^2`$. We balance it against the potential energy of lifting the center of mass by the angle $`\theta_b`$:
+
+```math
+\tfrac12\,I_{\text{tot}}\,\omega_b^2 = \left(m_b l_b + m_w l\right) g\left(1-\cos\theta_b\right)
+```
+
+Substituting $`\omega_b = \dfrac{I_w\,\omega_w}{I_{\text{tot}}}`$, obtained from the Step 2 conservation law (Eq. A):
+
+```math
+\tfrac12\,I_{\text{tot}}\left(\frac{I_w\,\omega_w}{I_{\text{tot}}}\right)^2 = \left(m_b l_b + m_w l\right) g\left(1-\cos\theta_b\right)
+```
+
+Solving for $`\omega_w`$ gives article **Eq. C** (the required wheel speed):
 
 ```math
 \omega_w^2 = \frac{2\left(1-\cos\theta_b\right)\left(I_w + I_b + m_w l^2\right)\left(m_b l_b + m_w l\right) g}{I_w^{\,2}}
@@ -51,7 +65,7 @@ What we can read from it:
 > From the wheel inertia $`I_w`$ and target angle $`\theta_b`$, you can calculate the required rotation speed backward.
 
 ### Why “all at once”? (review from Session 1)
-The shorter the braking time $`\Delta t`$ is, the larger the released torque is:
+The shorter the braking time $`\Delta t`$ is, the larger the released torque is (**basic Eq. 6** from Session 1, $`\tau=\Delta L/\Delta t`$):
 
 ```math
 \tau_{\text{brake}} = \frac{\Delta L}{\Delta t} \;\gg\; \tau_{\text{motor}}

@@ -44,6 +44,38 @@ You will learn in this order: “first see the whole picture → turn one axis i
 
 ---
 
+## 🧭 Equation map (one backbone)
+
+The equations form **one connected line**: “basics → stabilize one axis → extend to three axes.” Numbers are the article's equation numbers (basic Eqs. 1–6 are the running numbers we assigned in these notes).
+
+```
+Basic Eqs. 1–6 (Session 1: physics of turning)
+   │  L=Iω, conservation, τ=Iω̇, reaction, E=½Iω², τ=ΔL/Δt
+   ▼
+Eqs. 9,10,12 (Session 2, modeling: equations of motion + motor)
+   ▼  sinθ≈θ makes it straight (nonlinear → linear)
+Eq. 13 (linearization: ẋ=Ax+Bu)
+   ▼  predict one step ahead (forward Euler)
+Eqs. 16–18 (discretization: x[k+1]=A_d x+B_d u)
+   ▼  substitute u=−Kx = closed loop
+Eq. 19 (state feedback + LQR)
+   ▼  extend to three axes
+Eqs. 36,37 (Session 3: tilt estimation + complementary filter)
+   ▼  vector version of basic Eqs. 1,3 = Euler's equation
+Eqs. 39,41,42 (3-D equations of motion: gyro term, inertia tensor, 9-D)
+```
+
+| Link | Where | In one line |
+|---|---|---|
+| Basic Eqs. 1–6 → Eqs. 9,10 | [S2 · 02](./session-2-modeling/02-modeling.md) | turn the physics of spinning into a 1-axis equation of motion |
+| Eq. 10 → Eq. 13 | [S2 · 03](./session-2-modeling/03-linearization.md) | `sinθ≈θ` turns nonlinear into linear; build A,B |
+| Eq. 13 → Eq. 16 | [S2 · 04](./session-2-modeling/04-discretization.md) | forward Euler to “one step ahead” |
+| Eq. 16 → Eq. 19 | [S2 · 05](./session-2-modeling/05-control-law.md) | substitute `u=−Kx` = closed loop, stabilize via eigenvalues |
+| Basic Eq. 3 → Eq. 39 | [S3 · 05](./session-3-3d/05-3d-equations.md) | `τ=Iω̇` gains `ω×(Iω)` (the gyro term) |
+| Basic Eq. 2 → yaw | [S3 · 06](./session-3-3d/06-controllability-lqr.md) | conservation + cyclic coordinate drop yaw from controllability |
+
+---
+
 ## 🔧 Reference (information needed to build)
 
 This is where you can look up “How is this circuit put together?”

@@ -42,6 +42,20 @@ u[k] = -K_d\,\mathbf{x}[k]
 
 $`K_d`$ is a $`1\times 3`$ row vector (because there are three states and one input). It multiplies each state by a “weight,” adds them, and sends the result back to the input with the opposite sign.
 
+### Why does $`u=-K\mathbf{x}`$ make it stable? (closed loop)
+Substitute the control law $`u[k]=-K_d\mathbf x[k]`$ into the discrete model $`\mathbf x[k{+}1]=A_d\mathbf x[k]+B_d u[k]`$:
+
+```math
+\mathbf x[k{+}1]=A_d\mathbf x[k]-B_d K_d\mathbf x[k]=(A_d-B_d K_d)\,\mathbf x[k]
+```
+
+The input $`u`$ disappears, leaving “next state = **one matrix** $`(A_d-B_d K_d)`$ × current state.” This is called the **closed loop** (the feedback loop is now closed).
+
+- **Left alone** ($`K_d=0`$): the eigenvalues of $`A_d`$ have **magnitude greater than 1**, so the state **grows** every step = it falls.
+- **With feedback**: the eigenvalues become those of $`(A_d-B_d K_d)`$. If we choose $`K_d`$ so that **all eigenvalues have magnitude below 1** ($`|\lambda|<1`$), the state **shrinks** every step back to the upright point = stable.
+
+> 🧠 The **minus** in $`u=-K\mathbf x`$ is the mark of “pull back in the direction that cancels the error.” The essence of feedback is to **move the matrix's eigenvalues ‘inward’ and turn instability into stability**. Choosing where to move them *optimally* is the job of LQR, next.
+
 ### How to decide the gain $`K_d`$: LQR
 **LQR (linear-quadratic regulator)** answers the question “How should we choose $`K_d`$?” It uses mathematics (the Riccati equation) to minimize the following **cost function** $`J`$ and find the corresponding $`K_d`$ in one shot.
 

@@ -45,6 +45,23 @@ A_d = I_3 + \Delta t\,A, \qquad B_d = \Delta t\,B \qquad(\text{Eqs. 17, 18})
 - $`I_3`$: a 3×3 **identity matrix** (1 on the diagonal, 0 elsewhere).
 - $`\Delta t = 20\,\text{ms}`$: **sampling period**.
 
+### Where does this form come from? (forward Euler)
+Nothing hard — it is just the definition of “derivative = rate of change.” The rate $`\dot{\mathbf x}`$ can be approximated by the difference over one step $`\Delta t`$:
+
+```math
+\dot{\mathbf x}\approx\frac{\mathbf x[k{+}1]-\mathbf x[k]}{\Delta t}\quad\Rightarrow\quad \mathbf x[k{+}1]\approx \mathbf x[k]+\Delta t\,\dot{\mathbf x}[k]
+```
+
+Substituting the continuous equation $`\dot{\mathbf x}=A\mathbf x+Bu`$:
+
+```math
+\mathbf x[k{+}1]\approx \mathbf x[k]+\Delta t\,(A\mathbf x[k]+Bu[k]) = (I_3+\Delta t\,A)\,\mathbf x[k]+(\Delta t\,B)\,u[k]
+```
+
+Matching terms gives $`A_d=I_3+\Delta t\,A`$ and $`B_d=\Delta t\,B`$ — that is what Eqs. 16–18 are.
+
+> 🧠 This is the crudest approximation (**forward Euler method**). Strictly, $`A_d=e^{A\Delta t}`$ (a matrix exponential), but if $`\Delta t`$ is small enough, its first-order part $`I_3+\Delta t\,A`$ is enough (up to the first order of the Taylor expansion).
+
 ### Why 20 ms is enough (stability check)
 An inverted pendulum is an **unstable** system: if left alone, it falls. In the linearized model, how “unstable” it is can be seen from the **eigenvalues** of the matrix $`A`$. For this body, the unstable eigenvalue is
 

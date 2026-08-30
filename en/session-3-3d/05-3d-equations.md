@@ -33,6 +33,29 @@ In 1 axis, the moment of inertia was one number. In 3D, because the difficulty o
 ### Gyroscopic effect (coupling terms)
 In 3-D rotation, terms from the **gyroscopic effect** appear, such as the cross product between angular velocities, $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$. This is the true source of the coupling where “moving one direction also moves another direction” (collected as a multi-body system of the body plus three wheels in article Eq. 39).
 
+### Supplement: where does the gyro term $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ come from? (the 3-D version of basic Eq. 3)
+Basic Eq. 3 from Session 1, $`\tau=I\dot\omega`$, was actually a **special case**. The more general law of rotation is “torque = rate of change of angular momentum,” using basic Eq. 1 $`\mathbf{L}=\mathbf{I}\boldsymbol{\omega}`$:
+
+```math
+\boldsymbol{\tau}=\frac{d\mathbf{L}}{dt},\qquad \mathbf{L}=\mathbf{I}\boldsymbol{\omega}
+```
+
+The key point is that $`\mathbf{L}`$ can change in **two ways**: (1) its **magnitude** changes ($`\mathbf{I}\dot{\boldsymbol{\omega}}`$), and (2) its **direction** changes (as the body rotates, $`\mathbf{L}`$ turns with it, so it changes even if the magnitude stays the same).
+
+The change seen from the inertial frame splits into “the change seen in the body frame + the change of direction due to rotation” ($`\text{in}`$ = inertial frame, $`\text{body}`$ = body frame):
+
+```math
+\left.\frac{d\mathbf{L}}{dt}\right|_{\text{in}}=\left.\frac{d\mathbf{L}}{dt}\right|_{\text{body}}+\boldsymbol{\omega}\times\mathbf{L}
+```
+
+Substituting this gives **Euler's equation of motion**:
+
+```math
+\boldsymbol{\tau}=\mathbf{I}\dot{\boldsymbol{\omega}}+\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})
+```
+
+The second term $`\boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega})`$ is the gyro term. **In 1 axis, $`\boldsymbol{\omega}`$ and $`\mathbf{I}\boldsymbol{\omega}`$ are parallel, so the cross product is zero** — which is why basic Eq. 3 had no such term. It appears for the first time in 3D, when three directions rotate at once.
+
 ### 9-D state equation
 The state is a vector $`\mathbf{x}\in\mathbb{R}^9`$ that collects nine variables:
 
