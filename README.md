@@ -20,7 +20,7 @@
 - 📖 [用語集](./ja/GLOSSARY.md)
 - 📚 [出典・参考文献](./REFERENCES.md)
 
-**元ネタ**: トランジスタ技術 2020年6月号 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」【第1回】1次元倒立振子のメカニズム（巳谷 真司／JAXA, pp.121–127）
+**元ネタ**: トランジスタ技術 2020年6〜8月号 短期連載「XYZ 3軸姿勢制御モジュールの運動方程式とマイコン制御」（全3回、巳谷 真司／JAXA）。各回の詳細は [出典・参考文献](./REFERENCES.md) を参照。
 記事の写真は使わず、**自分で描いた図**と**自分の言葉のまとめ**だけで作っています。
 
 </td>
@@ -37,7 +37,7 @@ For readers who want to know *how* it works, there is also a **🔵 In-depth** t
 - 📖 [Glossary](./en/GLOSSARY.md)
 - 📚 [Sources and references](./REFERENCES.md)
 
-**Source**: Transistor Gijutsu (Transistor Technology) June 2020, short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module," Part 1 (Shinji Mitani / JAXA, pp.121–127).
+**Source**: Transistor Gijutsu (Transistor Technology), June–August 2020, short serial "Equations of Motion and Microcontroller Control of an XYZ 3-Axis Attitude Control Module" (3 parts, Shinji Mitani / JAXA). See [Sources and references](./REFERENCES.md) for each part.
 No photos from the article are used — only **diagrams I redrew myself** and **summaries in my own words**.
 
 </td>
@@ -55,7 +55,15 @@ No photos from the article are used — only **diagrams I redrew myself** and **
 | Diagrams（図） | [`assets/ja/`](./assets/ja/) | [`assets/en/`](./assets/en/) |
 | Glossary（用語集） | [`ja/GLOSSARY.md`](./ja/GLOSSARY.md) | [`en/GLOSSARY.md`](./en/GLOSSARY.md) |
 
-> 座学は全3回。今回は **1回目（全体像と基本概念）** を作り込んでいます。
-> There are 3 study sessions in total; **Session 1 (big picture and basic concepts)** is the one built out here.
+> 座学は全3回：**第1回**（全体像と基本概念）・**第2回**（運動方程式とマイコン制御）・**第3回**（3次元への拡張）。日本語・英語ともにそろっています。
+> There are 3 study sessions: **Session 1** (big picture and basic concepts), **Session 2** (equations of motion and microcontroller control), and **Session 3** (extension to 3D) — all available in both Japanese and English.
+
+---
+
+## 📄 ライセンス / License
+
+- **本文・図（オリジナル）/ Original text & figures**: [CC BY 4.0](./LICENSE) — クレジットを示せば自由に共有・改変できます / free to share and adapt with attribution.
+- **コード片 / Code snippets**: MIT（併用可 / also available under MIT）。
+- **元記事 / Original article**: トランジスタ技術の文章・写真・図版は各権利者（JAXA／CQ出版ほか）に帰属し、本リポジトリには含みません / The article's text, photos, and figures remain © their respective rights holders and are not included here. 詳細 / details: [REFERENCES.md](./REFERENCES.md)
 
 Have fun learning 🚀

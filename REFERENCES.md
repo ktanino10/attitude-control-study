@@ -72,6 +72,7 @@
 - 本ノートの図（`assets/` 内のSVG・Mermaid）は**すべて筆者が独自に作成**したものです。
 - 元記事の写真・図版の**著作権は、個別に記載のある場合を除き JAXA**（一部は CQ出版社等の各権利者）に帰属し、本ノートには**転載していません**。
 - 部品名・型番・商標は各社に帰属します。
+- 本ノート（オリジナルの文章・図）のライセンスは [CC BY 4.0](./LICENSE)（コード片は MIT も併用可）。
 
 ---
 
@@ -144,3 +145,4 @@ Shinji Mitani (巳谷 真司, JAXA), short serial "Equations of Motion and Micro
 - All figures in this repository (SVG/Mermaid under `assets/`) were **created independently by the author**.
 - Copyright of the original article's photographs and figures belongs to **JAXA** (except where individually noted; some rights held by CQ Publishing and others); they are **not reproduced** here.
 - Product names, part numbers, and trademarks belong to their respective owners.
+- The original text and figures in this note are licensed under [CC BY 4.0](./LICENSE) (code snippets also under MIT).
